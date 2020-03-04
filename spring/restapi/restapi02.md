@@ -63,7 +63,7 @@ tags: RestAPI
 
 - @MockBean
     - Mockito를 사용해서 mock 객체를 만들고 빈으로 등록해 줌.
-        <img src="/images/restapi/restapi02-1.png" width="100">
+        <img src="/images/restapi/restapi02-1.png" width="100%">
         - 하지않으면 Repository는 Mock 객체기 때문에 save나 무엇을 하더라도 return 값은 null이 나온다.
     - (주의) 기존 빈을 테스트용 빈이 대체 한다.
 
