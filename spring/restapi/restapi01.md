@@ -152,7 +152,7 @@ Stateless 하다는 것은 서버가 어떠한 Client 의 Status 도 저장하�
     - limitOfEnrollment
     
 - basePrice와 maxPrice 경우의 수와 각각 로직
-    ![restapi](/images/restapi/restapi01-1.png){: width="100%"}
+    ![restapi](/images/restapi/restapi01-1.png)
 
 - 결과값
     - id
@@ -167,6 +167,5 @@ Stateless 하다는 것은 서버가 어떠한 Client 의 Status 도 저장하�
         - publish
         - ...
 <br><br>
-
 
 
