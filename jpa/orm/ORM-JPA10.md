@@ -52,7 +52,7 @@ tags: JPA
 
 - 예시
 
-  ![ORM10-1](/images/jpa/ORM-JPA/ORM10-1.png)
+  ![ORM10-1](images/jpa/ORM-JPA/ORM10-1.png)
 
 #### Criteria
 
@@ -241,7 +241,7 @@ List<Member> findMember = em.createQuery("select m from Member m", Member.class)
 
   - 결과로 나오는 Member 모두 관리가 된다.
 
-    ![ORM10-2](/images/jpa/ORM-JPA/ORM10-2.png)
+    ![ORM10-2](images/jpa/ORM-JPA/ORM10-2.png)
 
   - 연관관계의 엔티티도 마찬가지로 관리가 된다.
 
@@ -255,17 +255,17 @@ SELECT m.username, m.age FROM Member m
 
   - Query 타입으로 조회
 
-    ![ORM10-5](/images/jpa/ORM-JPA/ORM10-5.png)
+    ![ORM10-5](images/jpa/ORM-JPA/ORM10-5.png)
 
     - Object[] 타입으로 변환하여 사용
 
   - Object[] 타입으로 조회
 
-    ![ORM10-3](/images/jpa/ORM-JPA/ORM10-3.png)
+    ![ORM10-3](images/jpa/ORM-JPA/ORM10-3.png)
 
   - new 명령어로 조회
 
-    ![ORM10-4](/images/jpa/ORM-JPA/ORM10-4.png)
+    ![ORM10-4](images/jpa/ORM-JPA/ORM10-4.png)
 
     - DTO를 생성
     - jpql new 명령어 사용
@@ -281,7 +281,7 @@ SELECT m.username, m.age FROM Member m
   - setFirstResult(int startPosition) : 조회 시작 위취
   - setMaxResult(int maxResult) : 조회할 데이터 수
 
-![ORM10-6](/images/jpa/ORM-JPA/ORM10-6.png)
+![ORM10-6](images/jpa/ORM-JPA/ORM10-6.png)
 
 - **설정한 방언에 따라서** 페이징 SQL을 만들어준다.(Oracle 등의 DB에서는 페이징 처리가 굉장히 복잡했다...)
 
@@ -391,15 +391,15 @@ SELECT m.username, m.age FROM Member m
 
 - ENUM : jpql.MemberType.ADMIN(패키지명 포함)
 
-  ![ORM10-8](/images/jpa/ORM-JPA/ORM10-8.png)
+  ![ORM10-8](images/jpa/ORM-JPA/ORM10-8.png)
 
   - 파라미터로 넣으면 좀 더 편하게 넣을 수 있다.
 
-    ![ORM10-9](/images/jpa/ORM-JPA/ORM10-9.png)
+    ![ORM10-9](images/jpa/ORM-JPA/ORM10-9.png)
 
 - 엔티티 타입 : TYPE(m) = Member (상속 관계에서 사용)
 
-  ![ORM10-7](/images/jpa/ORM-JPA/ORM10-7.png)
+  ![ORM10-7](images/jpa/ORM-JPA/ORM10-7.png)
 
   - Book은 ITEM을 상속받는다.
 
@@ -439,11 +439,11 @@ SELECT m.username, m.age FROM Member m
 
 - COALESCE : 하나씩 조회해서 null이 아니면 반환
 
-  ![ORM10-11](/images/jpa/ORM-JPA/ORM10-11.png)
+  ![ORM10-11](images/jpa/ORM-JPA/ORM10-11.png)
 
 - NULLIF : 두 값이 같으면 null 반환, 다르면 첫번째 값 반환  
 
-  ![ORM10-10](/images/jpa/ORM-JPA/ORM10-10.png)
+  ![ORM10-10](images/jpa/ORM-JPA/ORM10-10.png)
 
 <br><br>
 
@@ -479,16 +479,16 @@ SELECT m.username, m.age FROM Member m
 
   - 기본적인 함수들은 등록이 되어있다.
 
-    ![ORM10-12](/images/jpa/ORM-JPA/ORM10-12.png)
+    ![ORM10-12](images/jpa/ORM-JPA/ORM10-12.png)
 
   - 사용자 방언 생성
 
     - 사용하는 DB 방언을 상속받아서 만들고, 사용할 사용자정의함수를 등록한다.(생성자를 통해서)
 
-      ![ORM10-14](/images/jpa/ORM-JPA/ORM10-14.png)
+      ![ORM10-14](images/jpa/ORM-JPA/ORM10-14.png)
 
     - 생성한 방언을 사용한다고 설정한다.
 
-      ![ORM10-13](/images/jpa/ORM-JPA/ORM10-13.png)
+      ![ORM10-13](images/jpa/ORM-JPA/ORM10-13.png)
 
 <br><br>

@@ -3,7 +3,7 @@ title: 스프링 데이터 JPA01 - 관계형 데이터 베이스와 자바, ORM
 date: 2019-04-29 15:19:45
 tags: JPA
 ---
-![springf](/images/jpa_logo.png)
+![springf](images/jpa_logo.png)
 # 스프링 데이터 JPA(inflearn) - 백기선 
 ## 핵심 개념 이해
 
@@ -20,7 +20,7 @@ ORM이란 RDB 테이블을 객체지향적으로 사용하기 위한 기술을 �
     - 데이터의 종속성을 관계(relationship)로 표현하는 것이 관계형 데이터베이스의 특징
     
 - JDBC : 데이터 베이스와 자바의 연결고리
-    ![jpa](/images/jpa/jpa01-1.png)
+    ![jpa](images/jpa/jpa01-1.png)
     - 어플리케이션에 데이터를 영속화(persistence)하기 위함
 
 #### 기본 JDBC를 사용한 프로젝트 예제
@@ -68,7 +68,7 @@ ORM이란 RDB 테이블을 객체지향적으로 사용하기 위한 기술을 �
             ```
 
 - sql 작성 및 커넥션 사용
-    ![jpa](/images/jpa/jpa01-2.png)
+    ![jpa](images/jpa/jpa01-2.png)
 
 - 참고 : [postgresql 사용법](https://cyr9210.github.io/2019/04/15/Spring/springboot13/#PostgreSQL-%ED%8F%AC%EC%8A%A4%ED%8A%B8%EA%B7%B8%EB%A0%88%EC%8A%A4)  
 

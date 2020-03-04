@@ -3,7 +3,7 @@ title: 스프링 부트 운영16 - Actuator
 date: 2019-04-18 20:13:46
 tags: SpringBoot
 ---
-![springboot](/images/springboot_logo.png)
+![springboot](images/springboot_logo.png)
 # 스프릥 부트 개념과 활용16(inflearn) - 백기선 
 ## Spring boot
 
@@ -41,11 +41,11 @@ tags: SpringBoot
 #### JMX와 HTTP
  - JConsole 사용하기
     - terminal에서 jconsole
-    ![springboot](/images/springboot/springboot16-1.png)
+    ![springboot](images/springboot/springboot16-1.png)
     - https://docs.oracle.com/javase/tutorial/jmx/mbeans/
     - https://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html
  - VisualVM 사용하기
-    ![springboot](/images/springboot/springboot16-2.png)
+    ![springboot](images/springboot/springboot16-2.png)
     - [다운로드 사이트]https://visualvm.github.io/download.html
     - JConsole보다 가시적이고 다양한 플러그인을 지원한다.
     
@@ -72,7 +72,7 @@ tags: SpringBoot
 
     ```
     - @EnableAdminServer
-    ![springboot](/images/springboot/springboot16-3.png)
+    ![springboot](images/springboot/springboot16-3.png)
 
 - 클라이언트 설정 (운영될 프로젝트)
     - 의존성 추가
@@ -87,7 +87,7 @@ tags: SpringBoot
     - management.endpoints.web.exposure.include=*
     - 포트를 같은걸 쓸 수 없기 때문에 포트 변경해준다.
     - 설정했던 localhost:8080 접속 시, 아래와같은 화면이 나오고 아래 버튼 클릭 시, 기능들을 사용할 수 있다.
-     ![springboot](/images/springboot/springboot16-4.png)
+     ![springboot](images/springboot/springboot16-4.png)
     - 가시적으로 정보들을 확인할 수 있고, 운영중에 로거 변경등의 기능이 있다.
 
 ---

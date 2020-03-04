@@ -3,7 +3,7 @@ title: 스프링 MVC 동작 원리01 - 스프링 MVC 소개, 서블릿
 date: 2019-04-23 20:21:40
 tags: SpringWebMvc
 ---
-![springf](/images/springframwork-logo.png)
+![springf](images/springframwork-logo.png)
 # 스프링 웹 MVC(inflearn) - 백기선 
 ## Springframework
 
@@ -17,13 +17,13 @@ tags: SpringWebMvc
         - 도메인 객체 또는 DTO로 화면에 전달할 또는 화면에서 전달 받은 데이터를 담고 있는 객체.
         - 평범한 자바 객체 POJO
         - ex)
-            ![springmvc](/images/springwebmvc/springwebmvc01-2.png)
+            ![springmvc](images/springwebmvc/springwebmvc01-2.png)
     - V: 뷰
         - 데이터를 보여주는 역할. 다양한 형태로 보여줄 수 있다. HTML, JSON, XML, ...
         - HTML. JSP, 타임리프, ...
         - 스프링부트는 기본적으로 동적인 뷰를 resources - templates디렉토리에서 찾는다.
         - ex)
-            ![springmvc](/images/springwebmvc/springwebmvc01-3.png)
+            ![springmvc](images/springwebmvc/springwebmvc01-3.png)
     - C: 컨트롤러
         - 사용자 입력을 받아 모델 객체의 데이터를 변경하거나, 모델 객체를 뷰에 전달하는 역할.
         - 입력값 검증
@@ -31,7 +31,7 @@ tags: SpringWebMvc
         - 변경된 모델 객체를 뷰에 전달
         - @Controller 사용한 클래스
         - ex)
-            ![springmvc](/images/springwebmvc/springwebmvc01-1.png)
+            ![springmvc](images/springwebmvc/springwebmvc01-1.png)
 
 >**tip**
 - Java9는 적은수의 요소로 편리하게 Collections의 인스턴스를 생성 할 수 있는 새로운 정적 팩토리를 지원한다.
@@ -79,7 +79,7 @@ tags: SpringWebMvc
 - 우리가 만든 서블릿 어플리케이션은 직접 사용할 수 없으며, 반드시 서블릿 컨테이너를 이용하여 사용할 수 있다.
 
 - 서블릿 생명주기
-![springmvc](/images/springwebmvc/springwebmvc01-4.png)
+![springmvc](images/springwebmvc/springwebmvc01-4.png)
     - 서블릿 컨테이너가 서블릿 인스턴스의 init() 메소드를 호출하여 초기화 한다.
         - 최초 요청을 받았을 때 한번 초기화 하고 나면 그 다음 요청부터는 이 과정을 생략한다.
     - 서블릿이 초기화 된 다음부터 클라이언트의 요청을 처리할 수 있다. 각 요청은 별도의 쓰레드로 처리하고 이때 서블릿 인스턴스의 service() 메소드를 호출한다.
@@ -93,9 +93,9 @@ tags: SpringWebMvc
 #### 가장 기본적이고 원시적인 서블릿 어플리케이션 개발
 - 메이븐 프로젝트 생성
     - archetype 사용(메이븐이 만들어 놓은 프로젝트 틀)
-    ![springmvc](/images/springwebmvc/springwebmvc01-6.png)
+    ![springmvc](images/springwebmvc/springwebmvc01-6.png)
     - webapp archetype 사용
-    <img src="/images/springwebmvc/springwebmvc01-7.png" width="40%">
+    <img src="images/springwebmvc/springwebmvc01-7.png" width="40%">
     
 - Java Servlet API 의존성 추가
     ```
@@ -111,10 +111,10 @@ tags: SpringWebMvc
 
 - 톰캣 설치 및 추가
     - artifacts 는 war-exploded로 추가한다.
-        ![springmvc](/images/springwebmvc/springwebmvc01-9.png)
+        ![springmvc](images/springwebmvc/springwebmvc01-9.png)
         - war는 압축된것 exploded 풀린상태
     - web.xml에 서블릿 클래스 추가 및 매핑 추가
-    ![springmvc](/images/springwebmvc/springwebmvc01-8.png)
+    ![springmvc](images/springwebmvc/springwebmvc01-8.png)
 <br>
 
 ### 서블릿 리스너와 필터
@@ -129,27 +129,27 @@ tags: SpringWebMvc
 
 - 예제
     - 서블릿 리스너 생성
-        ![springmvc](/images/springwebmvc/springwebmvc01-11.png)
+        ![springmvc](images/springwebmvc/springwebmvc01-11.png)
         - implements ServletContextListener
     - web.xml에 리스너 등록
-        ![springmvc](/images/springwebmvc/springwebmvc01-12.png)
+        ![springmvc](images/springwebmvc/springwebmvc01-12.png)
     - 리스너 적용 및 결과
-        ![springmvc](/images/springwebmvc/springwebmvc01-13.png)
+        ![springmvc](images/springwebmvc/springwebmvc01-13.png)
      
 #### 서블릿 필터
 - 들어온 요청을 서블릿으로 보내고, 또 서블릿이 작성한 응답을 클라이언트로 보내기 전에 특별한 처리가 필요한 경우에 사용할 수 있다.
 - 체인 형태의 구조
-    <img src="/images/springwebmvc/springwebmvc01-10.png" width="40%">
+    <img src="images/springwebmvc/springwebmvc01-10.png" width="40%">
 
 - 예제
     - 서블릿 필터 생성
         - implements Filter(javax.servlet)
     - doFilter 설정
-    ![springmvc](/images/springwebmvc/springwebmvc01-15.png)
+    ![springmvc](images/springwebmvc/springwebmvc01-15.png)
         - 다음 필터 적용 또는 마지막 필터인 경우 서블릿은 연결해준다.
     
     - web.xml에 필터 등록 및 매핑
-    ![springmvc](/images/springwebmvc/springwebmvc01-14.png)
+    ![springmvc](images/springwebmvc/springwebmvc01-14.png)
         - 매핑은 servlet-name 또는 url-pattern 으로 매핑할 수 있다.
         - 리스너 - 필터 - 서블릿 순서로 init destroy는 역순
 <br>   

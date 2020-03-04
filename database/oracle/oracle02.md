@@ -5,7 +5,7 @@ tags: OracleDB
 
 ---
 
-![DB](/images/oracledb_logo.png)
+![DB](images/oracledb_logo.png)
 # KOSTA DAY21
 ## DataBase
 
@@ -15,7 +15,7 @@ tags: OracleDB
     - WHERE와 비슷하게 사용된다.
 
 #### 예제
-![DB](/images/database/DB02-01.png)
+![DB](images/database/DB02-01.png)
 - WHERE절 사용
 ```
 SELECT department_id, avg(salary) FROM employees
@@ -33,13 +33,13 @@ HAVING avg(salary) < 5000;
 
 ### 함수
 #### 문자함수
-![DB](/images/database/DB02-02.png)
+![DB](images/database/DB02-02.png)
 - LOWER() : 소문자 문자 변환
 - UPPER() : 대문자 문자 변환
 - SUBSTR(index, n) : 부분 문자열 추출(INDEX 1부터시작, 문자갯수)
 
 #### 예제
-![DB](/images/database/DB02-03.png)
+![DB](images/database/DB02-03.png)
 
 #### 숫자함수
 - MOD : 나머지값 변환
@@ -86,7 +86,7 @@ SELECT job_id, DECODE(job_id, ‘SH_CLERK’, ‘Sales Dept’,’SA_MAN’, ‘
 #### CASEWHEN
 WHEN뒤의 값을 THEN뒤의 값으로 변환
 - DECODE와 비슷한 역할을 한다.
-![DB](/images/database/DB02-04.png)
+![DB](images/database/DB02-04.png)
 ```
 SELECT job_id, 
 CASE job_id

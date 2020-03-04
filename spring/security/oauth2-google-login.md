@@ -3,7 +3,7 @@ title: oauth2 - 구글 로그인
 date: 2019-04-21 17:07:08
 tags: SpringSecurity
 ---
-![google_logo](/images/google_logo.png)
+![google_logo](images/google_logo.png)
 # Spring
 ## SpringSecurity-OAuth2
 
@@ -65,35 +65,35 @@ spring:
     - 기존 스프링부트 1점대에서는 properties파일 또는 yml 파일에서 security.basic.enabled: false로 변경할 수 있었다.
     
     - 2점대 부터는 아래와 WebConfigurerAdapter를 상속하는 @Configuration 클래스를 만들어서 설정해줘야한다.
-    ![oauth2](/images/springboot/oauth01-1.png)
+    ![oauth2](images/springboot/oauth01-1.png)
     - 모든 요청에 대하여 인증을 하지 않은것으로 설정한다.
-    ![oauth2](/images/springboot/oauth01-2.png)
+    ![oauth2](images/springboot/oauth01-2.png)
     
 #### index.html 호출 test 파일작성
 - 기본 루트로 접속 시, index.html을 호출하는지 확인하기 위해 테스트 클래스를 작성한다.
-![oauth2](/images/springboot/oauth01-3.png)
+![oauth2](images/springboot/oauth01-3.png)
 
 #### 구글 OAuth 등록
 - [구글 개발자 콘솔](http://console.developers.google.com)에 접속한다.
 - 프로젝트 생성 
-![oauth2](/images/springboot/oauth01-4.png)
+![oauth2](images/springboot/oauth01-4.png)
 
 - 프로젝트 정보 입력 및 생성
-![oauth2](/images/springboot/oauth01-5.png)
+![oauth2](images/springboot/oauth01-5.png)
 
 - 만들어진 프로젝트를 선택한다.
 
 - 사용자 인증 정보 페이지로 이동한다.
-![oauth2](/images/springboot/oauth01-6.png)
+![oauth2](images/springboot/oauth01-6.png)
 
 - OAuth 클라이언트 ID 생성
-![oauth2](/images/springboot/oauth01-7.png)
+![oauth2](images/springboot/oauth01-7.png)
 
 - OAuth 동의 화면에서 어플리케이션 이름을 설정해준다.
-![oauth2](/images/springboot/oauth01-8.png)
+![oauth2](images/springboot/oauth01-8.png)
 
 - 정보 입력
-![oauth2](/images/springboot/oauth01-9.png)
+![oauth2](images/springboot/oauth01-9.png)
     - 이름(어플리케이션 이름이 아니다.)
     - 테스트용으로 localhost 주소를 사용했다.
 
@@ -115,10 +115,10 @@ spring:
        ```
 
 - **git 인증정보가 노출 될 수 있기 때문에 별도의 yml파일을 생성하고 gitignore설정을 해준다.**
-    ![oauth2](/images/springboot/oauth01-10.png)
+    ![oauth2](images/springboot/oauth01-10.png)
     
 - 프로젝트 실행 시, 호출될 수 있도록 Application.java에 추가해준다.(**여러개일때는 , 필수**)
-![oauth2](/images/springboot/oauth01-11.png)
+![oauth2](images/springboot/oauth01-11.png)
 
 - SecurityConfig에 아래와 같은 설정을 해준다.
     ```
@@ -209,10 +209,10 @@ spring:
         - spring-cloud-security로 변경하는것도 가능하다고 한다.
 
 - 생성한 ssoFilter가 Security를 거치도록 설정한다.
-    ![oauth2](/images/springboot/oauth01-12.png)
+    ![oauth2](images/springboot/oauth01-12.png)
     - OAuthConfig에서 생성한 ssoFilter 추가
     - 테스트 파일
-        ![oauth2](/images/springboot/oauth01-13.png)
+        ![oauth2](images/springboot/oauth01-13.png)
         -  google.yml파일을 테스트 시에도 사용할 수 있도록 @TestPropertySource로 추가
         - OAuth2 로그인의 경우 인증코드(code)를 발급 받고, 발급 받은 인증코드로 AccessToken을 다시 발급 받는 과정이 있어 중간 리다이렉션이 발생합니다.
             - 이런 과정들로 login URL 테스트 결과를 확인하기 어려워 리다이렉션을 방지 하였다.
@@ -223,10 +223,10 @@ spring:
              
 #### 브라우저에서 확인
 - localhost:8080/login
-![oauth2](/images/springboot/oauth01-14.png)
+![oauth2](images/springboot/oauth01-14.png)
 
 - [구글계정으로 가입된 서비스](https://myaccount.google.com/permissions)에서 확인 할 수 있다.
-![oauth2](/images/springboot/oauth01-15.png)
+![oauth2](images/springboot/oauth01-15.png)
 
 ### 로그인 세션 관리
 - OAuth2를 사용하는것은 사용자 인증 및 허가된 정보를 가져오는것
@@ -256,7 +256,7 @@ compile('org.springframework.boot:spring-boot-starter-jdbc')
 - 세션의 저장을 DB에 하기 위해서 세션 테이블이 생성되어야한다.
     - SpringSession에서 어떠한 형태로 쿼리문을 사용하는지 알려준다.
     - 맥/intelij 기준으로 , Command + Shift + o schema-검색하면 아래와 같이 DBMS에 맞춰 스키마 쿼리를 확인할 수 있다.
-    ![oauth2](/images/springboot/oauth01-16.png)
+    ![oauth2](images/springboot/oauth01-16.png)
     
     - 복사하여 새로 작성한다.
         - resources 아래 schema-h2.sql
@@ -269,7 +269,7 @@ spring:
 ```
 #### JdbcSession 옵션 활성화
 - @EnableJdbcHttpSession만 사용하면 된다.
-    ![oauth2](/images/springboot/oauth01-17.png)
+    ![oauth2](images/springboot/oauth01-17.png)
     
 #### SuccessHandler 생성
 - AuthenticationSuccessHandler를 implements하는 클래스 생성
@@ -304,26 +304,26 @@ spring:
     - 이 SuccessHandler는 로그인 유저의 기본적인 정보를 LOGIN_USER라는 키값에 담는다.
     
 - SessionConstants.class 생성
-![oauth2](/images/springboot/oauth01-18.png)
+![oauth2](images/springboot/oauth01-18.png)
 - 리다이렉트 되는 "/me" 컨트롤러
-![oauth2](/images/springboot/oauth01-19.png)
+![oauth2](images/springboot/oauth01-19.png)
 - GoogleUser.class 생성
-![oauth2](/images/springboot/oauth01-20.png)
+![oauth2](images/springboot/oauth01-20.png)
     - ObjectMapper가 필드를 명확히 인식하기 위해 @JsonProperty로 필드명을 지정
     - @JsonIgnoreProperties(ignoreUnknown = true) : 멤버변수로 지정되지 않은 필드는 무시
     - Serializable
     
 #### SuccessHandler 적용
 - 완성된 SuccessHandler를 필터에 적용시킨다.
-    ![oauth2](/images/springboot/oauth01-21.png)
+    ![oauth2](images/springboot/oauth01-21.png)
 
 #### 결과
 - localhost:8080/me 접속
     - 인증 오류 403 발생
-    ![oauth2](/images/springboot/oauth01-22.png)
+    ![oauth2](images/springboot/oauth01-22.png)
 - localhost:8080/login 접속 및 google 로그인
     - 유저 정보 확인
-    ![oauth2](/images/springboot/oauth01-23.png)
+    ![oauth2](images/springboot/oauth01-23.png)
 
 ---
 많은 자료들이 스프링부트 1점대를 기준으로 작성되어 작업이 생각보다 오래걸렸습니다..😂

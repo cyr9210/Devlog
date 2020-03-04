@@ -3,7 +3,7 @@ title: 스프링 부트 활용15 - 스프링 REST 클라이언트
 date: 2019-04-17 16:27:48
 tags: SpringBoot
 ---
-![springboot](/images/springboot_logo.png)
+![springboot](images/springboot_logo.png)
 # 스프릥 부트 개념과 활용15(inflearn) - 백기선 
 ## Spring boot
 
@@ -29,7 +29,7 @@ tags: SpringBoot
 - 비교 테스트
     - 사정 동일한 작업
         - RestController 생성 및 매핑
-        ![springboot](/images/springboot/springboot15-2.png)
+        ![springboot](images/springboot/springboot15-2.png)
             - hello → 스레드 타임슬립 5초
             - world → 스레드 타임슬립 3초
     - RestTemplate
@@ -37,7 +37,7 @@ tags: SpringBoot
         - builder를 통해 build 한다.
         - 빌드된 RestTemplate를 통해 실행한다.
         - 결과
-        ![springboot](/images/springboot/springboot15-1.png)
+        ![springboot](images/springboot/springboot15-1.png)
             1. 5초 뒤 hello 출력
             2. 3초 뒤 world 출력
             3. stopwatch가 꺼진다.
@@ -46,7 +46,7 @@ tags: SpringBoot
         - builder를 통해 build 한다.
         - Mono를 세팅하고 subscribe() 한다.
         - 결과
-        ![springboot](/images/springboot/springboot15-3.png)
+        ![springboot](images/springboot/springboot15-3.png)
             1. stopwatch 꺼진다.
             2. world 출력
             3. hello 출력
@@ -73,18 +73,18 @@ tags: SpringBoot
         </dependency>
         ```
         - RestTemplate.setRequestFactory();
-        ![springboot](/images/springboot/springboot15-6.png)
+        ![springboot](images/springboot/springboot15-6.png)
         
 - WebClient
     - 기본으로 Reactor Netty의 HTTP 클라이언트 사용.
     - 커스터마이징
         - 로컬 커스터마이징
             - 빌더 전에 baseUrl등 여러 설정이 가능하다.
-            ![springboot](/images/springboot/springboot15-4.png)
+            ![springboot](images/springboot/springboot15-4.png)
         - 글로벌 커스터마이징
             - 전역적으로 사용하기 위해서..
             - WebClientCustomizer
-                ![springboot](/images/springboot/springboot15-5.png)
+                ![springboot](images/springboot/springboot15-5.png)
             - 빌더 자체를 빈 재정의
         
 

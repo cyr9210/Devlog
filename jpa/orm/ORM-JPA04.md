@@ -97,7 +97,7 @@ tags: JPA
 
 - unique의 경우, Constraints 이름은 줄 수 없다. 
 
-  ![ORM03-21](/images/jpa/ORM-JPA/ORM03-21.png)
+  ![ORM03-21](images/jpa/ORM-JPA/ORM03-21.png)
 
 - Constarints 이름을 주고 싶다면 @Table(uniqueConstraints)를 사용하자.
 
@@ -114,7 +114,7 @@ tags: JPA
 #### @Temporal
 
 - 날짜 타입을 매핑할 때 사용
-- 자바8에 **LocalDateTime**, **LocalDate** 가 생겼기 때문에, 최근에는 거의 사용하지 않는다.	![ORM03-23](/images/jpa/ORM-JPA/ORM03-23.png)
+- 자바8에 **LocalDateTime**, **LocalDate** 가 생겼기 때문에, 최근에는 거의 사용하지 않는다.	![ORM03-23](images/jpa/ORM-JPA/ORM03-23.png)
 
   - 최신 하이버네이트 버전에서 지원하고 있다.
 
@@ -183,7 +183,7 @@ private String id;
   - DB에 아이디값이 null로 날라왔을 때, DB가 ID를 생성한다.
   - 생성한 ID값을 리턴받아서 영속성 컨텍스트에 넣어준다.
 
-  ![ORM03-20](/images/jpa/ORM-JPA/ORM03-20.png)
+  ![ORM03-20](images/jpa/ORM-JPA/ORM03-20.png)
 
 #### SEQUENCE 전략
 
@@ -199,13 +199,13 @@ private Long id;
 
 - Sequence를 DB에 요청해서 먼저 받고 영속성 컨텍스트에 저장 -> 트랜잭션 commit 시점에 쿼리를 호출
 
-  ![ORM03-19](/images/jpa/ORM-JPA/ORM03-19.png)
+  ![ORM03-19](images/jpa/ORM-JPA/ORM03-19.png)
 
   - DB와 너무 많은 커넥션을 맺는것 아닌가..? 성능에 문제가 있지 않나?
 
     - **allocationSize만큼 DB의 시퀀스값으 올려두고 하나씩 사용한다.** (밑에 예는 allocationSize = 2)
 
-      ![ORM03-24](/images/jpa/ORM-JPA/ORM03-24.png)
+      ![ORM03-24](images/jpa/ORM-JPA/ORM03-24.png)
 
       - 첫번째 시퀀스 1을 더미처럼 호출한 후, 시퀀스를 2증가시킨 3까지 증가시키는 콜을 한다. (사용값 : 1, DB 시퀀스 현재값 : 3)
       - 2번째 엔티티를 persist할 때, 미리 증가시켰던 시퀀스 범위 안으로 시퀀스 2를 사용한다. (사용값 : 2, DB 시퀀스 현재값 : 3)
@@ -266,7 +266,7 @@ public class Member {
 
 - pikColumName 컬럼 이름
 
-  ![ORM03-18](/images/jpa/ORM-JPA/ORM03-18.png)
+  ![ORM03-18](images/jpa/ORM-JPA/ORM03-18.png)
 
 - @TableGenerator 속성
 

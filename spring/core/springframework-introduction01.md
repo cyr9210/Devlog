@@ -4,7 +4,7 @@ date: 2019-03-05 02:19:06
 tags: Springframework
 ---
 
-![springf](/images/springframwork-logo.png)
+![springf](images/springframwork-logo.png)
 # 스프링 프레임워크 입문01(inflearn) - 백기선 
 ## Springframework
 
@@ -75,7 +75,7 @@ String young
 - @Inject
 
 > **@Autowired 와 Inject의 차이점**
-![spring](/images/springi/springi01-01.png)@Autowired와 @Inject의 경우에도 @Qualifier 어노테이션을 사용하면, 타입 이외의 방법으로도 연결 할 수 있다.
+![spring](images/springi/springi01-01.png)@Autowired와 @Inject의 경우에도 @Qualifier 어노테이션을 사용하면, 타입 이외의 방법으로도 연결 할 수 있다.
 ```
 @Autowired
 @Qualifier("chicken")

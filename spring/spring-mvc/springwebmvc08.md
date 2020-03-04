@@ -89,7 +89,7 @@ tags: SpringWebMvc
 
 ### HTTP 요청 맵핑하기 - URI패턴 맵핑
 #### URI, URL, URN
-![springwebmvc](/images/springwebmvc/springwebmvc08-1.png)
+![springwebmvc](images/springwebmvc/springwebmvc08-1.png)
 - [참고](https://stackoverflow.com/questions/176264/what-is-the-difference-between-a-uri-a-url-and-a-urn)
 
 #### 요청 맵팽하기
@@ -98,12 +98,12 @@ tags: SpringWebMvc
     - \* : 여러 글자 (“/author/*” => “/author/keesun”)
     - \*\* : 여러 패스 (“/author/** => “/author/keesun/book”)
 - @RequestMapping은 클래스에도 선언이 가능하며, 조합도 가능하다.
-    ![springwebmvc](/images/springwebmvc/springwebmvc08-2.png)
+    ![springwebmvc](images/springwebmvc/springwebmvc08-2.png)
 - 정규표현식 맵핑도 가능하다. (띄어쓰기 주의)
-    ![springwebmvc](/images/springwebmvc/springwebmvc08-3.png)
+    ![springwebmvc](images/springwebmvc/springwebmvc08-3.png)
 - 패턴이 중복되는 경우
     - 가장 구체적으로 맵핑되는 핸들러를 선택한다.
-    ![springwebmvc](/images/springwebmvc/springwebmvc08-4.png)
+    ![springwebmvc](images/springwebmvc/springwebmvc08-4.png)
 
 - URI 확장자 맵핑 지원
     - 스프링 mvc는 기본적으로 지원한다.
@@ -125,14 +125,14 @@ tags: SpringWebMvc
 
 ### HTTP 요청 맵핑하기 - 미디어 타입 맵핑
 - 특정한 타입의 데이터를 담고 있는 요청만 처리하는 핸들러
-    ![springwebmvc](/images/springwebmvc/springwebmvc08-5.png)
+    ![springwebmvc](images/springwebmvc/springwebmvc08-5.png)
     - @RequestMapping(consumes=MediaType.APPLICATION_JSON_UTF8_VALUE)
         - 문자열을 입력하는 대신 MediaType을 사용하면 상수를 (IDE에서) 자동 완성으로 사용할 수있다.
         - MediaType.APPLICATION_JSON_UTF8_VALUE은 문자열로 직접 넣어줄 수 있으나 type safe하지 않다.
     - Content-Type 헤더로 필터링
     - 매치 되는 않는 경우에 415 Unsupported Media Type 응답
 - 특정한 타입의 응답을 만드는 핸들러
-    ![springwebmvc](/images/springwebmvc/springwebmvc08-6.png)
+    ![springwebmvc](images/springwebmvc/springwebmvc08-6.png)
     - @RequestMapping(produces=”application/json”)
     - Accept 헤더로 필터링 (하지만 살짝... 오묘함)
     - 매치 되지 않는 경우에 406 Not Acceptable 응답
@@ -163,12 +163,12 @@ tags: SpringWebMvc
 - OPTIONS
 
 #### HEAD
-![springwebmvc](/images/springwebmvc/springwebmvc08-7.png)
+![springwebmvc](images/springwebmvc/springwebmvc08-7.png)
 - GET 요청과 동일하지만 **응답 본문을 받아오지 않고 응답 헤더**만 받아온다.
     
 
 #### OPTIONS
-![springwebmvc](/images/springwebmvc/springwebmvc08-8.png)
+![springwebmvc](images/springwebmvc/springwebmvc08-8.png)
 - 사용할 수 있는 HTTP Method 제공
 - 서버 또는 특정 리소스가 제공하는 기능을 확인할 수 있다.
 - 서버는 Allow 응답 헤더에 사용할 수 있는 HTTP Method 목록을 제공해야 한다.

@@ -4,7 +4,7 @@ date: 2019-03-14 09:59:13
 tags: Algorithm
 ---
 
-![Java](/images/algorism_logo.png)
+![Java](images/algorism_logo.png)
 # Study
 ## Algorism
 
@@ -13,7 +13,7 @@ tags: Algorithm
 
 알고리즘은 아래 교재로 진행할 예정입니다. 🙂<br>
 
-<img src="/images/doit_algorithm.jpg" width="40%">
+<img src="images/doit_algorithm.jpg" width="40%">
 
 ***
 
@@ -59,7 +59,7 @@ public void max(){
 3. c값이 max보다 크면 max에 c값을 넣는다.
 
 #### 결과
-![doital](/images/doital/doital01-01.png)
+![doital](images/doital/doital01-01.png)
 
 #### 학습내용
 - 순차적 구조 : 위와 같이 세 문장이 아래로 나란히 있을 때, 순차적으로 실행되는 구조
@@ -82,31 +82,31 @@ public void judgeSign(){
 }
 ```
 ### 결과
-![doital](/images/doital/doital01-02.png)
+![doital](images/doital/doital01-02.png)
 <br><br>
 
 ### 순서도의 기호
 #### 프로그램 순서도
-<img src="/images/doital/doital01-03.png" width="20%">
+<img src="images/doital/doital01-03.png" width="20%">
 - 데이터 : 데이터의 입력과 출력
 
-<img src="/images/doital/doital01-04.png" width="20%">
+<img src="images/doital/doital01-04.png" width="20%">
 - 처리 : 연산집합이나 연산군의 실행
 
-<img src="/images/doital/doital01-05.png" width="20%">
+<img src="images/doital/doital01-05.png" width="20%">
 - 미리 정의한 처리 : 서브루틴 및 모듈 등 다른곳에서 이미 정의한 하나 이상의 연산 또는 명령어들로 이루어진 처리
 
-<img src="/images/doital/doital01-06.png" width="20%">
+<img src="images/doital/doital01-06.png" width="20%">
 - 판단 : 하나의 입구와 하나 이상의 출구가 있고, 정의한 조건을 평가하여 하나의 출구를 선택하는 판단기능
 
-<img src="/images/doital/doital01-07.png" width="20%">
+<img src="images/doital/doital01-07.png" width="20%">
 - 루프 범위 : 루프의 시작과 종료
     - 루프의 이름 사용(시작과 종료에 같은값)
     - 시작 또는 종료 기호에 초깃값, 증갓값, 종룟값 표기
 - 선 : 제어의 흐름
     - 흐름의 방향을 분명히 나타내고자 할 때, 화살표를 붙인다. 
 
-<img src="/images/doital/doital01-08.png" width="20%">
+<img src="images/doital/doital01-08.png" width="20%">
 - 단말 : 외부환경으로 나가거나, 들어오는것을 나타냄
     - ex)프로그램의 시작과 종료
 <br><br>
@@ -156,7 +156,7 @@ public void judgeSign(){
 ```
 
 #### 결과
-![doital](/images/doital/doital01-09.png)
+![doital](images/doital/doital01-09.png)
 <br><br>
  
 ### 구조적 프로그래밍
@@ -182,7 +182,7 @@ for (int i = 2; i < 10; i++) {
 }
 ```
 #### 결과
-![doital](/images/doital/doital01-10.png)
+![doital](images/doital/doital01-10.png)
 <br><br>
 
 ### 직각 이등변 삼각형 출력
@@ -207,6 +207,6 @@ for (int i = 2; i < 10; i++) {
 ```
 
 #### 결과
-![doital](/images/doital/doital01-11.png)
+![doital](images/doital/doital01-11.png)
 <br><br>
 

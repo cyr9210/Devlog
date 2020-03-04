@@ -5,7 +5,7 @@ tags: Seminar
 ---
 # Git/GitHub 입문 (oss개발자포럼 세미나)
 ## Git
-![ossgit](/images/git/ossgit02.png)
+![ossgit](images/git/ossgit02.png)
 버젼관리 시스템인 Git에 대하여 생활코딩 '지옥에서 온 git'을 수강하며, 공부를 하던중...   
 oss개발자 포럼 커뮤니티와 국민대학교가 주관하는 'Git과 Github을 이용한 버전관리 입문'이라는 주제로 강연을 진행하단다는 정보를 알게되었습니다.
 해당 커뮤니티에 대한 궁금함과 동시에 오프라인으로 강의를 들어보는게 나쁘지 않을것 같아서 신청하게 되었습니다.🙂
@@ -30,26 +30,26 @@ oss개발자 포럼 커뮤니티와 국민대학교가 주관하는 'Git과 Gith
 <br><br>
 
 ### 버전 관리 시스템
-![gitoss](/images/git/ossgit03.png)
+![gitoss](images/git/ossgit03.png)
 소스코드의 변경사항을 체계적으로 추적하고 관리, 통제하는 시스템
 #### 버전 관리 시스템 - VCS(Version Control System)
-![gitoss](/images/git/ossgit04.png)
+![gitoss](images/git/ossgit04.png)
 - 로컬에서 직접 모든 자원을 관리
 - USB, 메일 첨부파일
        
 #### 집중형 버전 관리 시스템 - CVCS(Centralized VCS)
-![gitoss](/images/git/ossgit05.png)
+![gitoss](images/git/ossgit05.png)
 - 하나의서버를두고서버를중심으로모든자원을관리 
 - SVN - https://subversion.apache.org/
      
 #### 분산형 버전 관리 시스템 - DVCS(Distributed VCS)
-![gitoss](/images/git/ossgit06.png)
+![gitoss](images/git/ossgit06.png)
 - CVCS처럼 서버를 두고 서버에서 자원 관리를 하지만 로컬에서도 자원 관리를 함
 - Git - https://github.com/git/git 
 <br><br>
 
 ### Git / Github
-![gitoss](/images/git/ossgit07.png)
+![gitoss](images/git/ossgit07.png)
 - Git : 버전관리 시스템
 - Github : Git 호스팅 사이트
 > 호스팅 : 웹의 공간을 빌려주거나 빌리는것
@@ -79,18 +79,18 @@ GitKraken
 
 #### 버전관리를 어떻게할까?
 - CVCS
-    - ![gitoss](/images/git/ossgit08.png)
-    - ![gitoss](/images/git/ossgit09.png)
+    - ![gitoss](images/git/ossgit08.png)
+    - ![gitoss](images/git/ossgit09.png)
 - DVCS
-    - ![gitoss](/images/git/ossgit10.png)
-    - ![gitoss](/images/git/ossgit11.png)
+    - ![gitoss](images/git/ossgit10.png)
+    - ![gitoss](images/git/ossgit11.png)
 
 - Git(DVCS)
-    - ![gitoss](/images/git/ossgit12.png)
+    - ![gitoss](images/git/ossgit12.png)
 
 #### Git의 흐름(workflow)
-![gitoss](/images/git/ossgit13.png)
-![gitoss](/images/git/ossgit14.png)
+![gitoss](images/git/ossgit13.png)
+![gitoss](images/git/ossgit14.png)
 <br><br>
 
 ### GitHub 둘러보기
@@ -98,7 +98,7 @@ GitKraken
 - Pull Request : 자신이 변경한 코드를 상대방의 리포지토리에 넣고 싶을 때 사용하는 기능
     - git Lab에서는 merge request라고 부른다.
     - Pull Request에도 순서가 있다.
-    ![gitoss](/images/git/ossgit15.png)
+    ![gitoss](images/git/ossgit15.png)
 - git fetch : 리포지토리에서 변경된 기록을 가져오되 merge는 하지 않음
 - git pull : 리포지토리에서 변경된 기록을 가져오고 merge도 바로 이루어짐
 <br><br>

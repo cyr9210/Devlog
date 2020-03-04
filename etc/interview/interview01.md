@@ -91,7 +91,7 @@ http만 잘 따라도 Uniform Interface조건을 제외한 나머지 조건은 �
 <br><br>
 
 ### MVC
-![mvc](/images/interview/interview01.png)
+![mvc](images/interview/interview01.png)
 <br>
 
 ## 자료구조

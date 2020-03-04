@@ -3,7 +3,7 @@ title: 스프링 부트 시작하기01
 date: 2019-03-28 13:29:41
 tags: SpringBoot
 ---
-![springboot](/images/springboot_logo.png)
+![springboot](images/springboot_logo.png)
 # 스프릥 부트 개념과 활용01(inflearn) - 백기선 
 ## Spring boot
 
@@ -34,34 +34,34 @@ tags: SpringBoot
 
 #### 프로젝트 생성
 - 프로젝트를 생성한다. (메이븐/인텔리제이 사용)
-    ![springboot](/images/springboot/springboot01-1.png)
+    ![springboot](images/springboot/springboot01-1.png)
       
-    ![springboot](/images/springboot/springboot01-2.png)
+    ![springboot](images/springboot/springboot01-2.png)
         
-    ![springboot](/images/springboot/springboot01-3.png)
+    ![springboot](images/springboot/springboot01-3.png)
     - GroupId는 보통 패키지명
     - 생성위치 설정
     
 
 - spring boot 레퍼런스 문서를 보고 메이븐 파일을 설정한다.
-![springboot](/images/springboot/springboot01-4.png)
+![springboot](images/springboot/springboot01-4.png)
     - maven간에 프로젝트 계층구조를 만들수 있다.
     부모 프로젝트로 spring-boot-starter-parent로 설정해준다.
     - spring-boot-starter-web을 의존성 추가한다.
     - 빌드 플러그인에 spring-boot-maven을 추가한다.
 
 - 패키지 및 클래스 파일 만든 후, 메인 실행 메소드 생성
-![springboot](/images/springboot/springboot01-4.png)
+![springboot](images/springboot/springboot01-4.png)
     
 - 실행 시, 스프링 부트 내장 톰캣이 실행된다. (기본 포트 : 8080)
-![springboot](/images/springboot/springboot01-6.png)
+![springboot](images/springboot/springboot01-6.png)
 
 #### 여러가지 스프링 부트 생성방법
 - 인텔리제이 Spring Initializr
-![springboot](/images/springboot/springboot01-7.png)
+![springboot](images/springboot/springboot01-7.png)
 
 - [start.spring.io](https://start.spring.io/) 사용
-![springboot](/images/springboot/springboot01-8.png)
+![springboot](images/springboot/springboot01-8.png)
 
 #### 스프링 부트 구조
 - 이븐 기본 프로젝트 구조와 동일
@@ -73,7 +73,7 @@ tags: SpringBoot
     ('classpath:text.txt'일 경우, resource 디렉토리 바로 아래 text.txt가 있다.)
 
 - 메인 애플리케이션 위치
-    <image src="/images/springboot/springboot01-9.png" width="40%"/>
+    <image src="images/springboot/springboot01-9.png" width="40%"/>
     - 기본패키지
     - @SpringBootApplication이 @ComponentScan을 포함하여 해당 패키지 및 하위 패키지들을 스캔한다.
     - 만약 java 하위에 패키지를 생성하지 않고 만들게 되면 모든 패키지를 스캔하기 때문에 좋지 않다.

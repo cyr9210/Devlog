@@ -4,7 +4,7 @@ date: 2018-11-21 15:29:57
 tags: Interview
 ---
 
-![Java](/images/javaimage.png)
+![Java](images/javaimage.png)
 # KOSTA DAY17
 ## Java
 
@@ -51,9 +51,9 @@ linkedlist : 전후 노드의 주소값과 연결되어저장 리스트 추가 �
 ### KOSTA 필기시험
 전일 Java 진도를 모두 끝내 금일 오전수업은 필기시험을 진행하였다.
 
-![Java](/images/java/java16-01.png)
-![Java](/images/java/java16-02.png)
-![Java](/images/java/java16-03.png)
-![Java](/images/java/java16-04.png)
+![Java](images/java/java16-01.png)
+![Java](images/java/java16-02.png)
+![Java](images/java/java16-03.png)
+![Java](images/java/java16-04.png)
 <br><br>
 

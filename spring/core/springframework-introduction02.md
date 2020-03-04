@@ -3,7 +3,7 @@ title: 스프링 프레임워크 입문02 - AOP
 date: 2019-03-08 14:03:12
 tags: Springframework
 ---
-![springf](/images/springframwork-logo.png)
+![springf](images/springframwork-logo.png)
 # 스프링 프레임워크 입문02(inflearn) - 백기선 
 ## Springframework
 
@@ -63,12 +63,12 @@ public class LogAspect {
 ##### @Transactional
 [PlatformTransactionManager](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html)
 
-![spring](/images/springi/springi02-01.png)
+![spring](images/springi/springi02-01.png)
 - 구현체들중 하나는 또는 다수는 빈으로 등록이 된다.(Spring boot의 자동설정에 의해서)
 - 트랜잭션을 처리하는 Aspect는 빈의 바뀌더라도 Aspect는 변화하지 않으므로, 코드의 변경이 없다.
 
 ##### @Controller | @RequestMapping
-![spring](/images/springi/springi02-02.png)
+![spring](images/springi/springi02-02.png)
 - 해당코드만 봐서는 Servlet을 사용하는 것인지, Reactive를 사용하는 것인지 판단이 불가능하다. 즉, 추상화 (의존성을 봐야한다.)
 - 추상화 되있으므로 기술이 변경되어도 대부분의 코드들은 변경없이 사용이 가능하다.
 <br><br>

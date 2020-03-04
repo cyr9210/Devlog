@@ -4,7 +4,7 @@ date: 2018-11-20 14:27:17
 tags: Algorithm
 ---
 
-![Java](/images/algorism_logo.png)
+![Java](images/algorism_logo.png)
 # KOSTA DAY16
 ## Algorism
 
@@ -38,7 +38,7 @@ tags: Algorithm
 - 4 / 20
 
 ##### 작성답안
-![Java](/images/algorism/algorism01-01.png)
+![Java](images/algorism/algorism01-01.png)
 <br><br>
 
 ### DFS(깊이우선탐색) 알고리즘
@@ -50,7 +50,7 @@ tags: Algorithm
 - 단순검색 속도 자체는 BFS에 비해서 느리다.
 - 모든 노드를 방문하고자 하는경우에 이방법을 선택
 #### 예제
-![Java](/images/algorism/algorism01-02.png)
+![Java](images/algorism/algorism01-02.png)
 
 #### 문제
 1번부터 N번까지 번호가 매겨져 있는 도시가 있고, 도시를 사이에 길이 있는 경우에만 이동할 수 있다.   
@@ -98,7 +98,7 @@ tags: Algorithm
 
 #### 강사님 해답
 못풀었다.. 강사님 작성 답안은 아래와 같다.
-![Java](/images/algorism/algorism01-03.png)
+![Java](images/algorism/algorism01-03.png)
 <br><br>
 
 

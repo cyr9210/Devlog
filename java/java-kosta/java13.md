@@ -3,7 +3,7 @@ title: 배열정렬, 스트림
 date: 2018-11-15 11:20:17
 tags: Java
 ---
-![Java](/images/javaimage.png)
+![Java](images/javaimage.png)
 # KOSTA DAY13
 ## Java
 
@@ -79,14 +79,14 @@ Collections.sort(list, Comparator<person>(){
 
 #### 예제
 - reader
-![Java](/images/java/java13-02.png)
+![Java](images/java/java13-02.png)
 
 - writer
-![Java](/images/java/java13-03.png)
+![Java](images/java/java13-03.png)
 
 - Bufferd
-![Java](/images/java/java13-04.png)
+![Java](images/java/java13-04.png)
 
 - Serializable
-![Java](/images/java/java13-05.png)
-![Java](/images/java/java13-06.png)
+![Java](images/java/java13-05.png)
+![Java](images/java/java13-06.png)

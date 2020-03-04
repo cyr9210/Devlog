@@ -3,14 +3,14 @@ title: KOSTA 필기시험(Oracle DB)
 date: 2018-12-04 21:09:07
 tags: Interview
 ---
-![DB](/images/oracledb_logo.png)
+![DB](images/oracledb_logo.png)
 # KOSTA DAY28
 ## DataBase
 
 DB진도를 마치며 Java때와 마찬가지로 필기시험을 진행하였다.
 
 ### 필기시험
-![DB](/images/database/OracleTest01.png)
+![DB](images/database/OracleTest01.png)
 - 체크를 한 부분이 틀리거나, 정답은 썼지만 확실하지 않은 부분
 
 #### 정리

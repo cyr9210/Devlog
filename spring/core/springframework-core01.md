@@ -3,7 +3,7 @@ title: 스프링 핵심기술01 - IoC 컨테이너와 빈
 date: 2019-03-20 16:36:43
 tags: Springframework
 ---
-![springf](/images/springframwork-logo.png)
+![springf](images/springframwork-logo.png)
 # 스프링 프레임워크 핵심기술01(inflearn) - 백기선 
 ## Springframework
 
@@ -54,14 +54,14 @@ BeanFactory를 상속받는다. 즉, BeanFactory의 기능을 하면서 추가�
 - ClassPathXmlApplicationContext(XML)
 - **AnnotationConfigApplicationContext(Java)**
 최근에는 아래와 같이 Java형식을 사용한다.
-![springcore](/images/springc/springcore01-01.png)
+![springcore](images/springc/springcore01-01.png)
 
 
 #### ComponentScan
 Annotation이 붙은 객체를 빈 등록
 - xml 설정 → context:componen-scan
 - Java → @ComponentScan
-![springcore](/images/springc/springcore01-03.png)![springcore](/images/springc/springcore01-04.png)
+![springcore](images/springc/springcore01-03.png)![springcore](images/springc/springcore01-04.png)
 <br>
 
 ### Autowired
@@ -72,32 +72,32 @@ Annotation이 붙은 객체를 빈 등록
     - 필드
 
 #### 생성자
-![springcore](/images/springc/springcore01-05.png)
+![springcore](images/springc/springcore01-05.png)
 - 해당 타입의 빈이 한개인 경우
     - 정상
 - 해당 타입의 빈이 없는 경우
     - 에러발생
 - 해당 타입의 빈이 여러 개인 경우
     - @Primary 사용하면 여러 개인경우 해당 빈을 주입
-![springcore](/images/springc/springcore01-08.png)
+![springcore](images/springc/springcore01-08.png)
 
 #### setter, 필드
-![springcore](/images/springc/springcore01-06.png)
+![springcore](images/springc/springcore01-06.png)
 - 해당 타입의 빈이 한개인 경우
     - 정상
 - 해당 타입의 빈이 없는경우
     - required = false 설정 시, 없을경우 의존성을 주입하지 않는다.
-![springcore](/images/springc/springcore01-07.png)
+![springcore](images/springc/springcore01-07.png)
 
 - 해당 타입의 빈이 여러 개인 경우
     - @Primary 사용하면 여러 개인경우 해당 빈을 주입
     - @Qualifier 사용하여 빈이름 지정
-    ![springcore](/images/springc/springcore01-09.png)
+    ![springcore](images/springc/springcore01-09.png)
     **Qualifier을 사용으로 해결 할 수 있지만, @Primary를 쓰는것을 추천한다.**
 
 #### 해당 타입의 빈을 모두 받고 싶을때
 - List<>로 받는다.
-![springcore](/images/springc/springcore01-10.png)
+![springcore](images/springc/springcore01-10.png)
 
 #### 동작 원리
  - 라이프사이클에 의해 동작
@@ -110,7 +110,7 @@ Annotation이 붙은 객체를 빈 등록
 ### @Component와 ComponentScan
 #### 컨포넌트 스캔 주요 기능
 - 스캔 위치 설정(basePackage, basePackageClasses를 통해 위치 설정)
-![springcore](/images/springc/springcore01-11.png)
+![springcore](images/springc/springcore01-11.png)
 Myservice는 @Service를 사용했지만 스캔 범위에서 벗어나기 때문에 빈으로 등록되지 않는다.
 
 - 필터: 어떤 애노테이션을 스캔 할지 또는 하지 않을지 
@@ -141,7 +141,7 @@ Myservice는 @Service를 사용했지만 스캔 범위에서 벗어나기 때문
  }  
 ```
 
-![springcore](/images/springc/springcore01-12.png)
+![springcore](images/springc/springcore01-12.png)
 - ComponentScan 범위 밖이지만 위와같은 방법으로 빈을 등록해줬기 때문에 빈으로 등록이된 것을 볼 수 있다.
 <br><br>
 
@@ -153,7 +153,7 @@ Myservice는 @Service를 사용했지만 스캔 범위에서 벗어나기 때문
     - ApplicationContext 초기 구동시 인스턴스 생성
     
 - 프로토 타입
-    ![springcore](/images/springc/springcore01-14.png)
+    ![springcore](images/springc/springcore01-14.png)
     - @Scope를 사용하여 설정
     - Request
     - Session
@@ -165,25 +165,25 @@ Myservice는 @Service를 사용했지만 스캔 범위에서 벗어나기 때문
     - 프로토타입 빈이 업데이트되지 않는다. (싱글톤처럼 계속 같은 값)
     - 업데이트 
         - scoped-proxy
-        ![springcore](/images/springc/springcore01-13.png)
+        ![springcore](images/springc/springcore01-13.png)
         - Object-Provider
 
 #### 예제
 - 싱글톤 및 프로토타입 
-![springcore](/images/springc/springcore01-15.png)
+![springcore](images/springc/springcore01-15.png)
 
 - 싱글톤 빈이 프로토타입을 참조할 때
-![springcore](/images/springc/springcore01-16.png)
+![springcore](images/springc/springcore01-16.png)
     - 프로토 타입은 전부 다른값을 가르켜야하는데 같은 값을 가르키는 문제가 발생(없데이트가 안됨)
 
 - 프록시 시용
-    ![springcore](/images/springc/springcore01-17.png)
+    ![springcore](images/springc/springcore01-17.png)
     - 프록시를 사용하여 상기 문제를 해결하였다.
     - ScopedProxyMode의 Default는 프록시를 사용하지 않는다.   
     우리예제에서는 class로 설정되어 있어 TARGET_CLASS 로 변경해주었다. 
     
 - Object provider 사용
-    ![springcore](/images/springc/springcore01-18.png)
+    ![springcore](images/springc/springcore01-18.png)
     - 코드자체를 건드리기때문에 추천하지는 않는다. 
 <br><br>
 
@@ -208,21 +208,21 @@ Environment environment = ctx.getEnvironment();
 #### Profile 정의하기
 - 클래스에 정의
     - @Configuration @Profile("[profile_name\]")
-    ![springcore](/images/springc/springcore01-21.png)
+    ![springcore](images/springc/springcore01-21.png)
 
     - @Component @Profile("[profile_name\]")
-    ![springcore](/images/springc/springcore01-19.png)
+    ![springcore](images/springc/springcore01-19.png)
 
 - 메소드에 정의
     - Bean @Profile("[profile_name\]")
-    ![springcore](/images/springc/springcore01-20.png)
+    ![springcore](images/springc/springcore01-20.png)
 
 #### Profile 설정하기
 - -Dspring.prifiles.active="[profile_name\]"
-![springcore](/images/springc/springcore01-23.png)
+![springcore](images/springc/springcore01-23.png)
 
 - ActivePrifiles
-![springcore](/images/springc/springcore01-22.png)
+![springcore](images/springc/springcore01-22.png)
 
 #### Profile 표현식
 - ! (not)
@@ -240,16 +240,16 @@ Environment environment = ctx.getEnvironment();
     - ServletContext 매개변수
     - JNDI (java:comp/env/)
     - JVM 시스템 프로퍼티 (-Dkey=”value”)
-    ![springcore](/images/springc/springcore01-26.png)
+    ![springcore](images/springc/springcore01-26.png)
 
     - JVM 시스템 환경 변수 (운영 체제 환경 변수)
 
 - @PropertySource
     - Environment를 통해 프로퍼티 추가하는 방법
-    ![springcore](/images/springc/springcore01-24.png)
+    ![springcore](images/springc/springcore01-24.png)
 
 - JVM 시스템 프로퍼티 vs @PropertySource
-    ![springcore](/images/springc/springcore01-25.png)
+    ![springcore](images/springc/springcore01-25.png)
 <br><br>
 
 ### MessageSource
@@ -298,7 +298,7 @@ public class AppRun implements ApplicationRunner {
 ```
 
 - 실행결과
-![springcore](/images/springc/springcore01-27.png)
+![springcore](images/springc/springcore01-27.png)
 <br>
 
 ### ApplicationEventPublisher
@@ -310,32 +310,32 @@ public class AppRun implements ApplicationRunner {
 
 #### 이벤트 만들기
 - ApplicationEvent 상속
-![springcore](/images/springc/springcore01-28.png)
+![springcore](images/springc/springcore01-28.png)
 - 스프링 4.2 부터는 이 클래스를 상속받지 않아도 이벤트로 사용할 수 있다.
-![springcore](/images/springc/springcore01-31.png)
+![springcore](images/springc/springcore01-31.png)
     - 스프링 프레임워크의 클래스를 상속받지 않아 깔끔한 POJO객체가 되었다.
     - 스프링 프레임워크의 철학 → **비침투성**
 
 #### 이벤트 발생시키기
-![springcore](/images/springc/springcore01-29.png)
+![springcore](images/springc/springcore01-29.png)
 - ApplicationEventPublisher.publishEvent();
 
 #### 이벤트 처리하는 방법
 - ApplicationListener<이벤트> implements한 클래스 만들어서 빈으로 등록하기.
-![springcore](/images/springc/springcore01-30.png)
+![springcore](images/springc/springcore01-30.png)
 - 스프링 4.2 부터는 @EventListener를 사용해서 빈의 메소드에 사용할 수 있다.
-![springcore](/images/springc/springcore01-32.png)
+![springcore](images/springc/springcore01-32.png)
 - 이벤트 핸들러가 여러개일 경우 모두 실행
-![springcore](/images/springc/springcore01-33.png)
+![springcore](images/springc/springcore01-33.png)
     - 기본적으로는 순차적 (순서는 잘모르겠으나, 순처작으로 실행된다.)
 - 순서를 정하고 싶다면 @Order와 함께 사용.
-![springcore](/images/springc/springcore01-34.png)
+![springcore](images/springc/springcore01-34.png)
 
 - 비동기적으로 실행하고 싶다면 @Async와 함께 사용.(멀티쓰레드)
-![springcore](/images/springc/springcore01-35.png)
+![springcore](images/springc/springcore01-35.png)
 
 #### 스프링이 제공하는 기본 이벤트
-![springcore](/images/springc/springcore01-36.png)
+![springcore](images/springc/springcore01-36.png)
 - ContextRefreshedEvent: ApplicationContext를 초기화 했더나 리프래시 했을 때 발생.
 - ContextClosedEvent: ApplicationContext를 close()하여 싱글톤 빈 소멸되는 시점에 발생.
 - ContextStartedEvent: ApplicationContext를 start()하여 라이프사이클 빈들이 시작신호를 받은 시점에 발생.
@@ -347,5 +347,5 @@ public class AppRun implements ApplicationRunner {
 - 리소스를 읽어오는 기능을 제공하는 인터페이스
 - ApplicationContext는 ResourceLoader를 상속받는다.
 
-![springcore](/images/springc/springcore01-37.png)
+![springcore](images/springc/springcore01-37.png)
 <br>

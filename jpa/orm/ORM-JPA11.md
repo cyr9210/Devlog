@@ -15,7 +15,7 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
 - 점(.)을 찍어 객체 그래프를 탐색하는 것
 
-  ![ORM11-1](/images/jpa/ORM-JPA/ORM11-1.png)
+  ![ORM11-1](images/jpa/ORM-JPA/ORM11-1.png)
 
   - 상태 필드(state field) : 단순히 값을 저장하기 위한 필드
   - 연관 필드(association field) : 연관관계를 위한 필드
@@ -32,7 +32,7 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
 - 단일 값 연관 경로 : 묵시적 내부 조인(inner join) 발생, 탐색이 더 가능하다.
 
-  ![ORM11-2](/images/jpa/ORM-JPA/ORM11-2.png)
+  ![ORM11-2](images/jpa/ORM-JPA/ORM11-2.png)
 
   - **실무에서는 묵시적인 내부조인이 발생하지 않도록 쿼리를 짜야한다...**
     - 튜닝이 어려움.
@@ -42,7 +42,7 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
   - **FROM 절에서 명시적인 조인을 통해 별칭을 얻으면 별칭을 통해 탐색이 가능하다.**
 
-    ![ORM11-3](/images/jpa/ORM-JPA/ORM11-3.png)
+    ![ORM11-3](images/jpa/ORM-JPA/ORM11-3.png)
 
 #### 명시적 조인, 묵시적 조인
 
@@ -107,29 +107,29 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
 #### 예시
 
-![ORM11-4](/images/jpa/ORM-JPA/ORM11-4.png)
+![ORM11-4](images/jpa/ORM-JPA/ORM11-4.png)
 
 - join
 
-  ![ORM11-5](/images/jpa/ORM-JPA/ORM11-5.png)
+  ![ORM11-5](images/jpa/ORM-JPA/ORM11-5.png)
 
   - N+1 문제가 발생한다.
 
 - **join fetch**
 
-  ![ORM11-6](/images/jpa/ORM-JPA/ORM11-6.png)
+  ![ORM11-6](images/jpa/ORM-JPA/ORM11-6.png)
 
   - 한 번에 쿼리를 날린다.(N+1문제가 발생하지 않는다.)
 
 #### 컬렉션 패치 조인
 
-![ORM11-8](/images/jpa/ORM-JPA/ORM11-8.png)
+![ORM11-8](images/jpa/ORM-JPA/ORM11-8.png)
 
 - 데이터 중복 발생
 
   - 왜?
 
-    ![ORM11-7](/images/jpa/ORM-JPA/ORM11-7.png)
+    ![ORM11-7](images/jpa/ORM-JPA/ORM11-7.png)
 
     - 조회 ROW가 두개 나오기 때문에
       같은 주소값을 가진 결과가 두 줄나온다.
@@ -146,15 +146,15 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
     - SQL에 DISTINCT 만으로는 데이터가 다르므로 중복제거가 되지 않는다.
 
-      ![ORM11-9](/images/jpa/ORM-JPA/ORM11-9.png)
+      ![ORM11-9](images/jpa/ORM-JPA/ORM11-9.png)
 
     - 애플리케이션에서 중복 제거 시도
 
-      ![ORM11-11](/images/jpa/ORM-JPA/ORM11-11.png)
+      ![ORM11-11](images/jpa/ORM-JPA/ORM11-11.png)
 
     - 결과
 
-      ![ORM11-10](/images/jpa/ORM-JPA/ORM11-10.png)
+      ![ORM11-10](images/jpa/ORM-JPA/ORM11-10.png)
 
 #### 페치 조인과 일반 조인의 차이
 
@@ -162,7 +162,7 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
   - join은 나가되 select 절에서 포함하지 않음
 
-    ![ORM11-12](/images/jpa/ORM-JPA/ORM11-12.png)
+    ![ORM11-12](images/jpa/ORM-JPA/ORM11-12.png)
 
 - JPQL은 결과를 반환할 때, 연관관계를 고려하지 않는다.
 
@@ -203,7 +203,7 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
   - 다대일로 변경하여 페치조인하여 해결하거나,  `@BatchSize(size = 100)` 를 사용하여 레이지 로딩 시, 사이즈만큼 IN 쿼리를 날려 한번에 조회가 가능하다.
 
-    ![ORM11-13](/images/jpa/ORM-JPA/ORM11-13.png)
+    ![ORM11-13](images/jpa/ORM-JPA/ORM11-13.png)
 
     - size는 보통 1000이하로 크게잡는다.
 
@@ -211,7 +211,7 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
     - 실무에서는 글로벌 세팅으로 사용한다.
 
-      ![ORM11-14](/images/jpa/ORM-JPA/ORM11-14.png)
+      ![ORM11-14](images/jpa/ORM-JPA/ORM11-14.png)
 
       - @BatchSize를 안써도된다.
 
@@ -239,7 +239,7 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
 - 아래 예제 공통 
 
-  ![ORM11-15](/images/jpa/ORM-JPA/ORM11-15.png)
+  ![ORM11-15](images/jpa/ORM-JPA/ORM11-15.png)
 
 #### TYPE
 
@@ -312,13 +312,13 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
 - 엔티티를 파라미터로 전달
 
-  ![ORM11-16](/images/jpa/ORM-JPA/ORM11-16.png)
+  ![ORM11-16](images/jpa/ORM-JPA/ORM11-16.png)
 
   - 자동으로 식별자를 전달한다.
 
 - 엔티티 직접 사용 - 외래 키 값
 
-  ![ORM11-17](/images/jpa/ORM-JPA/ORM11-17.png)
+  ![ORM11-17](images/jpa/ORM-JPA/ORM11-17.png)
 
   - 마찬 가지로 식별자를 전달
 
@@ -328,11 +328,11 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
 - 미리 정의해서 이름을 부여해두고 사용하는 JPQL
 
-  ![ORM11-18](/images/jpa/ORM-JPA/ORM11-18.png)
+  ![ORM11-18](images/jpa/ORM-JPA/ORM11-18.png)
 
   - 사용
 
-    ![ORM11-19](/images/jpa/ORM-JPA/ORM11-19.png)
+    ![ORM11-19](images/jpa/ORM-JPA/ORM11-19.png)
 
 - **정적 쿼리만 가능하다.**
 
@@ -373,7 +373,7 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
 - `executeUpdate()` 메소드 사용으로 벌크연산이 가능하다.
 
-  ![ORM11-20](/images/jpa/ORM-JPA/ORM11-20.png)
+  ![ORM11-20](images/jpa/ORM-JPA/ORM11-20.png)
 
   - result는 적용된 숫자
 
@@ -397,7 +397,7 @@ title : ORM 11 - 객체지향 쿼리언어2(경로 표현식, fetch join, @Batch
 
      - 벌크연산 전에 flush가 자동 호출된다.
 
-       ![ORM11-21](/images/jpa/ORM-JPA/ORM11-21.png)
+       ![ORM11-21](images/jpa/ORM-JPA/ORM11-21.png)
 
        - `em.flush()` 가 없어도 flush 된다.
        

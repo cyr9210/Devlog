@@ -4,7 +4,7 @@ date: 2018-11-08 18:44:08
 tags: Java
 ---
 
-![Java](/images/javaimage.png)
+![Java](images/javaimage.png)
 # KOSTA DAY08
 ## Java
 
@@ -28,7 +28,7 @@ tags: Java
 - 지역변수 → 해당 메소드 안에서만 사용
 
 #### 예제
-![Java](/images/java/java08-01.png)
+![Java](images/java/java08-01.png)
 - grandTotal 은 정적필드 이고, total은 멤버변수이다.
 - obj1, obj2 에 각각 accumulate시켰을 때, total의 경우 일반 멤버 변수이기때문에 서로 다른 객체인 obj1와 obj2 는 다른 total을 가진다.
 - grandTotal은 정적필드로서 두값을 합친 30이 리턴된다.
@@ -52,7 +52,7 @@ tags: Java
 - 메소드의 이름, 매개변수, 리턴타입이 같아야 한다.
 <br><br>
 ### 상속
-![Java](/images/java/java08-02.png)
+![Java](images/java/java08-02.png)
 - 기존 클래스와 유사한 클래스를 만들어야 하는 경우 사용된다.   
 (확장성 용이)
 - extends 함수를 사용하여 상속한다.   

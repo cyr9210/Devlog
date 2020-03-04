@@ -24,7 +24,7 @@ tags: Springframework
 - SpringBoot 2.0 에서는 auto-configuration으로 스케줄러를 생성해준다.
   그러나 이 스케줄러의 경우, **쓰레드풀이 아니기 때문에** 많은 작업이 있을 때 효율적이지 못하다.
 
-  ![sceduled02](/images/springboot/scheduled/sceduled02.png)
+  ![sceduled02](images/springboot/scheduled/sceduled02.png)
 
 - 많은 작업이 필요한 경우, 쓰레드 풀을 사용할 수 있도록  설정할 수 있다.
 
@@ -59,7 +59,7 @@ tags: Springframework
 
     - Runtime.getRuntime().availableProcessors() = 4
 
-  ![sceduled03](/images/springboot/scheduled/sceduled03.png)
+  ![sceduled03](images/springboot/scheduled/sceduled03.png)
 
 #### 사용법
 
@@ -118,13 +118,13 @@ tags: Springframework
 
 - fixedDelay vs fixedRate
 
-  ![sceduled01](/images/springboot/scheduled/sceduled01.png)
+  ![sceduled01](images/springboot/scheduled/sceduled01.png)
 
 #### 커스터마이징
 
 1. ThreadPoolTaskScheduler를 상속받는 클래스를 생성
 
-   ![sceduled04](/images/springboot/scheduled/sceduled04.png)
+   ![sceduled04](images/springboot/scheduled/sceduled04.png)
 
    - 커스터마이징을 원하는 메소드를 오버라이드 한다.
      - 상기 예제는 fixedRate가 0이면 아무일도 일어나지 않도록 커스터마이징
@@ -132,7 +132,7 @@ tags: Springframework
 
 2. 생성한 커스터마이징 클래스를 사용하도록 설정한다.
 
-   ![sceduled05](/images/springboot/scheduled/sceduled05.png)
+   ![sceduled05](images/springboot/scheduled/sceduled05.png)
 
 #### 외부설정으로 주기 설정
 

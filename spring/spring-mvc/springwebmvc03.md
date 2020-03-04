@@ -3,12 +3,12 @@ title: 스프링 MVC 동작 원리03 - 스프링 MVC 구성 요소, 동작원리
 date: 2019-04-30 00:59:04
 tags: SpringWebMvc
 ---
-![springf](/images/springframwork-logo.png)
+![springf](images/springframwork-logo.png)
 # 스프링 웹 MVC(inflearn) - 백기선 
 ## Springframework
 
 ### 스프링 MVC 구성 요소
-![springmvc](/images/springwebmvc/springwebmvc03-1.png)
+![springmvc](images/springwebmvc/springwebmvc03-1.png)
 - DispatcherSerlvet의 기본 전략
     - DispatcherServlet.properties를 보면 정의되어있다.
     

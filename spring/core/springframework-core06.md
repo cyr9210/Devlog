@@ -4,7 +4,7 @@ date: 2019-03-27 15:17:40
 tags: Springframework
 ---
  
-![springf](/images/springframwork-logo.png)
+![springf](images/springframwork-logo.png)
 # 스프링 프레임워크 핵심기술06(inflearn) - 백기선 
 ## Springframework
 
@@ -20,14 +20,14 @@ tags: Springframework
 
 #### IDE설정 (IntelliJ)
 - preference → Compiler → Configure annotation → annotation추가
-![springcore](/images/springc/springcore05-11.png)
+![springcore](images/springc/springcore05-11.png)
     - NonNull에 Nonnull Nullable에 Nullable 추
 
 - IDE 재시작
-![springcore](/images/springc/springcore05-12.png)
+![springcore](images/springc/springcore05-12.png)
 
 #### @패키지 레벨 설정
-![springcore](/images/springc/springcore05-13.png)
+![springcore](images/springc/springcore05-13.png)
 - package-info 파일생성
 - @NonNullapi or NonNullFields 어노테이션 추가
 - 해당 어노테이션을 사용하면 패키지 전체 NonNull적용, 널이 필요한 경우 Nullable 어노테이션 사용하여 null값 가능하도록 활용할 수 있다.

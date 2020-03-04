@@ -48,21 +48,21 @@ tags: JPA
 
 #### JPA는 애플리케이션과 JDBC 사이에서 동작
 
-![ORM01-1](/images/jpa/ORM-JPA/ORM01-1.png)
+![ORM01-1](images/jpa/ORM-JPA/ORM01-1.png)
 - 개발자 직접 JDBC API를 사용하는것이 아니고 JPA에 명령을 하면 JPA가 JDBC API를 사용해서 SQL을 호출하고 결과를 받아서 동작한다.
 
 #### JPA 동작 - 저장
 
-![ORM01-2](/images/jpa/ORM-JPA/ORM01-2.png)
+![ORM01-2](images/jpa/ORM-JPA/ORM01-2.png)
 - 적절한 query를 생성한다. (개발자가 만드는것이 아니고 만들어준다.)
 
 #### JPA 동작 - 조회
 
-![ORM01-3](/images/jpa/ORM-JPA/ORM01-3.png)
+![ORM01-3](images/jpa/ORM-JPA/ORM01-3.png)
 
 #### JPA 역사
 
-![ORM01-4](/images/jpa/ORM-JPA/ORM01-4.png)
+![ORM01-4](images/jpa/ORM-JPA/ORM01-4.png)
 - 과거에는 EJB(엔티티 빈)이 있었다. 자바표준으로 사용되었다.
 - 그러나, 아마추어적인 기술... (속도 느림, 성능 떨어짐 등..)
 - '개빈 킹'이라는 개발자가 ORM 프레임워크 하이버네이트를 개발
@@ -74,7 +74,7 @@ tags: JPA
 
 - JPA는 인터페이스의 모음
 - 3가지 구현체가 있다.
-  ![ORM01-5](/images/jpa/ORM-JPA/ORM01-5.png)
+  ![ORM01-5](images/jpa/ORM-JPA/ORM01-5.png)
   - 하이버네이트
     - 우리가 사용하는 JPA의 80~90퍼 구현체
   - EclipseLink
@@ -95,18 +95,18 @@ tags: JPA
 
 - **패러다임 불일치 해결**
   - JPA와 상속
-    ![ORM01-6](/images/jpa/ORM-JPA/ORM01-6.png)
+    ![ORM01-6](images/jpa/ORM-JPA/ORM01-6.png)
 
-    ![ORM01-7](/images/jpa/ORM-JPA/ORM01-7.png)
+    ![ORM01-7](images/jpa/ORM-JPA/ORM01-7.png)
 
   - JPA와 연관관계
-    ![ORM01-8](/images/jpa/ORM-JPA/ORM01-8.png)
+    ![ORM01-8](images/jpa/ORM-JPA/ORM01-8.png)
 
   - JPA와 객체 그래프 탐색
-    ![ORM01-9](/images/jpa/ORM-JPA/ORM01-9.png)
+    ![ORM01-9](images/jpa/ORM-JPA/ORM01-9.png)
 
   - JPA와 비교하기
-    ![ORM01-10](/images/jpa/ORM-JPA/ORM01-10.png)
+    ![ORM01-10](images/jpa/ORM-JPA/ORM01-10.png)
 
 - JPA의 성능 최적화 기능
   - 1차 캐시와 동일성(identity) 보장
@@ -114,7 +114,7 @@ tags: JPA
     - 여러번 조회해도 같은 SQL을 여러번 실행하지 않는다.
     
   - 트랜잭션을 지원하는 쓰기 지연(transactional write-behind)
-    ![ORM01-11](/images/jpa/ORM-JPA/ORM01-11.png)
+    ![ORM01-11](images/jpa/ORM-JPA/ORM01-11.png)
     1. 트랜잭션을 커밋할 때까지 INSERT SQL을 모음
     2. JDBC BATCH SQL 기능을 사용해서 한번에 SQL 전송
        - JDBC BATCH : query를 모아서 한번에 날려준다.

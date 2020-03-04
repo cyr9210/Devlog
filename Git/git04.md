@@ -5,10 +5,10 @@ tags: Git
 ---
 
 # Git 
-![gitlogo](/images/git_logo.png)
+![gitlogo](images/git_logo.png)
 
 ### merge
-![merge](/images/git/git04-1.png)
+![merge](images/git/git04-1.png)
 - 브랜치를 병합한다.
 - 3wayMerge를 통해 병렬로 병합한다.
 
@@ -25,7 +25,7 @@ tags: Git
 <br><br>
 
 ### rebase
-![merge](/images/git/git04-2.png)
+![merge](images/git/git04-2.png)
 - 브랜치 병합방법중 하나이다.
 
 #### merge와 차이점

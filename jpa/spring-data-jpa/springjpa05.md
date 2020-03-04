@@ -3,12 +3,12 @@ title: 스프링 데이터 JPA05 - 스프링 데이터 Common
 date: 2019-05-03 18:05:54
 tags: JPA
 ---
-![springf](/images/jpa_logo.png)
+![springf](images/jpa_logo.png)
 # 스프링 데이터 JPA(inflearn) - 백기선 
 ## 스프링 데이터 Common
 
 ### 스프링 데이터 JPA 활용 파트 소개
-![springjpa](/images/jpa/jpa05-1.png)
+![springjpa](images/jpa/jpa05-1.png)
 - 스프링 데이터 : 하나의 프로젝트를 말하는것이 아니고, 여러개의 프로젝트들의 묶음을 말하는것.
 (SQL & NoSQL 저장소 지원 프로젝트의 묶음.)
 - 스프링 데이터 Common : 여러 저장소 지원 프로젝트의 공통 기능 제공.
@@ -53,24 +53,24 @@ tags: JPA
     - 보고 싶다면 @Rollback(false)를 추가하자.
     
 - CRUD
-    ![springjpa](/images/jpa/jpa05-2.png)
+    ![springjpa](images/jpa/jpa05-2.png)
 
 - PagingAndSorting
-    ![springjpa](/images/jpa/jpa05-3.png)
+    ![springjpa](images/jpa/jpa05-3.png)
 <br>
 
 ### Repository 인터페이스 정의하기
 #### Repository 인터페이스로 공개할 메소드를 직접 일일히 정의하고 싶을 때
 - 특정 레퍼지토리 정의
     - @RepositoryDefinition
-    ![springjpa](/images/jpa/jpa05-4.png)
+    ![springjpa](images/jpa/jpa05-4.png)
     - test(정의한 Repository인터페이스는 모두 테스트를 해주어야한다.)
-    ![springjpa](/images/jpa/jpa05-5.png)
+    ![springjpa](images/jpa/jpa05-5.png)
 - 공통 인터페이스 정의
     - @NoRepositoryBean
-    ![springjpa](/images/jpa/jpa05-6.png)
+    ![springjpa](images/jpa/jpa05-6.png)
     - 사용할 인터페이스에서 상속
-    ![springjpa](/images/jpa/jpa05-7.png)
+    ![springjpa](images/jpa/jpa05-7.png)
 <br>
 
 ### Null 처리하기
@@ -78,37 +78,37 @@ tags: JPA
 - 자바8 부터 지원
 - Null을 리턴하지 않고, 비어있는 콜렉션을 리턴한다.
 - 예시
-    ![springjpa](/images/jpa/jpa05-8.png)
+    ![springjpa](images/jpa/jpa05-8.png)
 - Optional 메소드 예시
-    ![springjpa](/images/jpa/jpa05-9.png)
+    ![springjpa](images/jpa/jpa05-9.png)
 
 #### Null 어노테이션
 - 스프링 프레임워크 5.0부터 지원하는 Null 애노테이션 지원.
     - @NonNullApi
-        ![springjpa](/images/jpa/jpa05-10.png)
+        ![springjpa](images/jpa/jpa05-10.png)
         - package-info.java파일 생성 후, 어노테이션 사용
         - 패키지안의 모든 파라미터 및 리턴타입 및 모두 Null이 아니어야한다.
         - Null이 필요한곳에 @Nullable을 사용 해야한다.
     - @NonNull
-        ![springjpa](/images/jpa/jpa05-11.png)
+        ![springjpa](images/jpa/jpa05-11.png)
         - Null이 아니길 바랄때 사용한다.
     - @Nullable.
 - 툴의 도움을 받을 수 있다.
-    ![springjpa](/images/jpa/jpa05-12.png)![springjpa](/images/jpa/jpa05-13.png)
+    ![springjpa](images/jpa/jpa05-12.png)![springjpa](images/jpa/jpa05-13.png)
     - NonNullApi는 불가능
 <br>
 
 ### 쿼리 만들기 개요
 #### 스프링 데이터 저장소의 메소드 이름으로 쿼리 만드는 방법
 - 메소드 이름을 분석해서 쿼리 만들기 (CREATE)
-    ![springjpa](/images/jpa/jpa05-14.png)
+    ![springjpa](images/jpa/jpa05-14.png)
 - 미리 정의해 둔 쿼리 찾아 사용하기 (USE_DECLARED_QUERY)
     - 우선순위 Query > Procedure > NamedQuery
     - 기본적으로 JPQL을 써야하나, SQL을 쓰고 싶다면 nativequery를 true로 변경한다.
-    ![springjpa](/images/jpa/jpa05-16.png)
+    ![springjpa](images/jpa/jpa05-16.png)
 - **미리 정의한 쿼리 찾아보고 없으면 만들기 (CREATE_IF_NOT_FOUND) (기본전략)**
     - @EnableJpaRepositories(queryLookupStrategy = )로 변경 가능하다.
-        ![springjpa](/images/jpa/jpa05-15.png)
+        ![springjpa](images/jpa/jpa05-15.png)
 
 #### 쿼리 만드는 방법
 - 리턴타입 {접두어}{도입부}By{프로퍼티 표현식}(조건식)\[(And|Or){프로퍼티표현식}(조건식)]{정렬 조건} (매개변수)
@@ -207,19 +207,19 @@ ListenableFuture<User> findOneByLastname(String lastname);
     
 #### 구현방법
 1. 커스텀 리포지토리 인터페이스 정의
-![springjpa](/images/jpa/jpa05-17.png)
+![springjpa](images/jpa/jpa05-17.png)
 1. 인터페이스 구현 클래스 만들기 (기본 접미어는 Impl)
-![springjpa](/images/jpa/jpa05-18.png)
+![springjpa](images/jpa/jpa05-18.png)
     - EntityManager, JdbcTemplate 등을 주입받아 사용할 수 있다.
 1. 엔티티 리포지토리에 커스텀 리포지토리 인터페이스 추가
-![springjpa](/images/jpa/jpa05-19.png)
+![springjpa](images/jpa/jpa05-19.png)
 
 - 기본 기능을 덮어쓰고 싶다면 기본기능 메소드를 그대로 정의하고 위와 같은 방법으로 구현한다.
-![springjpa](/images/jpa/jpa05-20.png)
+![springjpa](images/jpa/jpa05-20.png)
 
 #### 접미어 설정하기
 - @EnableJpaRepositories(repositoryImplementationPostfix = "변경값")
-    ![springjpa](/images/jpa/jpa05-21.png)    
+    ![springjpa](images/jpa/jpa05-21.png)    
     - 기본값은 "Impl" 이다.
 <br><br>
 
@@ -228,15 +228,15 @@ ListenableFuture<User> findOneByLastname(String lastname);
 
 #### 구현방법
 1. JpaRepository를 상속 받는 인터페이스 정의
-    ![springjpa](/images/jpa/jpa05-22.png)
+    ![springjpa](images/jpa/jpa05-22.png)
     - @NoRepositoryBean
 2. 기본 구현체를 상속 받는 커스텀 구현체 만들기
-    ![springjpa](/images/jpa/jpa05-23.png)
+    ![springjpa](images/jpa/jpa05-23.png)
 3. @EnableJpaRepositories에 설정
     - repositoryBaseClass
-    ![springjpa](/images/jpa/jpa05-25.png)
+    ![springjpa](images/jpa/jpa05-25.png)
 4. 엔티티 레포지토리에 설정 
-    ![springjpa](/images/jpa/jpa05-24.png)
+    ![springjpa](images/jpa/jpa05-24.png)
 <br>
 
 ### 도메인 이벤트
@@ -245,24 +245,24 @@ ListenableFuture<User> findOneByLastname(String lastname);
 #### 스프링 프레임워크의 이벤트 관련 기능
 - [참고문서](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#context-functionality-events)
 - 이벤트를 만들때는 ApplicationEvent를 상속받도록한다. (extends ApplicationEvent)
-    ![springjpa](/images/jpa/jpa05-26.png)
+    ![springjpa](images/jpa/jpa05-26.png)
 - ApplicationContext는 BeanFactory와 더불어 ApplicationEventPublisher도 상속받고 있다. (이벤트 등록 기능 지원)
-    ![springjpa](/images/jpa/jpa05-27.png)
+    ![springjpa](images/jpa/jpa05-27.png)
 - 리스너 (하기 두가지 방법중 선택하여 사용한다.)
     - implements ApplicationListener<E extends ApplicationEvent>
-        ![springjpa](/images/jpa/jpa05-28.png)
+        ![springjpa](images/jpa/jpa05-28.png)
     - @EventListener
-        ![springjpa](/images/jpa/jpa05-29.png)
+        ![springjpa](images/jpa/jpa05-29.png)
 
 #### 스프링 데이터의 도메인 이벤트 Publisher
 - extends AbstractAggregateRoot<E>
-    ![springjpa](/images/jpa/jpa05-30.png)
+    ![springjpa](images/jpa/jpa05-30.png)
     - AbstractAggregateRoot안에 두 어노테이션이 있다.
         - @DomainEvents
         - @AfterDomainEventPublication
     - registerEvent() 메소드를 사용할 수 있게된다. (이벤트 등록)        
 - 현재는 save() 할 때만 발생 합니다.
-    ![springjpa](/images/jpa/jpa05-31.png)
+    ![springjpa](images/jpa/jpa05-31.png)
 
 ### QueryDSL(Domain Specific Language)
 #### QueryDSL을 사용하는 이유
@@ -316,13 +316,13 @@ ListenableFuture<User> findOneByLastname(String lastname);
     </plugin>
     ```
     - compile 시, 해당 파일이 생성된다.(QAccount)
-        ![springjpa](/images/jpa/jpa05-32.png)
+        ![springjpa](images/jpa/jpa05-32.png)
         
     - Repostiory 인터페이스에 QuerydslPredicateExecutor<도메인타입> 상속을 추가한다.
-        ![springjpa](/images/jpa/jpa05-33.png)
+        ![springjpa](images/jpa/jpa05-33.png)
         
     - predicate를 사용하여 조건문을 만들고 사용한다.
-        ![springjpa](/images/jpa/jpa05-34.png)
+        ![springjpa](images/jpa/jpa05-34.png)
         
 - 기본 리포지토리 커스타마이징 했을 때.
     - 기존에는 만든 커스터마이징 구현체에 SimpleJpaRepository를 상속하지 않도록하고 QuerydslJpaRepository를 상속하도록 함으로 해결 할 수 있었다.

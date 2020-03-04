@@ -28,11 +28,11 @@ tags: JPA
 
 - 엔티티 매니저를 통해서 영속성 컨텍스트에 접근
 
-  ![ORM03-1](/images/jpa/ORM-JPA/ORM03-1.png)
+  ![ORM03-1](images/jpa/ORM-JPA/ORM03-1.png)
 
 #### 엔티티의 생명주기
 
-![ORM03-2](/images/jpa/ORM-JPA/ORM03-2.png)
+![ORM03-2](images/jpa/ORM-JPA/ORM03-2.png)
 
 - 비영속 (new/transient)
   - 영속성 컨텍스트와 전혀 관계가 없는 새로운 상태
@@ -47,7 +47,7 @@ tags: JPA
 
 #### 비영속
 
-![ORM03-3](/images/jpa/ORM-JPA/ORM03-3.png)
+![ORM03-3](images/jpa/ORM-JPA/ORM03-3.png)
 
 ```java
 Member member = new Member();
@@ -60,7 +60,7 @@ member.setUsername("회원1");
 
 #### 영속
 
-![ORM03-4](/images/jpa/ORM-JPA/ORM03-4.png)
+![ORM03-4](images/jpa/ORM-JPA/ORM03-4.png)
 
 ```java
 Member member = new Member();
@@ -77,7 +77,7 @@ em.persist(member);
 
 - **아직 DB에 저장되는것이 아니다.**
 
-  ![ORM03-5](/images/jpa/ORM-JPA/ORM03-5.png)
+  ![ORM03-5](images/jpa/ORM-JPA/ORM03-5.png)
 
   DB에 저장된다면 BEFORE와 AFTER사이에 쿼리가 찍혔을것이다.
 
@@ -113,37 +113,37 @@ em.remove(member);
 
 - 엔티티를 영속하면 1차캐시에 저장된다.
 
-  ![ORM03-6](/images/jpa/ORM-JPA/ORM03-6.png)
+  ![ORM03-6](images/jpa/ORM-JPA/ORM03-6.png)
 
   - @Id 값을 키값 Entity를 value값인 맵형태의 1차 캐시에 저장
 
 - 1차캐시에서 조회
 
-  ![ORM03-7](/images/jpa/ORM-JPA/ORM03-7.png)
+  ![ORM03-7](images/jpa/ORM-JPA/ORM03-7.png)
 
   - 1차 캐시에서 먼저 찾는다.
 
 - 데이터베이스에서 조회
 
-  ![ORM03-8](/images/jpa/ORM-JPA/ORM03-8.png)
+  ![ORM03-8](images/jpa/ORM-JPA/ORM03-8.png)
 
   - 1차캐시에 없을 경우 DB를 조회한 후, 결과를 1차캐시에 저장 후 반환한다.
 
 - 테스트
 
-  ![ORM03-9](/images/jpa/ORM-JPA/ORM03-9.png)
+  ![ORM03-9](images/jpa/ORM-JPA/ORM03-9.png)
 
   - 1차캐시에 저장된 값을 반환했기 때문에  SELECT 쿼리문이 없다.
   - commit 시에 데이터가 insert 된다.
 
-  ![ORM03-10](/images/jpa/ORM-JPA/ORM03-10.png)
+  ![ORM03-10](images/jpa/ORM-JPA/ORM03-10.png)
 
   - 조회 쿼리가 하나만 조회된다.
   - 조회할때 영속성컨텍스트의 1차캐시 안에 저장하고 반환하기 때문에 두번째 조회할때는 1차캐시 안의 값을 반환한다.
 
 #### 영속 엔티티의 동일성 보장
 
-![ORM03-11](/images/jpa/ORM-JPA/ORM03-11.png)
+![ORM03-11](images/jpa/ORM-JPA/ORM03-11.png)
 
 - 자바 컬렉션처럼 비교가 가능
 
@@ -151,21 +151,21 @@ em.remove(member);
 
 - 기본적으로 commit, flush 전에는 DB에 반영하지 않고 쓰지 지연 SQL 저장소에 저장한다.
 
-  ![ORM03-12](/images/jpa/ORM-JPA/ORM03-12.png)
+  ![ORM03-12](images/jpa/ORM-JPA/ORM03-12.png)
 
 - flush, 또는 commit 시에, 일괄 
 
-  ![ORM03-13](/images/jpa/ORM-JPA/ORM03-13.png)
+  ![ORM03-13](images/jpa/ORM-JPA/ORM03-13.png)
 
   - 설정에서 `hibernate.jdbc.batch_size` 를 설정해주면 그 사이즈 만큼 모아서 쿼리를 날린다.(버퍼링 같은 기능)
 
 - 테스트 코드 실행
 
-  ![ORM03-14](/images/jpa/ORM-JPA/ORM03-14.png)
+  ![ORM03-14](images/jpa/ORM-JPA/ORM03-14.png)
 
 #### 변경감지(Dirty Checking)
 
-![ORM03-16](/images/jpa/ORM-JPA/ORM03-16.png)
+![ORM03-16](images/jpa/ORM-JPA/ORM03-16.png)
 
 - JPA는 commit 시 flush() 메소드를 호출한다.
 
@@ -179,7 +179,7 @@ em.remove(member);
 
 - 테스트 코드 실행
 
-  ![ORM03-15](/images/jpa/ORM-JPA/ORM03-15.png)
+  ![ORM03-15](images/jpa/ORM-JPA/ORM03-15.png)
 
 <br><br>
 
@@ -241,7 +241,7 @@ em.setFlushMode(FlushModeType.COMMIT);
 
 #### 예시
 
-![ORM03-17](/images/jpa/ORM-JPA/ORM03-17.png)
+![ORM03-17](images/jpa/ORM-JPA/ORM03-17.png)
 
 - 상태값이 변경 됬지만, update 쿼리문이 날라가지 않는다.
 

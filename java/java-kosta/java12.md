@@ -4,24 +4,24 @@ date: 2018-11-14 21:22:14
 tags: Java
 ---
 
-![Java](/images/javaimage.png)
+![Java](images/javaimage.png)
 # KOSTA DAY12
 ## Java
 
 ### 정규표현식
 특정한 규칙(패턴)을 가진 문자열의 집합을 표현하는데 사용하는 표현식 언어
-![Java](/images/java/java12-01.png)
-![Java](/images/java/java12-02.png)
-![Java](/images/java/java12-03.png)
+![Java](images/java/java12-01.png)
+![Java](images/java/java12-02.png)
+![Java](images/java/java12-03.png)
 
 #### 예제
-![Java](/images/java/java12-04.png)
+![Java](images/java/java12-04.png)
 <br><br>
 
 ### 자료구조 클래스
 자료구조 : 데이터를 효율적으로 사용할 수 있도록 구조를 만들어서 저장해둔 것
 #### 종류
-![Java](/images/java/java12-06.png)
+![Java](images/java/java12-06.png)
 - list(리스트)
 - stack(스택) : 제일 처음에 넣은것이 제일 나중에 나옴
 - queue(큐) : 처음넣은것이 처음 나옴
@@ -30,7 +30,7 @@ tags: Java
  
 ####  ArrayList
 배열을 list형으로 구현하는 것
-![Java](/images/java/java12-05.png)
+![Java](images/java/java12-05.png)
 - 데이터 타입이 필요 → 제네릭 선언 : 코드의 일관성/사용 용이
 - 크기는 사용에 따라 증가
 - 삭제 시, 알아서 자리 채움
@@ -41,7 +41,7 @@ tags: Java
 - 크기 : .size() 
 - 검색 : indexof('')
 
-![Java](/images/java/java12-07.png)
+![Java](images/java/java12-07.png)
 - 정렬 : Collections.sort(list)
     - Comparable : 기본 정렬기준 구현
     - Comparator : 다른 기준을 정의하고 구현

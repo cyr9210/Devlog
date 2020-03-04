@@ -4,7 +4,7 @@ date: 2019-05-03 18:05:54
 tags: JPA
 ---
 
-![springf](/images/jpa_logo.png)
+![springf](images/jpa_logo.png)
 # 스프링 데이터 JPA(inflearn) - 백기선 
 ## 스프링 데이터 JPA
 
@@ -38,7 +38,7 @@ tags: JPA
     - Transient 상태의 객체라면 EntityManager.persist()
     - Detached 상태의 객체라면 EntityManager.merge()
     - **merge / persist 관련 오류 발생이 있을 수 있음으로 언제나 Repository에서 리턴되는 값을 사용하자.**
-        ![springjpa](/images/jpa/image1.PNG)
+        ![springjpa](images/jpa/image1.PNG)
 
 ---
 #### 테스트 범위에 따라서 달라지는 결과
@@ -116,7 +116,7 @@ tags: JPA
         
 - 추천하지 않는 이유
     - 1차캐싱때문에 Persistent 상태의 객체를 select 하지 않고 그냥 가져온다.(트랜잭션이 끝나지 않았다.)
-        ![springjpa](/images/jpa/image2.PNG)
+        ![springjpa](images/jpa/image2.PNG)
     - 문제를 해결하려면...
         - clearAutomatically = true
             - 실행 후, Persistent Context에 들어있던 캐쉬를 비워준다.   
@@ -132,18 +132,18 @@ tags: JPA
 
 #### @NamedEntityGraph
 - @Entity에서 재사용할 여러 엔티티 그룹을 정의할 때 사용
-    ![springjpa](/images/jpa/image4.PNG)
+    ![springjpa](images/jpa/image4.PNG)
 #### @EntityGraph
 - @NamedEntityGraph에 정의되어 있는 엔티티 그룹을 사용 함.
-    ![springjpa](/images/jpa/image6.PNG)
+    ![springjpa](images/jpa/image6.PNG)
 - 그래프 타입 설정 가능
     - (기본값) FETCH: 설정한 엔티티 애트리뷰트는 EAGER 패치 나머지는 LAZY 패치.
     - LOAD: 설정한 엔티티 애트리뷰트는 EAGER 패치 나머지는 기본 패치 전략 따름.
 - @NamedEntityGraph 정의 되어있지않아도 attributePaths를 설정하여 사용할 수 있다.
-    ![springjpa](/images/jpa/image5.PNG)
+    ![springjpa](images/jpa/image5.PNG)
     
 #### 비교 
-![springjpa](/images/jpa/image3.PNG)
+![springjpa](images/jpa/image3.PNG)
 <br>
 
 ### Projection
@@ -152,30 +152,30 @@ tags: JPA
 #### 인터페이스 기반 프로젝션
 - Nested 프로젝션 가능.
     - 인터페이스에 메소드 정의   
-        ![springjpa](/images/jpa/image7.PNG)
+        ![springjpa](images/jpa/image7.PNG)
     - 타입을 해당 인터페이스 타입으로 변경
-        ![springjpa](/images/jpa/image8.PNG)    
+        ![springjpa](images/jpa/image8.PNG)    
 - Open 프로젝션
     - @Value(SpEL)을 사용해서 연산을 할 수 있다. 스프링 빈의 메소드도 호출 가능.
-    ![springjpa](/images/jpa/image9.PNG)
+    ![springjpa](images/jpa/image9.PNG)
     - 쿼리 최적화를 할 수 없다. SpEL을 엔티티 대상으로 사용하기 때문에.
-    ![springjpa](/images/jpa/image10.PNG)
+    ![springjpa](images/jpa/image10.PNG)
 - Closed 프로젝션 (추천)
     - 쿼리를 최적화 할 수 있다. 가져오려는 애트리뷰트가 뭔지 알고 있으니까.
     - Java 8의 디폴트 메소드를 사용해서 연산을 할 수 있다.
-    ![springjpa](/images/jpa/image11.PNG)
+    ![springjpa](images/jpa/image11.PNG)
     
 
 #### 클래스 기반 프로젝션
 - DTO   
-    ![springjpa](/images/jpa/image12.PNG)
+    ![springjpa](images/jpa/image12.PNG)
 - 롬복 @Value로 코드 줄일 수 있음
-    ![springjpa](/images/jpa/image13.PNG)
+    ![springjpa](images/jpa/image13.PNG)
 
 #### 다이나믹 프로젝션
 - 프로젝션 용 메소드 하나만 정의하고 실제 프로젝션 타입은 타입 인자로 전달하기.
 - 그러나 오버로딩이 안됨으로 제네릭을 사용하자.
-    ![springjpa](/images/jpa/image14.PNG)
+    ![springjpa](images/jpa/image14.PNG)
 <br>
 
 ### Specifications
@@ -224,7 +224,7 @@ tags: JPA
     ```
     
 - IDE에 애노테이션 처리기 설정
-    ![springjpa](/images/jpa/image15.PNG)
+    ![springjpa](images/jpa/image15.PNG)
     - org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor
     
 #### 사용
@@ -277,7 +277,7 @@ tags: JPA
         ```
         
 - test
-    ![springjpa](/images/jpa/image16.PNG)
+    ![springjpa](images/jpa/image16.PNG)
     - 여러 조건들에 대하여 조합도 가능하여, 메소드를 많이 늘리지 않고, 사용할 수 있어 편리하다.(단, 테스트는 필수이다.) 
 <br>
 
@@ -298,7 +298,7 @@ tags: JPA
     ```
     
 - 사용
-    ![springjpa](/images/jpa/image17.PNG)
+    ![springjpa](images/jpa/image17.PNG)
     
 #### 장점
 - 별다른 코드 생성기나 애노테이션 처리기 필요 없음.
@@ -376,16 +376,16 @@ tags: JPA
 - 엔티티의 변경 시점에 언제, 누가 변경했는지에 대한 정보를 기록하는 기능.
 
 #### 스프링 데이터 JPA의 Auditing
-![springjpa](/images/jpa/image21.PNG)
+![springjpa](images/jpa/image21.PNG)
 
 - 스프링 부트가 자동 설정 해주지 않는다.
 - 엔티티 클래스 위에 @EntityListeners(AuditingEntityListener.class) 추가
-    ![springjpa](/images/jpa/image18.PNG)
+    ![springjpa](images/jpa/image18.PNG)
 - AuditorAware 구현체 만들기   
-    ![springjpa](/images/jpa/image19.PNG)
+    ![springjpa](images/jpa/image19.PNG)
     - security를 사용하여 현재 유저정보를 가져올 수 있지만 print문으로 대체하였다.
 - @EnableJpaAuditing 및 AuditorAware 빈 이름 설정하기.
-    ![springjpa](/images/jpa/image20.PNG)
+    ![springjpa](images/jpa/image20.PNG)
     > 빈 이름은 첫글자를 소문자로 변경한것이다.
     
 #### 라이프 사이클 이벤트
@@ -394,7 +394,7 @@ tags: JPA
 - @PrePersist
     - 엔티티가 저장이 되기전에 호출
     - 예)..
-        ![springjpa](/images/jpa/image22.PNG)
+        ![springjpa](images/jpa/image22.PNG)
 - @PreUpdate
 - 여러개가 있다. 살펴보길..
 <br><br>

@@ -21,7 +21,7 @@ tags: 프로젝트_회고
 ### 프로젝트 빌드 및 실행방법
 - zip파일 다운 또는 clone 후에 아래와 같은 방법으로 실행합니다.
     1. IDE툴 사용하여 Application.class 실행
-        ![noticeP](/images/Project/Notice_Project/notice-project1.png)
+        ![noticeP](images/Project/Notice_Project/notice-project1.png)
 
     2. jar 파일로 실행
         - 메이블 플러그인을 통해 jar파일 생성 
@@ -49,12 +49,12 @@ tags: 프로젝트_회고
 - 제목/글쓴이로 검색이 가능하다.
 
 ### 구현결과
-![noticeP](/images/Project/Notice_Project/notice-project2.png)
-![noticeP](/images/Project/Notice_Project/notice-project3.png)
-![noticeP](/images/Project/Notice_Project/notice-project4.png)
-![noticeP](/images/Project/Notice_Project/notice-project5.png)
-![noticeP](/images/Project/Notice_Project/notice-project6.png)
-![noticeP](/images/Project/Notice_Project/notice-project7.png)
+![noticeP](images/Project/Notice_Project/notice-project2.png)
+![noticeP](images/Project/Notice_Project/notice-project3.png)
+![noticeP](images/Project/Notice_Project/notice-project4.png)
+![noticeP](images/Project/Notice_Project/notice-project5.png)
+![noticeP](images/Project/Notice_Project/notice-project6.png)
+![noticeP](images/Project/Notice_Project/notice-project7.png)
 
 
 ### 회고
@@ -66,20 +66,20 @@ tags: 프로젝트_회고
 
 ##### 회고내용
 - Security설정 시, form 로그인 및 구글로그인 동시 적용
-    ![noticeP](/images/Project/Notice_Project/notice-project9.png)
+    ![noticeP](images/Project/Notice_Project/notice-project9.png)
     - web.ignoring().antMatchers()을 적용하여 security인증을 원하지 않는 페이지 주소를 지정한다.
         - js, css등 정적 리소스에 관하여도 path를 지정해주어야한다.
         - 스프링부트에서 정적 리소스 path는 /resources/static을 생략하고 지정해준다.
             ```
             <link href="/css/sb-admin-2.min.css" rel="stylesheet">
             ```
-            <img src="/images/Project/Notice_Project/notice-project10.png" width="40%">
+            <img src="images/Project/Notice_Project/notice-project10.png" width="40%">
             
     - formLogin()을 사용하여, 뷰페이지 지정(없을 시, 스프링 시큐리티 에서 만든 페이지 적용)
     
     - PasswordEncoder를 빈으로 등록하였다.(굳이 security 설정 class에서 등록할 필요는 없다.)
 - UserDetailsService 구현
-    ![noticeP](/images/Project/Notice_Project/notice-project12.png)
+    ![noticeP](images/Project/Notice_Project/notice-project12.png)
     - 내가 구현한 회원 객체의 Service 클래스를 UserDetails를 implements한다.
     - loadUserByUsername를 구현한다.
         - return User객체는 스프링 시큐리티에서 만들어 주는 객체이다.
@@ -88,13 +88,13 @@ tags: 프로젝트_회고
 
 - 로그인 유저 정보 처리
     - 이전에 로그인 기록이 없는 구글 로그인 발생 시, setAuthenticationSuccessHandler를 다음과 같이 하여 정보를 DB에 저장하였다.
-    ![noticeP](/images/Project/Notice_Project/notice-project11.png)
+    ![noticeP](images/Project/Notice_Project/notice-project11.png)
     - 일반 로그인 시, UserDetailsServie에서 Session에 정보를 저장하여 사용할 수 있도록 한다.(구글 로그인 session처리는 이미 적용하였다.)
-    ![noticeP](/images/Project/Notice_Project/notice-project12.png)
+    ![noticeP](images/Project/Notice_Project/notice-project12.png)
 
 ##### 어려움 및 주의사항
 - 로그인 폼 name="username" 으로 줘야한다.
-    ![noticeP](/images/Project/Notice_Project/username.png)
+    ![noticeP](images/Project/Notice_Project/username.png)
 
 ##### 보완해야 할 점
 - 로그인 정보를 같은 table에 넣어, 구글 로그인 후에 기본 로그인이 가능하다.. 개선이 필요..
@@ -154,7 +154,7 @@ tags: 프로젝트_회고
 <br><br>
 
 #### Page 
-![Page](/images/Project/Notice_Project/page.png)
+![Page](images/Project/Notice_Project/page.png)
 - offset() 현재 페이지 시작 엘리먼트 인덱스
 <br><br>
 
@@ -169,11 +169,11 @@ tags: 프로젝트_회고
 - 검색내용은 로그인 정보와 같은 보안이 중요한 사항이 아니라고 판단하여 쿠키를 사용하기로 결정하였다.
 
 ##### 쿠키저장
-![noticeP](/images/Project/Notice_Project/notice-project14.png)
+![noticeP](images/Project/Notice_Project/notice-project14.png)
 - 키워드를 쿠키에 저장 후, checkbox 체크값에 따라 제목, 글쓴이, 제목/글쓴이로 검색하는 컨트롤러로 매핑
 
 ##### @CookieValue
-![noticeP](/images/Project/Notice_Project/notice-project13.png)
+![noticeP](images/Project/Notice_Project/notice-project13.png)
 - HTTP쿠키 값을 HttpServletRequest등을 통해 읽을 필요없이 스프링 컨트롤러에서 파라미터로 전달 받을 수 있게해준다. 
     - required 속성 값을 이용해 필수여부 설정 (기본값은 true: 쿠키값없을 시, 에러발생)
     - defaultValue 속성 값을 이용해서 기본값을 지정
@@ -184,10 +184,10 @@ tags: 프로젝트_회고
 - https://github.com/js-cookie/js-cookie
 
 ##### 쿠키 저장
-![getCookies](/images/Project/Notice_Project/getCookies.png)
+![getCookies](images/Project/Notice_Project/getCookies.png)
 
 ##### 쿠키 사용
-![setCookies](/images/Project/Notice_Project/setCookies.png)
+![setCookies](images/Project/Notice_Project/setCookies.png)
 
 
 
