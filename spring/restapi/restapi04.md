@@ -35,7 +35,7 @@ tags: RestAPI
   - 첫페이지, 이전페이지, 현재페이지, 다음페이지, 마지막페이지 Link가 포함되어있다.
   - Resource<Event>로 사용할 경우, 각 리소스들의 링크정보는 포함되지 않는다.
     - 이전에 생성했던 EventResource로 적용시킨다. ( e -> new EventResouce(e); )
-    ![restapi04-1](images/restapi/restapi04-1.png)
+    ![restapi04-1](/images/restapi/restapi04-1.png)
 
 - Profile 링크 추가
     ```

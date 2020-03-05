@@ -18,7 +18,7 @@ tags: 정보처리기사_필기
 <br>
 
 ### 이진트리의 운행법
-![tree](images/test01/treestrucure.png)
+![tree](/images/test01/treestrucure.png)
 - Preorder(전위)운행 : Root -> Left -> Right   
 A -> B -> C
 - Inorder(중위)운행 : Left -> Root -> Right
@@ -114,12 +114,12 @@ B -> C -> A
 
 ### 정렬
 - 버블정렬
-    - ![버블정렬](images/test01/arrbubble.png)
+    - ![버블정렬](/images/test01/arrbubble.png)
 
 - 선택정렬
     - n개의 레코드 중에서 최소값을 찾아 첫번째 레코드 위치에 놓고, 나머지 n-1개 중에서 다시 최소값을 찾아 두번째 레코드 위치에 놓는 방식을 반복하여 정렬하는 방식이다.
 - 삽입정렬
-    - ![삽입정렬](images/test01/InsertArray.png)
+    - ![삽입정렬](/images/test01/InsertArray.png)
 <br>
 
 ### 수와 관계해석
@@ -200,7 +200,7 @@ B -> C -> A
 <br>
 
 ### 폴리쉬
-![Polish](images/test01/Polish.png)
+![Polish](/images/test01/Polish.png)
 <br>
 
 ### 순수 관계 연산자

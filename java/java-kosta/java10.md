@@ -3,7 +3,7 @@ title: 인터페이스, Object class, Wrapper class, Inner class, Anonymous clas
 date: 2018-11-12 19:24:18
 tags: Java
 ---
-![Java](images/javaimage.png)
+![Java](/images/javaimage.png)
 # KOSTA DAY10
 ## Java
 
@@ -37,7 +37,7 @@ tags: Java
 ### Wrapper class
 Wrapper class란 상호전환 시 , 사용하는 클래스
 
-![Java](images/java/java10-03.png)
+![Java](/images/java/java10-03.png)
 - 위의 기본형 data외에는 모두 reference 타입
 - 기본형 ← → reference 타입 상호전환이 필요할 수 있다.
 
@@ -58,16 +58,16 @@ int age2 = age.intValue();
 - 소스의 가독성을 높이고 유지보수를 용이하게 하기위해 사용
 
 #### Inner Class(내부 클래스)
-![Java](images/java/java10-01.png)
+![Java](/images/java/java10-01.png)
 - 클래스안에 클래스를 생성하는 것
 
 #### Anonymous Class(익명 내부 클래스)
-![Java](images/java/java10-02.png)
+![Java](/images/java/java10-02.png)
 - 클래스를 한번만 사용하고 구현할 때, 추상클래스 및 상속없이 일회성으로 구현하기위해서 사용한다.
 <br><br>
 
 ### String API
-![Java](images/java/java10-04.png)
+![Java](/images/java/java10-04.png)
 - 불변성을 가진다.
 - 연산자를 통해 추가가능
 - StringBuffer 클래스는 append로 추가가능

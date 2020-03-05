@@ -41,17 +41,17 @@ tags: SpringWebMvc
         - naver에서 만든 LUCY필터가 있다.
 
 #### 구현
-![springwebmvc](images/springwebmvc/springwebmvc07-2.png)
+![springwebmvc](/images/springwebmvc/springwebmvc07-2.png)
 - implements HandlerInterceptor
 
 #### 핸들러 인터셉터 등록하기
-![springwebmvc](images/springwebmvc/springwebmvc07-1.png)
+![springwebmvc](/images/springwebmvc/springwebmvc07-1.png)
 - .order로 순서를 정할수 있다.
     - add 순으로 등록된다.
 - .addPathPattern을 사용하여 원하는 핸들러에만 적용 가능
 
 ### testcode
-![springwebmvc](images/springwebmvc/springwebmvc07-3.png)
+![springwebmvc](/images/springwebmvc/springwebmvc07-3.png)
 - AnotherInterceptor는 PathPattern에 걸리지 않아서 제외
 <br><br>
 
@@ -70,7 +70,7 @@ tags: SpringWebMvc
 - 스프링 부트를 사용하는 경우 
 
 #### 리소스 핸들러 설정
-![springwebmvc](images/springwebmvc/springwebmvc07-4.png)
+![springwebmvc](/images/springwebmvc/springwebmvc07-4.png)
 - **file시스템으로 맵핑 시, classpath: 대신 file:로 넣어준다.**
 - 어떤 요청 패턴을 지원할 것인가
 - 어디서 리소스를 찾을 것인가
@@ -114,10 +114,10 @@ tags: SpringWebMvc
 
 #### 설정 방법
 - 기본으로 등록해주는 컨버터에 새로운 컨버터 추가하기: extendMessageConverters
-    ![springwebmvc](images/springwebmvc/springwebmvc07-5.png)
+    ![springwebmvc](/images/springwebmvc/springwebmvc07-5.png)
     - [reference 문서](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.html#extendMessageConverters-java.util.List-)
 - 기본으로 등록해주는 컨버터는 다 무시하고 새로 컨버터 설정하기: configureMessageConverters
-    ![springwebmvc](images/springwebmvc/springwebmvc07-6.png)
+    ![springwebmvc](/images/springwebmvc/springwebmvc07-6.png)
     - [reference 문서](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.html#configureMessageConverters-java.util.List-)
 - 의존성 추가로 컨버터 등록하기 (제일 많이 사용하게 될 것이며 추천한다.)
     - 메이븐 또는 그래들 설정에 의존성을 추가하면 그에 따른 컨버터가 자동으로 등록된다.
@@ -138,7 +138,7 @@ tags: SpringWebMvc
 
 - ObjectMapper는 스프링부트에서 의존성을 자동으로 주입해준다.(spring-boot-starter-web 추가 시)
 - TestCode
-    ![springwebmvc](images/springwebmvc/springwebmvc07-7.png)
+    ![springwebmvc](/images/springwebmvc/springwebmvc07-7.png)
 - JsonPath문법
     - https://github.com/json-path/JsonPath
     - http://jsonpath.com/
@@ -172,12 +172,12 @@ tags: SpringWebMvc
     
 - Marshaller 등록
     - xml로 변환할 클래스의 패키지이름을 설정해준다.
-        ![springwebmvc](images/springwebmvc/springwebmvc07-8.png)
+        ![springwebmvc](/images/springwebmvc/springwebmvc07-8.png)
     - 도메인 클래스에 @XmlRootElement 애노테이션 추가
-        ![springwebmvc](images/springwebmvc/springwebmvc07-9.png)
+        ![springwebmvc](/images/springwebmvc/springwebmvc07-9.png)
         
 - TestCode
-    ![springwebmvc](images/springwebmvc/springwebmvc07-10.png)
+    ![springwebmvc](/images/springwebmvc/springwebmvc07-10.png)
 - Xpath 문법
     - https://www.w3schools.com/xml/xpath_syntax.asp
     - https://www.freeformatter.com/xpath-tester.html

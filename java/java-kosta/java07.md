@@ -3,7 +3,7 @@ title: 접근제어자, Exception
 date: 2018-11-07 17:49:08
 tags: Java
 ---
-![Java](images/javaimage.png)
+![Java](/images/javaimage.png)
 # KOSTA DAY07
 ## Java
 
@@ -21,10 +21,10 @@ tags: Java
 ### Exception
 자바에서 에러를 지칭하는 용어
 
-![Java](images/java/java07-01.png)
+![Java](/images/java/java07-01.png)
 - try문 : Exception 처리에 사용되는 명령문
 
-![Java](images/java/java07-02.png)
+![Java](/images/java/java07-02.png)
 - throw문 : 예외를 사용자가 고의로 발생시킨다.   
 ( ex) throw new Exception)
 - throws문 : 발생된 예외를 처리하지 않고 상위 메소드로 전달

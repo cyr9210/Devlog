@@ -4,7 +4,7 @@ date: 2018-11-26 13:26:15
 tags: OracleDB
 ---
 
-![DB](images/oracledb_logo.png)
+![DB](/images/oracledb_logo.png)
 # KOSTA DAY20
 ## DataBase
 
@@ -24,7 +24,7 @@ Database Management System(데이터베이스 관리시스템)
 - 대표적인 DBMS로는 Oracle, mySQL, MS-SQL, Informix, DB2가 있다.
 
 #### 관계형 DBMS
-![DB](images/database/DB01-01.png)
+![DB](/images/database/DB01-01.png)
 - 가장대표적인 DBMS로 실세계 데이터들을 2차원적인 표(table)형식으로 표현
 - 데이터 무결성, 트래잭션 처리 등 기본적 기능이 우수
 - 질의어(Query Language)를 사용한 데이터 접근
@@ -35,7 +35,7 @@ Database Management System(데이터베이스 관리시스템)
 ### Oracle
 가장 대표적인 관계형 DBMS중의 하나이다.(회사명 과 DBMS 제품명 동일)
 
-![DB](images/database/DB01-02.png)
+![DB](/images/database/DB01-02.png)
 
 >KOSTA 교육 중에는 무료 버젼인 XE버젼을 사용 할 것이다.
 
@@ -46,7 +46,7 @@ Database Management System(데이터베이스 관리시스템)
     - sql developer 다운로드
     - [도커허브](https://hub.docker.com/)를 통해서 원하는 프로그램을 검색한다.(oracle12c) 
 
-    ![DB](images/database/DB01-09.png)
+    ![DB](/images/database/DB01-09.png)
     ```
     docker pull sath89/oracle-12c
     ```
@@ -99,7 +99,7 @@ pw : oracle
 <br><br>
 
 ### SELECT
-![DB](images/database/DB01-06.png)
+![DB](/images/database/DB01-06.png)
 - employees 테이블의 전체 데이터를 불러오기 
 ```
 SELECT * FROM employees
@@ -116,7 +116,7 @@ SELECT ENO, ENAME, SAL FROM EMP
 ORDER BY SAL DESC, ENO;
 ```
 
-![DB](images/database/DB01-07.png)
+![DB](/images/database/DB01-07.png)
 - 조건에 맞는 일부데이터(ROW) 불러오기 (WHERE절)
 ```
 SELECT DEMPLOYEE_ID, LAST_NAME, HIRE_DATE FROM EMPLOYEES
@@ -156,7 +156,7 @@ SELECT employee_id, last_name, commission_pct FROM employees
 WHERE commission_pct IS NOT NULL;
 ```
 
-![DB](images/database/DB01-08.png)
+![DB](/images/database/DB01-08.png)
 - LIKE 연산자 (%연산자와 함께 잘사용)
     - ‘김%’ = ‘김’으로 시작하는 모든 문자열
     - ‘%과% = ‘과’로끝나는 모든 문자열

@@ -66,7 +66,7 @@ private Set<AccountRole> roles;
 
 #### 스프링 시큐리티
 
-![restapi05-1](images/restapi/restapi05-1.png)
+![restapi05-1](/images/restapi/restapi05-1.png)
 
 - 웹 시큐리티 (Filter 기반 시큐리티)
   - 웹요청에 보안인증
@@ -314,11 +314,11 @@ private Set<AccountRole> roles;
 > - 확인하기 위해 logging.level.org.springframework.security=DEBUG 설정 후 확인해 보자.
 >   - web
 >
->  ![restapi05-3](images/restapi/restapi05-3.png)
+>  ![restapi05-3](/images/restapi/restapi05-3.png)
 >
 > - http
 >
->  ![restapi05-2](images/restapi/restapi05-2.png)
+>  ![restapi05-2](/images/restapi/restapi05-2.png)
 >
 > - 같은 요청에 대하여 http가 더 많은 시큐리티 관련 filterchain 로그가 찍히는 것을 확인 할 수 있었다.
 
@@ -420,7 +420,7 @@ protected void configure(HttpSecurity http) throws Exception {
 
 #### 응답결과
 
-![restapi05-4](images/restapi/restapi05-4.png)
+![restapi05-4](/images/restapi/restapi05-4.png)
 
 <br><br>
 
@@ -468,7 +468,7 @@ protected void configure(HttpSecurity http) throws Exception {
     - accessDeninedHandler(OAuth2AccessDeninedHandler())
 
 - 기존엑 작성한 EventControllerTest 테스트 결과 GET을 제외한 나머지 테스트 실패
-  ![restapi05-5](images/restapi/restapi05-5.png)
+  ![restapi05-5](/images/restapi/restapi05-5.png)
   - -> 실패 테스트에 대해서 액세스 토큰을 가지고 요청하도록 테스트 수정
 
     ```java
@@ -569,7 +569,7 @@ public class AppProperties {
 
 - 필드값 적용 시, properties파일에서 자동완성이 가능하다.
 
-  ![restapi05-6](images/restapi/restapi05-6.png)
+  ![restapi05-6](/images/restapi/restapi05-6.png)
 
 <br><br>
 
@@ -581,15 +581,15 @@ public class AppProperties {
 
 - 인증없이 GET요청
 
-  ![restapi05-9](images/restapi/restapi05-9.png)
+  ![restapi05-9](/images/restapi/restapi05-9.png)
 
 - 인증 -> access token
 
-  ![restapi05-7](images/restapi/restapi05-7.png)
+  ![restapi05-7](/images/restapi/restapi05-7.png)
 
 - 인증 후, GET요청
 
-  ![restapi05-8](images/restapi/restapi05-8.png)
+  ![restapi05-8](/images/restapi/restapi05-8.png)
 
 - 모두 정상 작동
 
@@ -597,13 +597,13 @@ public class AppProperties {
 
 - /api/events
 
-  ![restapi05-11](images/restapi/restapi05-11.png)
+  ![restapi05-11](/images/restapi/restapi05-11.png)
 
 #### 이벤트 조회
 
 - /api/events/{id}
 
-  ![restapi05-10](images/restapi/restapi05-10.png)
+  ![restapi05-10](/images/restapi/restapi05-10.png)
 
   - 로그인 했을 때 링크 부족
     - 이벤트 Manager인 경우 수정 링크를 제공하고 싶다.. 뒤에서 알아보자.
@@ -644,7 +644,7 @@ public class AppProperties {
   }
   ```
 
-  ![restapi05-15](images/restapi/restapi05-15.png)
+  ![restapi05-15](/images/restapi/restapi05-15.png)
 
   - spring.security.User를 상속받는 클래스를 구현하면 도메인 User를 얻을 수 있다.
 
@@ -665,13 +665,13 @@ public class AppProperties {
     }
     ```
 
-    ![restapi05-14](images/restapi/restapi05-14.png)
+    ![restapi05-14](/images/restapi/restapi05-14.png)
 
-    ![restapi05-13](images/restapi/restapi05-13.png)
+    ![restapi05-13](/images/restapi/restapi05-13.png)
 
   - SpEL을 사용하면 도메인 User를 파라미터로 받을 수 있다.
 
-    ![restapi05-12](images/restapi/restapi05-12.png)
+    ![restapi05-12](/images/restapi/restapi05-12.png)
 
   - 위와 같은 작업을 annotation을 생성하여 코드를 줄일 수 있다.
 
@@ -686,7 +686,7 @@ public class AppProperties {
     - @Target : 파라미터에 사용하겠다.
     - @Retention : 런타임까지 유지 시키겠다.
 
-    ![restapi05-16](images/restapi/restapi05-16.png)
+    ![restapi05-16](/images/restapi/restapi05-16.png)
 
   - 인증을 안하고 접근하면....
 
@@ -711,7 +711,7 @@ public class AppProperties {
 
 - Event create 응답결과
 
-  ![restapi05-17](images/restapi/restapi05-17.png)
+  ![restapi05-17](/images/restapi/restapi05-17.png)
 
   - 매니저에 대한 과도한 정보를 가지고 있음 -> id값만을 응답하고 싶다.
 
@@ -737,7 +737,7 @@ public class AppProperties {
 
    - 사용을 원하는곳에서만 @JsonSerialize를 사용하여 해결한다.
 
-     ![restapi05-18](images/restapi/restapi05-18.png)
+     ![restapi05-18](/images/restapi/restapi05-18.png)
 
    - 응답결과
 

@@ -22,7 +22,7 @@ tags: JPA
 
 ### 단방향 연관 관계
 
-![ORM05-1](images/jpa/ORM-JPA/ORM05-1.png)
+![ORM05-1](/images/jpa/ORM-JPA/ORM05-1.png)
 
 #### 도메인 모델링
 
@@ -149,7 +149,7 @@ public class JpaMain {
 
 ### 양방향 연관관계와 연관관계의 주인
 
-![ORM05-2](images/jpa/ORM-JPA/ORM05-2.png)
+![ORM05-2](/images/jpa/ORM-JPA/ORM05-2.png)
 
 #### 도메인 모델링
 
@@ -206,7 +206,7 @@ public class Team {
 
   - 객체를 양방향으로 참조하려면 단방향 연관관계 2개를 만들어야 한다.
 
-    ![ORM05-6](images/jpa/ORM-JPA/ORM05-6.png)
+    ![ORM05-6](/images/jpa/ORM-JPA/ORM05-6.png)
 
 #### 테이블의 양방향 연관관계
 
@@ -218,11 +218,11 @@ public class Team {
 
   - MEMBER.TEAM_ID 외래 키 하나로 양방향 연관관계 가짐(양쪽으로 조인 가능)
 
-    ![ORM05-7](images/jpa/ORM-JPA/ORM05-7.png)
+    ![ORM05-7](/images/jpa/ORM-JPA/ORM05-7.png)
 
 #### 외래 키 관리
 
-![ORM05-5](images/jpa/ORM-JPA/ORM05-5.png)
+![ORM05-5](/images/jpa/ORM-JPA/ORM05-5.png)
 
 - 객체의 경우 두개의 단방향 관계이기 때문에 한족에서 외래 키를 관리해야한다.
 
@@ -230,7 +230,7 @@ public class Team {
 
 - 한쪽은 읽기만 가능한 가짜 매핑이 될  수 밖에 없다.
 
-  ![ORM05-8](images/jpa/ORM-JPA/ORM05-8.png)
+  ![ORM05-8](/images/jpa/ORM-JPA/ORM05-8.png)
 
 #### 연관관계의 주인(Owner)
 
@@ -276,7 +276,7 @@ public class Team {
   List<Member> members = findTeam.getMembers();
   ```
 
-  ![ORM05-3](images/jpa/ORM-JPA/ORM05-3.png)
+  ![ORM05-3](/images/jpa/ORM-JPA/ORM05-3.png)
 
 - 주인이 아닌쪽 입력
 
@@ -299,7 +299,7 @@ public class Team {
   List<Member> members = findTeam.getMembers();
   ```
 
-  ![ORM05-4](images/jpa/ORM-JPA/ORM05-4.png)
+  ![ORM05-4](/images/jpa/ORM-JPA/ORM05-4.png)
 
   - **정상적으로 DB에 저장되지 않는것을 볼 수 있다.**
 
@@ -325,7 +325,7 @@ public class Team {
     em.clear();
     ```
 
-    ![ORM05-4](images/jpa/ORM-JPA/ORM05-4.png)
+    ![ORM05-4](/images/jpa/ORM-JPA/ORM05-4.png)
 
     - 연관관계의 주인은 Member이다. 
     - Team에서만 Member를 지정해주었다.
@@ -341,11 +341,11 @@ public class Team {
 
     - flush() 사용 -> DB에 바로 반영
 
-      ![ORM05-9](images/jpa/ORM-JPA/ORM05-9.png)
+      ![ORM05-9](/images/jpa/ORM-JPA/ORM05-9.png)
 
     - flush() 사용안함 -> 1차 캐시 값 사용
 
-      ![ORM05-10](images/jpa/ORM-JPA/ORM05-10.png)
+      ![ORM05-10](/images/jpa/ORM-JPA/ORM05-10.png)
 
   - test케이스 작성 시, JPA를 사용하지 않고 JAVA코드로 작성할 때 값이 정확하지 않다.
 

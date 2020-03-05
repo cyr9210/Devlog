@@ -3,19 +3,19 @@ title: 스프링 부트 원리02 - 의존성 관리
 date: 2019-03-28 17:01:13
 tags: SpringBoot
 ---
-![springboot](images/springboot_logo.png)
+![springboot](/images/springboot_logo.png)
 # 스프릥 부트 개념과 활용02(inflearn) - 백기선 
 ## Spring boot
 
 ### 의존성 관리 이해
 - pom.xml에서 spring-boot-parent로 들어가본다.
-![springboot](images/springboot/springboot02-1.png)
+![springboot](/images/springboot/springboot02-1.png)
 - spring-boot-parent도 spring-boot-dependencies라는 parent계층을 가지고 있다.
-![springboot](images/springboot/springboot02-2.png)
+![springboot](/images/springboot/springboot02-2.png)
 - spring-boot-dependencies에는 스프링과 호환되는 버전들이 설정되어있다.
-![springboot](images/springboot/springboot02-3.png)
+![springboot](/images/springboot/springboot02-3.png)
 - 또한, dependencyManagement에 각 버전에 해당하는 의존성이 다 정의되어있다.
-![springboot](images/springboot/springboot02-4.png)
+![springboot](/images/springboot/springboot02-4.png)
 
 - 정의된 의존성을 사용하게되면, 버전에 대한 정보는 없이 사용할 수 있다.
 dependencyManagement에 정의된 버전을 가져온다.
@@ -36,16 +36,16 @@ dependencyManagement에 정의된 버전을 가져온다.
 #### 스프링 의존성 추가
 - pom.xml 안에 <dependencies>에 추가해준다.
     - 메이븐 의존성 검색 : https://mvnrepository.com
-    ![springboot](images/springboot/springboot02-6.png)
+    ![springboot](/images/springboot/springboot02-6.png)
     - 스프링 부트 버전관리 지원 의존성 : 버전정보를 기입하지 않아도 된다.
     (인텔리제이에서는 좌측에 아이콘이 생성되며, 클릭하면 해당 dependencyManagement로 이됭된다.)
-    ![springboot](images/springboot/springboot02-5.png)
+    ![springboot](/images/springboot/springboot02-5.png)
     - 스프링 부트 버전관리 지원하지 않는 의존성 : 버전정보도 같이 기입
-    ![springboot](images/springboot/springboot02-7.png)
+    ![springboot](/images/springboot/springboot02-7.png)
 
 #### 기존 의존성 버전 변경하기
 - spring-boot-dependencies 또는 parent properties 값 복사
-![springboot](images/springboot/springboot02-8.png)
+![springboot](/images/springboot/springboot02-8.png)
 - pom.xml에 properties를 직접 재정의한다.
-![springboot](images/springboot/springboot02-9.png)
+![springboot](/images/springboot/springboot02-9.png)
 <br>

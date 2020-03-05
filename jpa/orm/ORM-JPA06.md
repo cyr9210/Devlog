@@ -46,14 +46,14 @@ tags: JPA
 
 #### 다대일 단방향
 
-![ORM06-2](images/jpa/ORM-JPA/ORM06-2.png)
+![ORM06-2](/images/jpa/ORM-JPA/ORM06-2.png)
 
 - 가장 많이 사용하는 연관관계
 - 다대일의 반대는 일대다
 
 #### 다대일 양방향
 
-![ORM06-1](images/jpa/ORM-JPA/ORM06-1.png)
+![ORM06-1](/images/jpa/ORM-JPA/ORM06-1.png)
 
 - 외래 키가 있는 쪽이 연관관계의 주인
   - 다가 연관간계의 주인이 되는것이 좋다.
@@ -66,7 +66,7 @@ tags: JPA
 
 #### 일대다 단방향
 
-![ORM06-3](images/jpa/ORM-JPA/ORM06-3.png)
+![ORM06-3](/images/jpa/ORM-JPA/ORM06-3.png)
 
 - 이모델은 권장하지 않음
 
@@ -76,7 +76,7 @@ tags: JPA
 
 - 객체와 테이블의 차이 때문에 반대편 테이블의 외래키를 관리하는 특이한 구조
 
-  ![ORM06-4](images/jpa/ORM-JPA/ORM06-4.png)
+  ![ORM06-4](/images/jpa/ORM-JPA/ORM06-4.png)
 
 - @JoinColumn을 꼭 사용해야 한다. 그렇지 않으면 조인 테이블 방식을 사용함(중간에 테이블이 추가된다.)
 
@@ -89,7 +89,7 @@ tags: JPA
 
 #### 일대다 양방향
 
-![ORM06-5](images/jpa/ORM-JPA/ORM06-5.png)
+![ORM06-5](/images/jpa/ORM-JPA/ORM06-5.png)
 
 - 이런 매핑은 공식적으로 존재 X
 
@@ -139,7 +139,7 @@ tags: JPA
 
 #### 일대일 관계
 
-![ORM06-6](images/jpa/ORM-JPA/ORM06-6.png)
+![ORM06-6](/images/jpa/ORM-JPA/ORM06-6.png)
 
 - 일대일 관계는 그 반대도 일대일
 - 주 테이블이나 대상 테이블 중에 외래 키 선택 가능
@@ -151,7 +151,7 @@ tags: JPA
 
 #### 일대일: 주 테이블에 외래 키 양방향
 
-![ORM06-7](images/jpa/ORM-JPA/ORM06-7.png)
+![ORM06-7](/images/jpa/ORM-JPA/ORM06-7.png)
 
 - 다대일 양방향 매핑 처럼 **외래 키가 있는곳이 연관관계의 주인**
 - **반대편은 mappedBy 적용**
@@ -163,7 +163,7 @@ tags: JPA
 
 #### 일대일: 대상 테이블에 외래 키 양방향 정리
 
-![ORM06-8](images/jpa/ORM-JPA/ORM06-8.png)
+![ORM06-8](/images/jpa/ORM-JPA/ORM06-8.png)
 
 - 일대일 주 테이블에 외래 키 양방향과 매핑 방법은 같음 
 
@@ -189,15 +189,15 @@ tags: JPA
 
 - 관계형 데이터베이스는 정규화된 테이블 2개로 다대다 관계를 표현할 수 없음
 
-  ![ORM06-9](images/jpa/ORM-JPA/ORM06-9.png)
+  ![ORM06-9](/images/jpa/ORM-JPA/ORM06-9.png)
 
   - 연결 테이블을 추가해서 일대다, 다대일 관계로 풀어내야한다.
 
 - 객체는 컬렉션을 사용해서 객체 2개로 다대다 관계 가능
 
-  ![ORM06-10](images/jpa/ORM-JPA/ORM06-10.png)
+  ![ORM06-10](/images/jpa/ORM-JPA/ORM06-10.png)
 
-![ORM06-12](images/jpa/ORM-JPA/ORM06-12.png)
+![ORM06-12](/images/jpa/ORM-JPA/ORM06-12.png)
 
 - `@ManyToMany` 사용
 
@@ -209,7 +209,7 @@ tags: JPA
 
   - 양방향 시, `@ManyToMany(mappedBy ="")`  옵션으로 대상 객체에 추가
 
-    ![ORM06-13](images/jpa/ORM-JPA/ORM06-13.png)
+    ![ORM06-13](/images/jpa/ORM-JPA/ORM06-13.png)
 
 #### 다대다 매핑의 한계
 
@@ -221,7 +221,7 @@ tags: JPA
 
 - 연결 테이블용 엔티티 추가**(연결 테이블을 엔티티로 승격**)
 
-  ![ORM06-11](images/jpa/ORM-JPA/ORM06-11.png)
+  ![ORM06-11](/images/jpa/ORM-JPA/ORM06-11.png)
 
 - @ManyToMany -> @OneToMany, @ManyToOne
 

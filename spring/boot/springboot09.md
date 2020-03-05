@@ -3,7 +3,7 @@ title: 스프링 부트 활용09 - 로깅
 date: 2019-04-10 12:21:30
 tags: SpringBoot
 ---
-![springboot](images/springboot_logo.png)
+![springboot](/images/springboot_logo.png)
 # 스프릥 부트 개념과 활용09(inflearn) - 백기선 
 ## Spring boot
 
@@ -51,7 +51,7 @@ Commons Logging을 사용해도 SLF4j로 가고 Logback로 간다.
     	<logger name="패키지_path" level="DEBUG"/>
     </configuration>
     ```
-    ![springboot](images/springboot/springboot09-1.png)
+    ![springboot](/images/springboot/springboot09-1.png)
 
 - Log4J2: log4j2-spring.xml
 - JUL (비추): logging.properties
@@ -79,7 +79,7 @@ Commons Logging을 사용해도 SLF4j로 가고 Logback로 간다.
     </dependency>
     ```
     - **앞서 말했던 스프링부트2버전대부터 pom.xml에 exclusion없이 사용할 수 있다고 하였는데, 그 경우에는 로깅퍼사드를 변경하는 경우이며, 이 경우에는 로거를 변경하는 경우이다.**
-    ![springboot](images/springboot/springboot09-3.png)
+    ![springboot](/images/springboot/springboot09-3.png)
     
     
     

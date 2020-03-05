@@ -3,7 +3,7 @@ title: 스프링 데이터 JPA02 - 프로젝트 세팅
 date: 2019-04-30 15:18:46
 tags: JPA
 ---
-![springf](images/jpa_logo.png)
+![springf](/images/jpa_logo.png)
 # 스프링 데이터 JPA(inflearn) - 백기선 
 ## 핵심 개념 이해
 
@@ -39,20 +39,20 @@ tags: JPA
             - 그러나, 컬러명 변경 또는 삭제는 해결할 수 없다.(DB 마이그레이션 툴 사용이 필요하다.)
         
 - Entity 생성
-    ![springjpa](images/jpa/jpa02-1.png)
+    ![springjpa](/images/jpa/jpa02-1.png)
     - 모든 필드값에 @Column이 생략되어있다고 생각하면 된다.
     - lombok 사용하였음
     
 - 데이터 저장
     - JPA 사용
-        [springjpa](images/jpa/jpa02-2.png)
+        [springjpa](/images/jpa/jpa02-2.png)
         - EntityManager는 JPA에 가장 핵심 클래스이다.
         - EntityManager와 관련된 모든 작업은 한 트랜잭션 안에서 일어나야한다.
             - @Transactional 사용하여 적용
                 - 클래스에 적용하여 모든 메소드에 적용
                 - 메소드에 적용 시, 해당 메소드에만 작
     - Hibernate 사용
-        [springjpa](images/jpa/jpa02-3.png)
+        [springjpa](/images/jpa/jpa02-3.png)
         - Hibernamte의 가장 핵심적인 api는 Session이다.
         - Session을 꺼내서 사용하여 데이터를 저장한다. 
 <br><br>

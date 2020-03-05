@@ -16,7 +16,7 @@ tags: Web
 - 웹애플리케이션에 모든 사람들이 접근할 수 있도록 해주는 것이다.
 
 #### IP
-![internet](images/web/internet01-01.png)
+![internet](/images/web/internet01-01.png)
 - Internet Protocol Address
 - 접근하기 위한 주소
 - 단점
@@ -40,7 +40,7 @@ tags: Web
 - 도메인 네임이 동작하는 체계
 
 ##### 동작원리
-![internet](images/web/internet01-02.png)
+![internet](/images/web/internet01-02.png)
 - Name Server에 접속하여 해당 IP주소를 요청하고 응답받는다.
 - 응답받은 IP주소로 접속한다.
 <br><br>
@@ -51,7 +51,7 @@ tags: Web
     - 부족하다.
     - 해결책이 필요하다.
 
-![internet](images/web/internet01-03.png)
+![internet](/images/web/internet01-03.png)
 - IPv4 
     - 기존체계
 - IPv6
@@ -60,25 +60,25 @@ tags: Web
 <br><br>
 
 ### 포트
-![internet](images/web/internet01-05.png)
+![internet](/images/web/internet01-05.png)
 
 #### 공유기 
-![internet](images/web/internet01-04.png)
+![internet](/images/web/internet01-04.png)
 - 하나의 공인IP로 여러개의 컴퓨터에서 인터넷을 사용할 수 있도록 하는것
 
 #### 포트포워딩
-![internet](images/web/internet01-06.png)
+![internet](/images/web/internet01-06.png)
 - 웹서버가 설치되어있는 IP로 토스해준다.
 
 ##### 공유기에서 포트포워딩 설정 (iptime기준)
-![internet](images/web/internet01-07.png)
+![internet](/images/web/internet01-07.png)
 - 192.168.0.1 접속 (대부분의 공유기가 해당 IP를 사용한다. 아닐수 있음.)
 - 포트포워딩 설정 탭에서 토스하려는 IP주소를 입력한다.
-![internet](images/web/internet01-08.png)
+![internet](/images/web/internet01-08.png)
 <br><br>
 
 ### 절대경로, 상대경로
-![internet](images/web/internet01-09.png)
+![internet](/images/web/internet01-09.png)
 #### 절대경로
 나의 위치와 무관
 #### 상대경로
@@ -105,7 +105,7 @@ tags: Web
 - DDNS는 도메인과 호스트의 IP를 지속적으로 동기화 시키고 있다.
 
 #### iptime DDNS설정
-![internet](images/web/internet01-10.png)
+![internet](/images/web/internet01-10.png)
 - iptime 펌웨어 버전이 9.58이상이어야 한다.
 - 해당 PC와 연결되어 있는 공인IP가 바뀌면 도메인 이름과 동기화 시켜준다.
 - 도메인이름은 Domain_name.iptime.org 로 설정한다.

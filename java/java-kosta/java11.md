@@ -3,7 +3,7 @@ title: Calendar, GregorianCalandar, Random
 date: 2018-11-13 17:21:55
 tags: Java
 ---
-![Java](images/javaimage.png)
+![Java](/images/javaimage.png)
 # KOSTA DAY11
 ## Java
 
@@ -17,19 +17,19 @@ tags: Java
 - Calendar 클래스의 후손 클래스로 년, 월, 일, 시, 분, 초 정보를 필드를 통해 사용가능
 - Calendar class와 차이점
 
-![Java](images/java/java11-01.png)
+![Java](/images/java/java11-01.png)
 
 #### Date 클래스
-![Java](images/java/java11-02.png)
+![Java](/images/java/java11-02.png)
 - 시스템으로부터 현재 날짜, 시간 정보를 가져와서 다루도록 만들어진 클래스 
 - 생성자 2개만 사용 가능
 
-![Java](images/java/java11-03.png)
+![Java](/images/java/java11-03.png)
 - Date(long n)클래스 정수값을 가지고 날짜 및 시간을 계산
 
 #### 내장 메소드
-![Java](images/java/java11-04.png)
-![Java](images/java/java11-05.png)
+![Java](/images/java/java11-04.png)
+![Java](/images/java/java11-05.png)
 <br><br>
 
 ### Random

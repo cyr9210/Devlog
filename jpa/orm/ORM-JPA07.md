@@ -20,7 +20,7 @@ tags: JPA
 
   - 조인 전략 : 각각 테이블로 변환 
 
-    ![ORM07-1](images/jpa/ORM-JPA/ORM07-1.png)
+    ![ORM07-1](/images/jpa/ORM-JPA/ORM07-1.png)
 
     - 각 테이블을 모두 생성 
     - 슈퍼타입 테이블의 PK를 서브타입의 PK,FK로 둔다.
@@ -29,13 +29,13 @@ tags: JPA
 
   - 단일 테이블 전략 : 통합 테이블로 변환
 
-    ![ORM07-2](images/jpa/ORM-JPA/ORM07-2.png)
+    ![ORM07-2](/images/jpa/ORM-JPA/ORM07-2.png)
 
     - 모든 테이블을 하나의 테이블로 구현하고 구분자 컬럼을 둔다.
 
   - 구현 클래스마다 테이블 전략 : 서브타입 테이블로 변환
 
-    ![ORM07-3](images/jpa/ORM-JPA/ORM07-3.png)
+    ![ORM07-3](/images/jpa/ORM-JPA/ORM07-3.png)
 
     - 모든 테이블을 따로 구현한다.
 
@@ -147,7 +147,7 @@ public class Item {
 
 ### @MappedSuperClass
 
-![ORM07-4](images/jpa/ORM-JPA/ORM07-4.png)
+![ORM07-4](/images/jpa/ORM-JPA/ORM07-4.png)
 
 - 공통 매핑 정보가 필요할 때 사용(id, name등의 항상 필요한 컬럼)
 - 상속관계 매핑 X

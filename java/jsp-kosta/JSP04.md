@@ -5,7 +5,7 @@ tags: JSP
 ---
 # KOSTA DAY42
 ## JSP
-![JSP](images/JSP_logo.png)
+![JSP](/images/JSP_logo.png)
 
 ### 설계모델
 - 애플리케이션을 설계할 때 가장 먼저 해야 할 일은 프로그램이 해야 할 일을 적당한 크기로 나누어서 모듈화하는 것이다.
@@ -14,7 +14,7 @@ tags: JSP
 
 ### 모델1 설계방식
 #### 모델1 개요
-![JSP](images/jsp/JSP04-01.png)
+![JSP](/images/jsp/JSP04-01.png)
 - JSP만 이용하여 개발하는 경우
 - JSP + Java Bean을 이용하여 개발하는 경우
 - Model2의 Controller 개념이 모호
@@ -32,7 +32,7 @@ tags: JSP
 
 ### 모델2 설계방식
 #### 모델2 개요
-![JSP](images/jsp/JSP04-02.png)
+![JSP](/images/jsp/JSP04-02.png)
 - GUI 개발모델인 MVC를 웹 애플리케이션에 적용하여 구현한 방식
 - Application의 역할을 Model — View — Controller로 분리
 
@@ -77,17 +77,17 @@ tags: JSP
 - 어노테이션 or Servlet(Controller)생성시 설정
 ex) *.do → 페이지 내 모든 .do 호출 시
 
-![JSP](images/jsp/JSP04-03.png)
+![JSP](/images/jsp/JSP04-03.png)
 
 #### 예제
-![JSP](images/jsp/JSP04-04.png)
+![JSP](/images/jsp/JSP04-04.png)
 - 페이지 로딩 시, → list.do로 이동
 
-![JSP](images/jsp/JSP04-05.png)
+![JSP](/images/jsp/JSP04-05.png)
 
-![JSP](images/jsp/JSP04-06.png)
+![JSP](/images/jsp/JSP04-06.png)
 
-![JSP](images/jsp/JSP04-07.png)
+![JSP](/images/jsp/JSP04-07.png)
 - request.getRequestURI 를 통해 전체 URI호출
 → /MVC/list.do
 - getContextPath를 통해 프로젝트 네임

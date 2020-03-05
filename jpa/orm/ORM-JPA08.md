@@ -15,23 +15,23 @@ tags: JPA
 
 - `em.find()` : 데이터베이스를 통해서 **실제 엔티티** 객체 조회
 
-  ![ORM08-1](images/jpa/ORM-JPA/ORM08-1.png)
+  ![ORM08-1](/images/jpa/ORM-JPA/ORM08-1.png)
 
   - query를 날린다.
 
 - `em.getReference()` : 데이터베이스 조회를 미루는 **가짜(프록시) 엔티티 객체** 조회
 
-  ![ORM08-2](images/jpa/ORM-JPA/ORM08-2.png)
+  ![ORM08-2](/images/jpa/ORM-JPA/ORM08-2.png)
 
   - query를 날리지 않는다.
 
   - 직접 사용할 때 query를 날린다.
 
-    ![ORM08-3](images/jpa/ORM-JPA/ORM08-3.png)
+    ![ORM08-3](/images/jpa/ORM-JPA/ORM08-3.png)
 
   - hibernate가 만든 **가짜 클래스를 호출**한다.(**Proxy객체**)
 
-    ![ORM08-4](images/jpa/ORM-JPA/ORM08-4.png)
+    ![ORM08-4](/images/jpa/ORM-JPA/ORM08-4.png)
 
 #### 프록시의 특징
 
@@ -49,7 +49,7 @@ tags: JPA
 
 - 프록시 객체를 호출하면, 프록시 객체는 실제 객체의 메소드 호출
 
-  ![ORM08-5](images/jpa/ORM-JPA/ORM08-5.png)
+  ![ORM08-5](/images/jpa/ORM-JPA/ORM08-5.png)
 
 #### 프록시 객체의 초기화
 
@@ -58,7 +58,7 @@ Member member = em.getReference(Member.class, 1L);
 member.getUsername();
 ```
 
-![ORM08-6](images/jpa/ORM-JPA/ORM08-6.png)
+![ORM08-6](/images/jpa/ORM-JPA/ORM08-6.png)
 
 1. 실제 사용 요청(`member.getName()`)
 
@@ -80,13 +80,13 @@ member.getUsername();
 
 - 프록시 객체는 원본 엔티티를 상속받음
 
-  ![ORM08-7](images/jpa/ORM-JPA/ORM08-7.png)
+  ![ORM08-7](/images/jpa/ORM-JPA/ORM08-7.png)
 
   - 타입 체크 시 주의가 필요( == 대신 **instanseof 사용**)
 
 - **영속성 컨텍스트에 찾는 엔티티가 있으면 `em.getReference()`를 호출해도 실제 엔티티 반환**
 
-  ![ORM08-8](images/jpa/ORM-JPA/ORM08-8.png)
+  ![ORM08-8](/images/jpa/ORM-JPA/ORM08-8.png)
 
   - **JPA는 같은 트랜잭션안에서 같은 데이터에 대하여 인스턴스 비교(==)를 보장한다.**
     (type이 다르면 ==비교는 무조건 false)
@@ -95,7 +95,7 @@ member.getUsername();
 
 - 영속성 컨텍스트의 도움을 받을 수 없는 준영속 상태일 때, 프록시를 초기화하면 문제발생
 
-  ![ORM08-9](images/jpa/ORM-JPA/ORM08-9.png)
+  ![ORM08-9](/images/jpa/ORM-JPA/ORM08-9.png)
 
   - org.hibernate.LazyInitializationException 예외 발생
 
@@ -107,7 +107,7 @@ member.getUsername();
   PersistenceUnitUtil.isLoaded(Object entity);
   ```
 
-  ![ORM08-10](images/jpa/ORM-JPA/ORM08-10.png)
+  ![ORM08-10](/images/jpa/ORM-JPA/ORM08-10.png)
 
 - 프록시 클래스 확인 방법
 
@@ -121,7 +121,7 @@ member.getUsername();
   org.hibernate.Hibernate.Initialize(entity);
   ```
 
-  ![ORM08-11](images/jpa/ORM-JPA/ORM08-11.png)
+  ![ORM08-11](/images/jpa/ORM-JPA/ORM08-11.png)
 
   - JPA표준에는 강제 초기화가 없다.
   - member.getName(), size() 등으로 강제호출하여 초기화시킨다.
@@ -134,9 +134,9 @@ member.getUsername();
 
 **Member를 조회할 때 Team도 조회해야할까?**
 
-![ORM08-12](images/jpa/ORM-JPA/ORM08-12.png)
+![ORM08-12](/images/jpa/ORM-JPA/ORM08-12.png)
 
-![ORM08-13](images/jpa/ORM-JPA/ORM08-13.png)
+![ORM08-13](/images/jpa/ORM-JPA/ORM08-13.png)
 
 - 해당 연관관계에 해당하는 엔티티를 프록시객체로 가져온다.
   - 실제로 사용하는 시점에 초기화(DB조회)
@@ -145,7 +145,7 @@ member.getUsername();
 
 **Meber와 Team을 자주 함께 사용한다면?**
 
-![ORM08-14](images/jpa/ORM-JPA/ORM08-14.png)
+![ORM08-14](/images/jpa/ORM-JPA/ORM08-14.png)
 
 - 해당 연관관계에 해당하는 엔티티를 실제 엔티티 객체로 초기화하여 가져온다.
 - JPA구현체는 가능하면 조인을 사용해서 SQL 한번에 함께 조회
@@ -176,7 +176,7 @@ member.getUsername();
 
 ### 영속성 전이: CASCADE
 
-![ORM08-15](images/jpa/ORM-JPA/ORM08-15.png)
+![ORM08-15](/images/jpa/ORM-JPA/ORM08-15.png)
 
 - 특정 엔티티를 영속상태로 만들 때, **연관된 엔티티도 함께 영속상태로 만들고 싶을 때**
   - 예시> 부모 엔티티를 저장할 때, 자식 엔티티도 함께 저장.

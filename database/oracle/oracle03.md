@@ -3,7 +3,7 @@ title: ANSI JOIN, INNER JOIN, OUTER JOIN, SELF JOIN, 서브쿼리
 date: 2018-11-28 17:36:11
 tags: OracleDB
 ---
-![DB](images/oracledb_logo.png)
+![DB](/images/oracledb_logo.png)
 # KOSTA DAY22
 ## DataBase
 
@@ -38,7 +38,7 @@ WHERE last_name = ‘King’;
 <br>
 
 ### INNER JOIN
-![DB](images/database/DB03-01.png)
+![DB](/images/database/DB03-01.png)
 - 교집합에 해당한다고 볼 수 있다.
 <br><br>
 
@@ -84,7 +84,7 @@ ON e.department_id = d.department_id
 /* 누락된 곳으로 방향설정 */
 ```
 
-![DB](images/database/DB03-02.png)
+![DB](/images/database/DB03-02.png)
 <br>
 
 ### 서브쿼리

@@ -19,12 +19,12 @@ tags: JPA
 #### H2 데이터베이스 설치와 실행
 - http://www.h2database.com/
  
-  ![ORM02-1](images/jpa/ORM-JPA/ORM02-1.png)
+  ![ORM02-1](/images/jpa/ORM-JPA/ORM02-1.png)
   - OS에 맞게 다운로드 및 압축해제
     - 윈도우 외 : All Platforms 다운
 
 - 압축해제위치/h2/bin/h2.sh 실행(mac의 경우)
-  ![ORM02-2](images/jpa/ORM-JPA/ORM02-2.png)
+  ![ORM02-2](/images/jpa/ORM-JPA/ORM02-2.png)
 
 #### 프로젝트 생성
 - 자바8
@@ -53,18 +53,18 @@ tags: JPA
 
 - JPA는 인터페이스의 모음이며 구현체로 하이버네이트를 선택했다.
 - hibernate 라이브러리가 jpa 인터페이스를 가지고 있다.
-  ![ORM02-3](images/jpa/ORM-JPA/ORM02-3.png)
+  ![ORM02-3](/images/jpa/ORM-JPA/ORM02-3.png)
   
 - h2 DB 버전을 맞추는게 좋다. 
-  ![ORM02-4](images/jpa/ORM-JPA/ORM02-4.png)
+  ![ORM02-4](/images/jpa/ORM-JPA/ORM02-4.png)
 
 #### JPA 설정하기 - persistence.xml
 - JPA 설정파일 
 - 위치는 반드시 /META-INF/persistence.xml
-  ![ORM02-7](images/jpa/ORM-JPA/ORM02-7.png)
+  ![ORM02-7](/images/jpa/ORM-JPA/ORM02-7.png)
 
 - persistence-unit_name으로 이름지정 가능
-  ![ORM02-6](images/jpa/ORM-JPA/ORM02-6.png)
+  ![ORM02-6](/images/jpa/ORM-JPA/ORM02-6.png)
 
 - javax.persistence로 시작 : JPA 표준 속성
   - hibernate가 아닌 다른 구현체를 사용하여도 같은 설정이 가능
@@ -108,16 +108,16 @@ tags: JPA
 
 #### JPA 구동방식
 
-![ORM02-5](images/jpa/ORM-JPA/ORM02-5.png)
+![ORM02-5](/images/jpa/ORM-JPA/ORM02-5.png)
 
 1. META-INF/persistence.xml에서 설정 정보를 확인
 2. 확인한 정보로 EntityManagerFactory를 생성
 
-   ![ORM02-8](images/jpa/ORM-JPA/ORM02-8.png)
+   ![ORM02-8](/images/jpa/ORM-JPA/ORM02-8.png)
 
 3. 필요할 때마다 EntityManger를 생성한다.
 
-   ![ORM02-9](images/jpa/ORM-JPA/ORM02-9.png)
+   ![ORM02-9](/images/jpa/ORM-JPA/ORM02-9.png)
    - EntityManagerFactory는 애플리케이션 로딩시점에 한번만 생성해준다.
    - 한 트랜잭션에 대한 DB커넥션을 위해서는 EntityManager를 만든다.
    - EntityManger는 쓰레드간 절대 공유하지 않는다.(사용 후 버림.)
@@ -168,24 +168,24 @@ tags: JPA
 
 #### 회원저장
 
-- em.persist(Object entity);![ORM02-10](images/jpa/ORM-JPA/ORM02-10.png)
+- em.persist(Object entity);![ORM02-10](/images/jpa/ORM-JPA/ORM02-10.png)
   - hibernate.show_sql : 쿼리가 출력된다.
   - hibernate.format_sql : 쿼리가 이쁘게 포맷팅된다.
   - hibernate.use_sql_comments : 이 쿼리가 왜나왔는지 주석이 달린다.
 - 사실은 위와 같은 코드는 좋지 않은 코드이다.
 - EntityManger를 만드는 과정에서 에러가 발생한다면.. close() 메소드등을 호출하지 못한다.
-- 실제론 이와같은 코드가 될 것이다.![ORM02-11](images/jpa/ORM-JPA/ORM02-11.png)
+- 실제론 이와같은 코드가 될 것이다.![ORM02-11](/images/jpa/ORM-JPA/ORM02-11.png)
 
 #### 회원 단 건 조회
 
 - Member member = em.find(Member.class, 1L);
-  ![ORM02-12](images/jpa/ORM-JPA/ORM02-12.png)
+  ![ORM02-12](/images/jpa/ORM-JPA/ORM02-12.png)
 
 #### 회원 삭제
 
 - 찾은 회원을 remove 메소드 파라미터에 넣어준다.
   em.remove(entity);
-  ![ORM02-14](images/jpa/ORM-JPA/ORM02-14.png)
+  ![ORM02-14](/images/jpa/ORM-JPA/ORM02-14.png)
 
 #### 회원수정
 
@@ -193,7 +193,7 @@ tags: JPA
 
 - **따로 저장하는 업데이트 메소드를 호출하지 않았지만, 트랜잭션을 커밋하는 시점에 변경사항을 체크한다. (dirty checking)**
   변경 사항이 있으면 update 쿼리를 날려준다.
-  ![ORM02-13](images/jpa/ORM-JPA/ORM02-13.png)
+  ![ORM02-13](/images/jpa/ORM-JPA/ORM02-13.png)
 
 JPA 쓸 때, 원하는 데이터를 최적화 및 목적에 맞도록 query를 날리고 싶다면 어떻게 해야할까..
 JPA에서는 JPQL을 통해 도와준다.

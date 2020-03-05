@@ -3,14 +3,14 @@ title: 스프링 핵심기술05 - 스프링 AOP
 date: 2019-03-26 16:23:40
 tags: Springframework
 ---
-![springf](images/springframwork-logo.png)
+![springf](/images/springframwork-logo.png)
 # 스프링 프레임워크 핵심기술05(inflearn) - 백기선 
 ## Springframework
 
 ### AOP 개념
 - Aspect-oriendted Programming (AOP)은 OOP를 보완하는 수단으로, 흩어진 Aspect를 모듈화 할 수 있는 프로그래밍 기법.
 
-![springcore](images/springc/springcore05-01.png)
+![springcore](/images/springc/springcore05-01.png)
 
 #### 주요개념
 - Aspect : 분류된 모듈
@@ -46,17 +46,17 @@ ex\) class A, B, C
 - 모든 AOP 기능을 제공하는 것이 목적이 아니라, 스프링 IoC와 연동하여 엔터프라이즈 애플리케이션에서 가장 흔한 문제에 대한 해결책을 제공하는 것이 목적.
 
 #### 프록시 패턴
-![springcore](images/springc/springcore05-02.png)
+![springcore](/images/springc/springcore05-02.png)
 - 기존 코드를 건드리지 않고 
     - 접근제어
     - 부가기능
 
 #### 예제
 - 프록시 미적용
-![springcore](images/springc/springcore05-04.png)
+![springcore](/images/springc/springcore05-04.png)
 
 - 프록시 적용
-![springcore](images/springc/springcore05-05.png)
+![springcore](/images/springc/springcore05-05.png)
 
 #### 문제점
 - 매번 프록시 클래스를 작성해야 하는가?
@@ -84,7 +84,7 @@ ex\) class A, B, C
 </dependency>
 ```
 - Aspect 정의
-    ![springcore](images/springc/springcore05-10.png)   
+    ![springcore](/images/springc/springcore05-10.png)   
     - @Aspect
     - 빈으로 등록해야 하니까 (컴포넌트 스캔을 사용한다면) @Component도 추가.
 
@@ -92,13 +92,13 @@ ex\) class A, B, C
 - @Pointcut(표현식)
 - 주요 표현식
     - execution
-    ![springcore](images/springc/springcore05-06.png)
+    ![springcore](/images/springc/springcore05-06.png)
     
     - @annotation
-    ![springcore](images/springc/springcore05-08.png)
+    ![springcore](/images/springc/springcore05-08.png)
     
     - bean
-    ![springcore](images/springc/springcore05-09.png)
+    ![springcore](/images/springc/springcore05-09.png)
 - 포인트컷 조합
     - &&, ||, !
 <br><br>

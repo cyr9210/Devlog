@@ -4,15 +4,15 @@ date: 2018-10-31 17:08:40
 tags: Java
 ---
 
-![Java](images/javaimage.png)
+![Java](/images/javaimage.png)
 # KOSTA DAY03
 ## Java
 
 ### Method
 필드가 물체의 상태라면, 물체의 행동에 해당하는게 메소드이다.
 
-![Java](images/java/java03-01.png)
-![Java](images/java/java03-02.png)
+![Java](/images/java/java03-01.png)
+![Java](/images/java/java03-02.png)
 - 메소드는 입력값이 있고, 그 입력값을 받아서 무언가 한 다음 결과를 도출해 내는 수학의 함수와 비슷한 개념
 - 이 때, 입력값을 매개변수(Parameter), 결과값을 리턴값 이라고 한다.
 - 메소드란 클래스 가지고 있는 기능(클래스 안에서 선언됨.)
@@ -21,8 +21,8 @@ tags: Java
 #### 배열
 배열은 같은 데이터 타입을 가진 연속된 메모리 공간으로 이루어진 자료구조이다.
 
-![Java](images/java/java03-03.png)
-![Java](images/java/java03-04.png)
+![Java](/images/java/java03-03.png)
+![Java](/images/java/java03-04.png)
 - 주소값 사용(reference 타입)
 - 같은 데이터 타입을 가진 여러개의 변수가 필요할 때 사용한다.
 - 한 번 생성하면 배열의 크기 변경 불가

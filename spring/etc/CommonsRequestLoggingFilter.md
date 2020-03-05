@@ -68,7 +68,7 @@ tags: Springframework
 
 #### 결과
 
-![CommonsLoggingFilter01](images/spring/CommonsLoggingFIlter/CommonsLoggingFilter01.png)
+![CommonsLoggingFilter01](/images/spring/CommonsLoggingFIlter/CommonsLoggingFilter01.png)
 
 ### 참고
 

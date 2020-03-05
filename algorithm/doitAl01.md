@@ -4,7 +4,7 @@ date: 2019-03-14 09:59:13
 tags: Algorithm
 ---
 
-![Java](images/algorism_logo.png)
+![Java](/images/algorism_logo.png)
 # Study
 ## Algorism
 
@@ -59,7 +59,7 @@ public void max(){
 3. c값이 max보다 크면 max에 c값을 넣는다.
 
 #### 결과
-![doital](images/doital/doital01-01.png)
+![doital](/images/doital/doital01-01.png)
 
 #### 학습내용
 - 순차적 구조 : 위와 같이 세 문장이 아래로 나란히 있을 때, 순차적으로 실행되는 구조
@@ -82,7 +82,7 @@ public void judgeSign(){
 }
 ```
 ### 결과
-![doital](images/doital/doital01-02.png)
+![doital](/images/doital/doital01-02.png)
 <br><br>
 
 ### 순서도의 기호
@@ -156,7 +156,7 @@ public void judgeSign(){
 ```
 
 #### 결과
-![doital](images/doital/doital01-09.png)
+![doital](/images/doital/doital01-09.png)
 <br><br>
  
 ### 구조적 프로그래밍
@@ -182,7 +182,7 @@ for (int i = 2; i < 10; i++) {
 }
 ```
 #### 결과
-![doital](images/doital/doital01-10.png)
+![doital](/images/doital/doital01-10.png)
 <br><br>
 
 ### 직각 이등변 삼각형 출력
@@ -207,6 +207,6 @@ for (int i = 2; i < 10; i++) {
 ```
 
 #### 결과
-![doital](images/doital/doital01-11.png)
+![doital](/images/doital/doital01-11.png)
 <br><br>
 

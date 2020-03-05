@@ -4,7 +4,7 @@ date: 2019-04-19 23:03:39
 tags: Git
 ---
 # Git 
-![gitlogo](images/git_logo.png)
+![gitlogo](/images/git_logo.png)
 
 ### Github
 - github은 git이라는 버전관리시스템에 저장소를 빌려주는 호스팅 사이트이다.

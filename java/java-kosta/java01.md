@@ -3,7 +3,7 @@ title: 변수, 데이터 종류, 연산자, if/else, switch
 date: 2018-10-29 09:00:00
 tags: Java
 ---
-![Java](images/javaimage.png)
+![Java](/images/javaimage.png)
 # KOSTA DAY01
 ## Java
 
@@ -54,12 +54,12 @@ tags: Java
 #### 증감연산자
 - 1씩 증가 or 감소 시키는 연산자
 
-![증감연산자](images/java/java01-01.png)
+![증감연산자](/images/java/java01-01.png)
 - 위의 예제와 같이 전치, 후치 에 따라서 값이 달라질 수 있다.
 
 #### 삼항연산자
 
-![삼항연산자](images/java/java01-02.png)
+![삼항연산자](/images/java/java01-02.png)
 <br><br>
 
 ### if/else
@@ -73,7 +73,7 @@ tags: Java
 - 조건식이 true일 경우, if 블록의 실행문이 실행되고, false일 경우 else블록의 실행문이 실행된다.
 
 #### if/else if/else문
-![if/esle](images/java/java01-03.png)
+![if/esle](/images/java/java01-03.png)
 - 처음 if 문의 조건식의 조건문이 true일 경우 if문의 실행문이 실행
 - false일 경우 다음 조건식의 결과에 따라 실행블록이 달라진다.
 - else if 문의 수는 제한이없으나, 많은 else if문은 속도를 저하시킴
@@ -83,7 +83,7 @@ tags: Java
 ### switch
 - 어떤변수의 값에 따라서 문장을 실행할 수 있도록 하는 제어문
 
-![switch](images/java/java01-03.png)
+![switch](/images/java/java01-03.png)
 <br><br>
 
 

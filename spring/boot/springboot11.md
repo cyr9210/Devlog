@@ -3,7 +3,7 @@ title: 스프링 부트 활용11 - SpringBoot_Devtools
 date: 2019-04-11 00:26:47
 tags: SpringBoot
 ---
-![springboot](images/springboot_logo.png)
+![springboot](/images/springboot_logo.png)
 # 스프릥 부트 개념과 활용11(inflearn) - 백기선 
 ## Spring boot
 
@@ -20,7 +20,7 @@ tags: SpringBoot
     - 캐시 적용 시, 변경사항을 바로바로 반영하지 않음.(캐시를 꺼준다.)
     - **devtools 사용보다는 설정만 복사하여 [property 설정](https://github.com/spring-projects/spring-boot/blob/v2.1.4.RELEASE/spring-boot-project/spring-boot-devtools/src/main/java/org/springframework/boot/devtools/env/DevToolsPropertyDefaultsPostProcessor.java)을 하는것을 추천한다.**
     (restart, 라이브 릴로드 등의 기능은 오류가 많음) 
-    ![springboot](images/springboot/springboot11-1.png)
+    ![springboot](/images/springboot/springboot11-1.png)
     
 - 클래스패스에 있는 파일이 변경 될 때마다 자동으로 재시작
     - 직접 껐다 켜는거 (cold starts)보다 빠르다.

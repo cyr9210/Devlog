@@ -21,7 +21,7 @@ tags: Process
     - 계속적 수정으로 인해 프로그램의 구조가 나빠져 수정이 매우 어려워진다.
 
 #### 선형 순차적 모델(water fall)
-![process](images/Process/Process02-01.png)
+![process](/images/Process/Process02-01.png)
 - 폭포수 모델의 장점
     - 관리의 용이
     - 체계적인 문서화
@@ -32,22 +32,22 @@ tags: Process
     - 사용자가 중간에 가시적인 결과를 볼 수 없어 답답해할 수 있다.
 
 #### V모델
-![process](images/Process/Process02-02.png)
+![process](/images/Process/Process02-02.png)
 - 폭포수 모델 + 테스트 단계 추가 확장
 - 산출물 중심 vs 각 개발 단계를 검증하는데 초점
 - 테스트단계에서 정확한 니즈가 확인이 안되며, 지나간 단계의 수정이 어려움
 
 #### 프로토 타입
 미리 제작해보는 시제품, 제작물의 모형
-![process](images/Process/Process02-03.png)
+![process](/images/Process/Process02-03.png)
 - 정식 절차에 따라 완전한 소프트웨어를 만들기 전에 사용자의 요구를 받아 일단 모형을 만들고 이 모형을 사용자와 의사소통 하는 도구로 활용
 - 비용 및 시간의 측면에서 부적합
 
 #### 통합 프로세스 모델(UP)
-![process](images/Process/Process02-04.png)
+![process](/images/Process/Process02-04.png)
 
 #### 애자일 프로세스 모델
-![process](images/Process/Process02-05.jpg)
+![process](/images/Process/Process02-05.jpg)
 - 애자일(agile) : 날렵한, 민첩한
 - 고객의 요구에 민첨하게 대응하고 그때그때 주어지는 문제를 풀어나가는 방법론
 

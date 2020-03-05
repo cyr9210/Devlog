@@ -108,11 +108,11 @@ tags: SpringBoot
 
    - Async 적용
 
-     ![async-1](images/springboot/Async/async-1.png)
+     ![async-1](/images/springboot/Async/async-1.png)
 
    - 미적용
 
-     ![async-2](images/springboot/Async/async-2.png)
+     ![async-2](/images/springboot/Async/async-2.png)
 
 ### 심화
 
@@ -133,7 +133,7 @@ tags: SpringBoot
 
 - service의 메소드는 동기로 호출되기를 바라지만, 내부에서 하는 일부의 기능에 대해 비동기로 실행하기를 바란다면 @Async동작이 불가능 하다. (내부 메소드를 호출은 @Async적용이 불가하여..)
 
-  ![async-3](images/springboot/Async/async-3.png)
+  ![async-3](/images/springboot/Async/async-3.png)
 
 #### 해결
 
@@ -174,7 +174,7 @@ tags: SpringBoot
 
    - 결과
 
-     ![async-4](images/springboot/Async/async-4.png)
+     ![async-4](/images/springboot/Async/async-4.png)
 
 2. @Async 사용하지 않고 CompletableFuture를 쓰되, 쓰레드 풀을 주입받아 해당 쓰레드 풀에서 실행
 
@@ -201,7 +201,7 @@ tags: SpringBoot
 
    - 결과
 
-     ![async-5](images/springboot/Async/async-5.png)
+     ![async-5](/images/springboot/Async/async-5.png)
 
 ### More
 

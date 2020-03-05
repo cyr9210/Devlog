@@ -3,19 +3,19 @@ title: 스프링 데이터 JPA04 - Cascade, Fetch, Query, 스프링 데이터 JP
 date: 2019-04-30 20:12:00
 tags: JPA
 ---
-![springf](images/jpa_logo.png)
+![springf](/images/jpa_logo.png)
 # 스프링 데이터 JPA(inflearn) - 백기선 
 ## 핵심 개념 이해
 ### 엔티티의 상태와 Cascade
 
 #### 엔티티의 상태
-![springjpa](images/jpa/jpa04-1.png)
+![springjpa](/images/jpa/jpa04-1.png)
 - Transient: JPA가 모르는 상태
     - ex)  new 사용하여 객체생성 상태
 - Persistent: JPA가 관리중인 상태 (1차 캐시, Dirty Checking(변경사항을 계속체크), Write Behind, ...)
     - ex)  session.save()를 통해 저장한 상태
     - 1차 캐시(persistent context(session, entitiymanager등)에 저장된다.)
-        ![springjpa](images/jpa/jpa04-2.png)
+        ![springjpa](/images/jpa/jpa04-2.png)
         - 바로 쿼리문을 날리지 않고 1차캐싱 후, 트랜잭션 종료 시 객체를 체크하여 쿼리문을 날린다.
         (불필요한 쿼리문 날리지 않는다.)
 - Detached: JPA가 더이상 관리하지 않는 상태.
@@ -25,18 +25,18 @@ tags: JPA
 #### Cascade
 - 엔티티의 상태 변화를 전파 시키는 옵션
 - 참조하고 있던 객체들도 함께 변화한다.(설정을 해주어야한다.)
-    ![springjpa](images/jpa/jpa04-3.png)
+    ![springjpa](/images/jpa/jpa04-3.png)
     - remove 옵션을 주면 함께 사라진다.
-    ![springjpa](images/jpa/jpa04-4.png)
+    ![springjpa](/images/jpa/jpa04-4.png)
     
 ### Fetch
 - 연관 관계의 엔티티의 정보를 어떻게 가져올것인가에 대한 설정
     - 지금 : Eager
         - @ManyToOne (기본값)
             - comment를 통해서 post를 호출할때 쿼리를 두개 날라지 않는다. 조인쿼리문을 사용하여 출력
-            ![springjpa](images/jpa/jpa04-6.png)
+            ![springjpa](/images/jpa/jpa04-6.png)
         - @OneToMany의 fetch모드를 eager로 변경하게 되면 comment정보 까지 가져오는것을 확인 할 수 있다.
-        ![springjpa](images/jpa/jpa04-5.png)
+        ![springjpa](/images/jpa/jpa04-5.png)
     - 나중에 : Lazy
         - @OneToMany (기본값)
         

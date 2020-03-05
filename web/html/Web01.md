@@ -3,7 +3,7 @@ title: Web, HTML
 date: 2018-12-07 21:31:38
 tags: Web
 ---
-![html](images/html_logo.jpeg)
+![html](/images/html_logo.jpeg)
 # KOSTA DAY28
 ## Web
 
@@ -34,7 +34,7 @@ tags: Web
 #### 웹 플랫폼의 구성요소
 
 ##### 클라이언트 기술
-![web](images/web/Web01-02.png)
+![web](/images/web/Web01-02.png)
 - RIA(Rich Internet Application) 기술의 등장
 >**RIA**   
 웹 애플리케이션의 장점은 유지하면서 기존 웹 브라우저 기반 인터페이스의 단점인 늦은 응답 속도, 데스크톱 애플리케이션에 비해 떨어지는 조작성 등을 개선하기 위한 기술의 통칭이다. 즉, 별도의 설치가 필요 없는 웹 브라우저 기반의 애플리케이션 배포 장점과 서버 측 웹 서비스와의 연동, 마크업 언어 기반의 선언적 애플리케이션 구성 등은 유지하면 서 데스크톱 애플리케이션과 대등한 사용자 경험을 주는 것을 목표로 하는 기술이다.
@@ -60,10 +60,10 @@ tags: Web
 #### 웹표준
 - W3C토론을 통해 나온 권고안
 - 목표
-![web](images/web/Web01-03.png)
+![web](/images/web/Web01-03.png)
 
 - 웹표준스펙
-![web](images/web/Web01-04.png)
+![web](/images/web/Web01-04.png)
 <br>
 
 - 웹페이지 내용, 구성 = HTML
@@ -85,27 +85,27 @@ tags: Web
 Hyper Text Mark up Language
 
 #### 역사
-![web](images/web/Web01-05.png)
+![web](/images/web/Web01-05.png)
 - 과거 구버젼 HTML의 경우, 플러그인 기술 사용
 ex) 웹어플리케이션 별 Active X 설치 필요
 - HTML5 자체 브라우저 기능만으로 구현(플러그인 기술 대체)
 - 최근 웹브라우저는 모두 HTML 5를 지원
 
 #### 구조
-![web](images/web/Web01-06.png)
+![web](/images/web/Web01-06.png)
 - DOCTYPE : 문서타입정의(HTML버젼의미)
 - head : 필요한걸 불러오는 작업, 사전에 선언되야하는 부분, setting, 리소스불러오기 등 **화면에 보여지는것과 상관 없다.**
 - body : 문서의 내용을 표시한다.
 
 #### 구동원리
-![web](images/web/Web01-07.png)
+![web](/images/web/Web01-07.png)
 - 서버는 클라이언트의 요청을 분석하여 결과값을 HTML로 전송한다.
 - 서버는 결과값을 전송 후 클라이언트와 접속을 끊는다.
 - 클라이언트는 서버로부터 전달받은 HTML을 웹브라우저에서 표시한다.
 - 각 웹브라우저는 브라우저 엔진이 내장되어 있고, 이 엔진이 태그를 해석하여 화면을 표시한다.
 
 #### 마크업작성
-![web](images/web/Web01-08.png)
+![web](/images/web/Web01-08.png)
 - 태그는 브라우저에 의해 해석되며, 각 태그의 의미는 모두 다르다.
 - 태그내용이 화면에 표시되지 않음
 - Body, Title, BR 등과 같은 텍스트는 화면에 표시하지 않음
@@ -117,18 +117,18 @@ ex) 웹어플리케이션 별 Active X 설치 필요
 
 #### DOCTYPE
 브라우저는 현재 문서가 어떤형태의 문서인지 판단하는 목적으로 DOCTYPE을 확인한다.
-![web](images/web/Web01-09.png)
+![web](/images/web/Web01-09.png)
 - 선언되지 않을 경우, HTML을 해석하고 출력하는데 많은 시간 소요
 - HTML5에서는 <!DOCTYPE html>로 간소화 하였다.
 
 #### Tag
-![web](images/web/Web01-10.png)
+![web](/images/web/Web01-10.png)
 - 구조와 의미를 브라우저로 전달한다.
 - 대소문자 구별 없음
 - 시작태그(<>)와 종료태그(</>)로 쌍을 이루며 중첩되지 않도록 한다.
 
 #### head
-![web](images/web/Web01-11.png)
+![web](/images/web/Web01-11.png)
 - <head\>태그는 부라우저에게 html문서의 머리부분임을 알려준다.
 - <title\>, <meta\>, <style\>, <script\>, <link\>태그를 포홈할수 있다.
 - <title\> : 문서의 제목을 의미, 브라우저 제목표시줄에 태그내용이 표시
@@ -142,7 +142,7 @@ ex) 웹어플리케이션 별 Active X 설치 필요
 #### Body
 문서의 내용을 작성하는 부분
 
-![web](images/web/Web01-12.png)
+![web](/images/web/Web01-12.png)
 - <head>에 위치하며 <head>내부 태그 및 <html>을 제외한 모든 태그를 포함한다.
 - id속성을 이용, 문서 내에서 유일하게 태그를 식별한다.(id 속성 중복 X)
 - class 속성을 이용하여 여러태그에 공톡적인 특성을 부여 가능(중복가능)
@@ -165,23 +165,23 @@ ex) 웹어플리케이션 별 Active X 설치 필요
 - 종류 : a, img, span 등이 있다.
 
 ##### 목록형 태그
-![web](images/web/Web01-13.png)
+![web](/images/web/Web01-13.png)
 - <a> : 폐이지로 이동하는 명령어
 - href 는 문서내 특정지점으로 이동 가능
 
 ##### 예시
-![web](images/web/Web01-14.png)
-![web](images/web/Web01-15.png)
+![web](/images/web/Web01-14.png)
+![web](/images/web/Web01-15.png)
 
 #### 테이블요소
-![web](images/web/Web01-16.png)
+![web](/images/web/Web01-16.png)
 - colspan : 열병합
 - rowspan : 행병합
 
-![web](images/web/Web01-17.png)
+![web](/images/web/Web01-17.png)
 
 ##### 예제
-![web](images/web/Web01-18.png)
+![web](/images/web/Web01-18.png)
 
 #### 오브젝트 ,이미지요소
 - alt : 간단한 그림의 설명을 툴팁으로 보여줌, 이미지가 나타날 수 없는 경우 대체 텍스트를 설정함
@@ -189,7 +189,7 @@ ex) 웹어플리케이션 별 Active X 설치 필요
 - alt는 웹접근성을 위해서 사용된다.(시각장애인)
 
 ##### 예제
-![web](images/web/Web01-19.png)
+![web](/images/web/Web01-19.png)
 
 #### FORM 요소
 - 사용자로부터 데이터를 입력받아 서버에서 처리하기 위한 용도로 사용
@@ -201,9 +201,9 @@ ex) 웹어플리케이션 별 Active X 설치 필요
 - method속성 : 데이터 전송방식을 지정(GET, POST)
 
 ##### form 컨트롤 요소
-![web](images/web/Web01-20.png)
+![web](/images/web/Web01-20.png)
 
 ##### 예제
-![web](images/web/Web01-21.png)
+![web](/images/web/Web01-21.png)
 - input 태그안의 text, email, date, color, range, checkbox, radio 활용 및 select , feild 태그 활용
 <br><br>

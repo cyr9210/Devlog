@@ -3,12 +3,12 @@ title: File Class, Thread
 date: 2018-11-16 13:19:05
 tags: Java
 ---
-![Java](images/javaimage.png)
+![Java](/images/javaimage.png)
 # KOSTA DAY14
 ## Java
 
 ### File Class
-![Java](images/java/java13-01.png)
+![Java](/images/java/java13-01.png)
 - File 클래스
     - (파일의 내용이 아니라) 파일 자체를 관리하는 클래스 
     - 파일 정보를 가져오는 메소드 
@@ -18,18 +18,18 @@ tags: Java
     - 배열로 저장 가능
 #### 예제
 - File
-![Java](images/java/java14-01.png)
-![Java](images/java/java14-02.png)
-![Java](images/java/java14-03.png)
+![Java](/images/java/java14-01.png)
+![Java](/images/java/java14-02.png)
+![Java](/images/java/java14-03.png)
 
 - 디렉토리 복사
-![Java](images/java/java14-04.png)
-![Java](images/java/java14-05.png)
+![Java](/images/java/java14-04.png)
+![Java](/images/java/java14-05.png)
 
 <br><br>
 
 ### Thread(스레드)
-![Java](images/java/java14-06.png)
+![Java](/images/java/java14-06.png)
 - 프로그램의 실행 흐름 
 - 싱글스레드 : 스레드가 하나뿐인 프로그램 
 - 멀티스레드 프로그램 : 스레드가 둘 이상인 프로그램

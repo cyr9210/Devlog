@@ -3,7 +3,7 @@ title: 객체지향, 생성자, 객체 내 배열
 date: 2018-11-06 17:43:45
 tags: Java
 ---
-![Java](images/javaimage.png)
+![Java](/images/javaimage.png)
 # KOSTA DAY06
 ## Java
 ### 객체지향

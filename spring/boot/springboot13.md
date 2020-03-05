@@ -3,12 +3,12 @@ title: 스프링 부트 활용13 - 스프링 데이터
 date: 2019-04-15 14:34:06
 tags: SpringBoot
 ---
-![springboot](images/springboot_logo.png)
+![springboot](/images/springboot_logo.png)
 # 스프릥 부트 개념과 활용13(inflearn) - 백기선 
 ## Spring boot
 
 ### 스프링 데이터
-![springboot](images/springboot/springboot13-1.png)
+![springboot](/images/springboot/springboot13-1.png)
 
 #### 인메모리 데이터베이스
 - 스프링 부트가 지원하는 인-메모리 데이터베이스
@@ -23,13 +23,13 @@ tags: SpringBoot
 - 스프링부트는 인메모리 데이터베이스 의존성이 설정이 되있고, Data Source를 설정하지 않으면 스프링 부트는 자동으로 인메로리 데이터베이스를 설정해준다.
 
 - 인-메모리 데이터베이스 기본 연결 정보 확인하는 방법
-![springboot](images/springboot/springboot13-2.png)
+![springboot](/images/springboot/springboot13-2.png)
     - URL: “testdb”
     - username: “sa”
     - password: “”
 
 - table 생성 예시
-![springboot](images/springboot/springboot13-4.png)
+![springboot](/images/springboot/springboot13-4.png)
     >**createStatement()**
     데이터베이스로 SQL 문을 보내기 위한 SQLServerStatement 개체를 만듭니다.
     
@@ -41,11 +41,11 @@ tags: SpringBoot
     - spring-boot-devtools를 추가하거나...
     - spring.h2.console.enabled=true 만 추가.
     - /h2-console로 접속 (이 path도 바꿀 수 있음)
-    ![springboot](images/springboot/springboot13-3.png)
+    ![springboot](/images/springboot/springboot13-3.png)
 
 - Data Source뿐만 아니라 JdbcTemplate도 빈으로 등록됨으로 사용할 수 있다.
-![springboot](images/springboot/springboot13-5.png)
-![springboot](images/springboot/springboot13-6.png)
+![springboot](/images/springboot/springboot13-5.png)
+![springboot](/images/springboot/springboot13-6.png)
     - Jdbc api(connection등)를 사용하는것보다 JdbcTemplate를 사용하는것을 추천한다.
         - 보다 간결한 코드를 사용한다.
         - 보다 안전한다. (리소스 반납처리가 잘 되어있다.(try catch finally등))
@@ -63,11 +63,11 @@ Java에서 Database와 연결하기 위해선 JDBC를 필요로 하며, JDBC를 
 
 - 스프링 부트 DBCP 설정
     - spring.datasource.hikari.*
-    ![springboot](images/springboot/springboot13-7.png)
+    ![springboot](/images/springboot/springboot13-7.png)
     - spring.datasource.tomcat.*
     - spring.datasource.dbcp2.*
     - DBCP 확인
-    ![springboot](images/springboot/springboot13-8.png)
+    ![springboot](/images/springboot/springboot13-8.png)
     
     
 - MySQL 커넥터 의존성 추가
@@ -160,7 +160,7 @@ psql -d <DBname> -U <username> -W
 \dt
 ```
     - DB접속이 안될 때 (role에러)
-    ![springboot](images/springboot/springboot13-9.png)
+    ![springboot](/images/springboot/springboot13-9.png)
     
     ```
     psql -U <username> <DBname>
@@ -183,11 +183,11 @@ psql -d <DBname> -U <username> -W
 - 인텔리제이 DataBase기능 활용
     - docker가 실행되고 있는 상태에서 진행
     - 우측의 DataBase 탭에서 progreSQL을 추가한다.
-    ![springboot](images/springboot/springboot13-10.png)
+    ![springboot](/images/springboot/springboot13-10.png)
     - DB이름 , user, password 설정
-    ![springboot](images/springboot/springboot13-11.png)
+    ![springboot](/images/springboot/springboot13-11.png)
     - 테이블 더블클릭으로 내용 확인 가능하며 쿼리문도 작성하여 확인할 수 있다.
-    ![springboot](images/springboot/springboot13-12.png)
+    ![springboot](/images/springboot/springboot13-12.png)
     
 #### 스프링 데이터 JPA
 - ORM(Object-Relational Mapping)과 JPA (Java Persistence API)
@@ -203,7 +203,7 @@ psql -d <DBname> -U <username> -W
     - @EnableJpaRepositories (스프링 부트가 자동으로 설정 해줌.)
     - SDJ -> JPA -> Hibernate -> Datasource
     - 기존 jdbc를 모두 활용할 수 있다. (의존성을 보면 확인이 가능하다.)
-    ![springboot](images/springboot/springboot13-13.png)
+    ![springboot](/images/springboot/springboot13-13.png)
 
 #### JPA 연동
 - 스프링 데이터 JPA 의존성 추가
@@ -215,16 +215,16 @@ psql -d <DBname> -U <username> -W
 ```
 - 스프링 데이터 JPA 사용하기
     - @Entity 클래스 만들기
-    ![springboot](images/springboot/springboot13-14.png)
+    ![springboot](/images/springboot/springboot13-14.png)
         - @GernerateValue 자동으로 값을 생성
         - lombok을 사용하면 보다 쉽게 만들 수 있다.
-        ![springboot](images/springboot/springboot13-15.png)
+        ![springboot](/images/springboot/springboot13-15.png)
         >**Lombok**
         자바에서 Model Object를 만들 때, getter/setter, Tostring등 반본적으로 사용되는 코드를 어노테이션을 통해 줄여주는 라이브러리
         참고 블로그 : [갓대희의 작은공간](https://goddaehee.tistory.com/95)
         
     - Repository 만들기
-    ![springboot](images/springboot/springboot13-15.png)
+    ![springboot](/images/springboot/springboot13-15.png)
         - Interface
         - extends JpaRepository<entity type , id type>
     
@@ -240,42 +240,42 @@ psql -d <DBname> -U <username> -W
         ```
     - @DataJpaTest (슬라이스 테스트) 작성
         - 레퍼지토리를 포함한 레퍼지토리와 관련된 빈들만 등록을 하여 테스트
-        ![springboot](images/springboot/springboot13-17.png)    
+        ![springboot](/images/springboot/springboot13-17.png)    
             - DataSource
             - JdbcTemplate
             - 해당 Repository
             - ...
         - 테스트 결과
-        ![springboot](images/springboot/springboot13-18.png)
+        ![springboot](/images/springboot/springboot13-18.png)
 
 - 어플리케이션 정상 작동을 위해서는 DataBase설정이 필요하다.
     - DB 드라이버 의존성 추가(PostgreSQL)
     - DataSource 설정
     - SpringBootTest 적용 시, 모든 빈들이 등록됨으로 프로퍼티값들도 등록된다.
     (즉, postgreSQL이 적용된다.)
-    ![springboot](images/springboot/springboot13-19.png)
+    ![springboot](/images/springboot/springboot13-19.png)
         - 테스트 DB가 하나 필요하게 됨으로 추천하지 않는다.
 
 - JPA 활용
     - 기본 JPA api
-    ![springboot](images/springboot/springboot13-20.png)
+    ![springboot](/images/springboot/springboot13-20.png)
     - Repostiry에 원하는 메소드 추가 후 활용
-    ![springboot](images/springboot/springboot13-22.png)
+    ![springboot](/images/springboot/springboot13-22.png)
     - 직접 SQL쿼리문을 사용하고 싶을 때
-    ![springboot](images/springboot/springboot13-23.png)
+    ![springboot](/images/springboot/springboot13-23.png)
     - Optional 사용
-    ![springboot](images/springboot/springboot13-24.png)
+    ![springboot](/images/springboot/springboot13-24.png)
     
 #### 데이터베이스 초기화
 - 스키마 자동생성
      - 테스트 코드에선 스키마가 자동 생성된다.(embeded DB사용)
-     ![springboot](images/springboot/springboot13-26.png)
+     ![springboot](/images/springboot/springboot13-26.png)
      - 실제로 구동했을 때, 스키마에 생성되지 않는다.
-     ![springboot](images/springboot/springboot13-27.png)
+     ![springboot](/images/springboot/springboot13-27.png)
 
 - JPA를 사용한 데이터베이스 초기화
     - spring.jpa.hibernate.ddl-auto
-        ![springboot](images/springboot/springboot13-28.png)
+        ![springboot](/images/springboot/springboot13-28.png)
         - update : 수정 및 추가된것만 수정된다.
             - 데이터가 남기때문에 자주 사용
             - **컬럼명이 변경되는것은 알지못함으로 필드명은 변경하면 안된다.**
@@ -291,13 +291,13 @@ psql -d <DBname> -U <username> -W
         - 릴레이션이 잘 설정되어있는지 확인해준다.
             - 클래스와 잘 매핑되있으면 오류없이 실행된다.
             - 매핑이 되지않으면 오류발생
-            ![springboot](images/springboot/springboot13-29.png)
+            ![springboot](/images/springboot/springboot13-29.png)
             - 따라서 DB수정이 필요 시, 업데이트 환경으로 진행
-            ![springboot](images/springboot/springboot13-30.png)
+            ![springboot](/images/springboot/springboot13-30.png)
 
 - SQL 스크립트를 사용한 데이터베이스 초기화
     - 테스트 코드를 돌려 쿼리문을 사용하면 간편하다.
-        ![springboot](images/springboot/springboot13-25.png)
+        ![springboot](/images/springboot/springboot13-25.png)
         - jpa관 설정들은 테스트 코드에도 적용됨으로 주의할 것.
             
     - schema.sql 또는 schema-${platform}.sql
@@ -321,12 +321,12 @@ psql -d <DBname> -U <username> -W
 - 마이그레이션 디렉토리
     - db/migration 또는 db/migration/{vendor}
         - 파일들의 쿼리문 문법을 잘 지켜야한다. (;까지)
-        ![springboot](images/springboot/springboot13-32.png)
+        ![springboot](/images/springboot/springboot13-32.png)
         
     - spring.flyway.locations로 변경 가능
 
 - 마이그레이션 파일 이름
-    ![springboot](images/springboot/springboot13-33.png)
+    ![springboot](/images/springboot/springboot13-33.png)
     - V숫자__이름.sql
     - **V는 꼭 대문자로.**
     - 숫자는 순차적으로 (타임스탬프 권장)
@@ -336,9 +336,9 @@ psql -d <DBname> -U <username> -W
 - **적용된 스크립트 파일(sql)은 절대로 건들면 안된다.**
     - 수정사항 발생 시, 새로운 파일을 작성한다.
         - 변경사항
-        ![springboot](images/springboot/springboot13-34.png)
+        ![springboot](/images/springboot/springboot13-34.png)
         - 새로운 스크립트 작성
-        ![springboot](images/springboot/springboot13-35.png)
+        ![springboot](/images/springboot/springboot13-35.png)
 
 #### Redis
 - 캐시, 메시지 브로커, 키/밸류 스토어 등으로 사용 가능.
@@ -351,12 +351,12 @@ psql -d <DBname> -U <username> -W
 -  스프링 데이터 Redis
     - https://projects.spring.io/spring-data-redis/
     - StringRedisTemplate 또는 RedisTemplate
-    ![springboot](images/springboot/springboot13-36.png)
+    ![springboot](/images/springboot/springboot13-36.png)
     - extends CrudRepository
-    ![springboot](images/springboot/springboot13-37.png)
+    ![springboot](/images/springboot/springboot13-37.png)
  
  - Redis 주요 커맨드
-    ![springboot](images/springboot/springboot13-38.png)
+    ![springboot](/images/springboot/springboot13-38.png)
     - https://redis.io/commands
     - keys *
     - get {key}
@@ -375,25 +375,25 @@ psql -d <DBname> -U <username> -W
 
 - 참고 : ApplicationRunner를 만드는 새로운 방법
     - ApplicationRunner를 리턴하는 메소드를 빈으로 등록한다.
-    ![springboot](images/springboot/springboot13-39.png)
+    ![springboot](/images/springboot/springboot13-39.png)
     - 람다를 사용하면 보다 간결하게 사용가능
-    ![springboot](images/springboot/springboot13-40.png)
+    ![springboot](/images/springboot/springboot13-40.png)
 
 - collections 생성
-    ![springboot](images/springboot/springboot13-41.png)
+    ![springboot](/images/springboot/springboot13-41.png)
     - RDB(Relation Data Base)의 테이블로 보면 된다.
     
 - MongoDB 설치 및 실행 (도커)
-    ![springboot](images/springboot/springboot13-42.png)
+    ![springboot](/images/springboot/springboot13-42.png)
     - docker run -p 27017:27017 --name mongo_boot -d mongo
     - docker exec -i -t mongo_boot bash
     - mongo
     
 - 스프링 데이터 몽고DB
     - MongoTemplate
-        ![springboot](images/springboot/springboot13-43.png)
+        ![springboot](/images/springboot/springboot13-43.png)
     - MongoRepository
-        ![springboot](images/springboot/springboot13-44.png)
+        ![springboot](/images/springboot/springboot13-44.png)
     - 내장형 MongoDB (테스트용)
         - 의존성 추가
         ```
@@ -404,10 +404,10 @@ psql -d <DBname> -U <username> -W
         </dependency>
         ```
         - @DataMongoTest
-            ![springboot](images/springboot/springboot13-46.png)
+            ![springboot](/images/springboot/springboot13-46.png)
         - 운영용 MongoDB에 영향을 주지 않는다.
             - 운영용 DB를 포함하지만, test에서 만든 데이터는 운영 DB에 추가 되지않는다.
-            ![springboot](images/springboot/springboot13-45.png)
+            ![springboot](/images/springboot/springboot13-45.png)
 
 #### Neo4j
 - Neo4j는 노드간의 연관 관계를 표현하는데 빠르고 다양한 기능을 제공하는 그래프 데이터베이스
@@ -430,10 +430,10 @@ ex) 친구의친구의친구를 찾는다거나.. 친구의 세번째링크에 �
         - 바로 접속할 수 있다.
         - 기본 패스워드 Neo4j 비밀번호를 바꿔야한다.
             - 기본 패스워드가 변경되었기 때문에 설정해줘야한다.
-            ![springboot](images/springboot/springboot13-48.png)
+            ![springboot](/images/springboot/springboot13-48.png)
 
 - NodeEntity 생성
-    ![springboot](images/springboot/springboot13-49.png)
+    ![springboot](/images/springboot/springboot13-49.png)
     - id 는 숫자값만 줄수 있다.
 
 - 스프링 데이터 Neo4J
@@ -441,22 +441,22 @@ ex) 친구의친구의친구를 찾는다거나.. 친구의 세번째링크에 �
         - Neo4jTemplate
         - Neo4jOpertion
     - **SessionFactory**
-        ![springboot](images/springboot/springboot13-50.png)
+        ![springboot](/images/springboot/springboot13-50.png)
     - Neo4jRepository
-        ![springboot](images/springboot/springboot13-55.png)
+        ![springboot](/images/springboot/springboot13-55.png)
     
 
 - 관계보기
     - NodeEntity 생성 및 데이터입력 (이전과정에서 진행하였다.)
     - 브라우저에서 확인 가능하다.
-    ![springboot](images/springboot/springboot13-51.png)
+    ![springboot](/images/springboot/springboot13-51.png)
     - Relationship을 가질 NodeEntity를 하나 더 만든다.
-    ![springboot](images/springboot/springboot13-47.png)
+    ![springboot](/images/springboot/springboot13-47.png)
     - Relationship 설정 (Account가 Role을 가지도록 설정하였다.)
-    ![springboot](images/springboot/springboot13-53.png)
+    ![springboot](/images/springboot/springboot13-53.png)
     - 롤 부여 및 실행
-    ![springboot](images/springboot/springboot13-52.png)
+    ![springboot](/images/springboot/springboot13-52.png)
     - 브라우저에서 확인
-    ![springboot](images/springboot/springboot13-54.png)
+    ![springboot](/images/springboot/springboot13-54.png)
      
        

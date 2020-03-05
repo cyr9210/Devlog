@@ -7,7 +7,7 @@ tags: Process
 ## Process
 
 ### 개발 프로세스
-![Process](images/Process/Process01-01.png)
+![Process](/images/Process/Process01-01.png)
 1.주제
 
 2.Usecase
@@ -25,7 +25,7 @@ tags: Process
 8.클래스 다이어그램
 
 #### UseCase
-![Process](images/Process/Process01-02.png)
+![Process](/images/Process/Process01-02.png)
 - 사용자의 상호작용을 다이어그램으로 표현한 것으로 사용자의 관점에서 시스템의 서비스 혹은 기능 및 그와 관련된 외부 요소를 보여주는것이다.
 - 한마디로 사용자와 시스템 사이의 관계를 나타냄
 <br>
@@ -40,19 +40,19 @@ tags: Process
         - 일반화 관계 : 다른 액터 또는 유스케이스를
         
 #### 요구분석 정의서
-![Process](images/Process/Process01-03.png)
+![Process](/images/Process/Process01-03.png)
 
 #### 요구분석 명세서
-![Process](images/Process/Process01-04.png)
+![Process](/images/Process/Process01-04.png)
 
 #### 도메인설계
-![Process](images/Process/Process01-05.png)
+![Process](/images/Process/Process01-05.png)
 - 도메인 : 소프트웨어로 해결하고자 하는 문제영역
 - 도메인을 이해하기 위한 개념 모델
 - 주로 간소화 된 클래스 다이어그램으로 나타냄 (이해하기 좋은 형식으로 표현)
 
 #### 클래스 다이어그램
-![Process](images/Process/Process01-06.png)
+![Process](/images/Process/Process01-06.png)
 - 시간에 따라 변하지 않는 시스템의 정적인 면을 보여주는 대표적인 UML
 - 시스템을 구성하는 클래스들 사이의 관계를 표현한다.
 <br><br>

@@ -3,7 +3,7 @@ title: 스프링 부트 활용12 - 스프링 웹 MVC
 date: 2019-04-11 16:43:16
 tags: SpringBoot
 ---
-![springboot](images/springboot_logo.png)
+![springboot](/images/springboot_logo.png)
 # 스프릥 부트 개념과 활용12(inflearn) - 백기선 
 ## Spring boot
 
@@ -33,13 +33,13 @@ tags: SpringBoot
 ##### 예제
 @RequestBody 및 @RestController를 활용하여 테스트 코드 작성하기
 - User
-![springboot](images/springboot/springboot12-1.png)
+![springboot](/images/springboot/springboot12-1.png)
 
 - UserController
-![springboot](images/springboot/springboot12-2.png)
+![springboot](/images/springboot/springboot12-2.png)
 
 - UserControllerTest
-![springboot](images/springboot/springboot12-3.png)
+![springboot](/images/springboot/springboot12-3.png)
     - contentType : 요청 타입
     - accept : 응답 타입
     - content : 요청
@@ -55,11 +55,11 @@ tags: SpringBoot
 
 - xml 메세지 컨버터 추가하기
     - accpet 헤더만 xml로 설정 후, 위의 예제 테스트를 실행하면 오류 발생
-    ![springboot](images/springboot/springboot12-4.png)
+    ![springboot](/images/springboot/springboot12-4.png)
         - 이유는 .. xml 메세지 컨버터가 없기 때문에
     
     - HttpMessageConvertersAutoConfiguration → JacksonHttpMessageConvertersConfiguration에 들어가 보면 XmlMapper.class가 없어서 설정이 안 된 것을 볼 수 있다.
-        ![springboot](images/springboot/springboot12-5.png)
+        ![springboot](/images/springboot/springboot12-5.png)
     
     - XmlMapper.class를 추가하기 위해 의존성을 추가한다.
     ```
@@ -70,7 +70,7 @@ tags: SpringBoot
     </dependency>
     ```
     - 정상작동
-    ![springboot](images/springboot/springboot12-6.png)
+    ![springboot](/images/springboot/springboot12-6.png)
     
 #### 정적 리소스 지원
 - 웹 브라우저나 클라이언트에 요청이 들어왔을 때, 그것에 해당하는 리소스가 만들어져 있고 그것을 응답하는 것
@@ -84,18 +84,18 @@ tags: SpringBoot
         - spring.mvc.static-path-pattern: 맵핑 설정 변경 가능
             - 매핑이 루트(/)부터 시작하지 않고 싶을 때 사용할 수 있다.  
             예) "localhost:8080/static/hello.html"
-            ![springboot](images/springboot/springboot12-9.png)
+            ![springboot](/images/springboot/springboot12-9.png)
         - spring.mvc.static-locations: 리소스 찾을 위치 변경 가능
     - 서버의 Last-Modified 헤더를 보고 304 응답을 보냄.
         - if-modified-since 이후에 바귀었으면 리소르를 새로 받는다.(200)
-        ![springboot](images/springboot/springboot12-7.png)
+        ![springboot](/images/springboot/springboot12-7.png)
         - 이후에 바뀌지 않았으면 리소를 새로 받지않고 이전에 받은것을 사용한다.(304)
         응답이 훨씬 빠르다.
-        ![springboot](images/springboot/springboot12-8.png)
+        ![springboot](/images/springboot/springboot12-8.png)
    
     - ResourceHttpRequestHandler가 처리함.
         - WebMvcConfigurer의 addRersourceHandlers로 커스터마이징 할 수 있음       
-        ![springboot](images/springboot/springboot12-10.png)![springboot](images/springboot/springboot12-11.png)
+        ![springboot](/images/springboot/springboot12-10.png)![springboot](/images/springboot/springboot12-11.png)
 
 #### 웹 jar
 - 스프링 부트는 웹 jar에 대한 기본 매핑을 지원한다.
@@ -105,16 +105,16 @@ tags: SpringBoot
 - jQuery 추가
     - 의존성 추가
     - 사용 할 파일에서 webjar를 사용하여 참조
-    ![springboot](images/springboot/springboot12-13.png)
+    ![springboot](/images/springboot/springboot12-13.png)
     - 버전을 생략하고 사용하려면..
-        ![springboot](images/springboot/springboot12-12.png)
+        ![springboot](/images/springboot/springboot12-12.png)
         - webjars-locator-core 의존성 추가 필요
         - 버전을 사용해도 되고 안해도 된다.
      
 #### index페이지(welcome페이지)와 파비콘
 - 웰컴 페이지
     - index.html 찾아 보고 있으면 제공.
-        ![springboot](images/springboot/springboot12-14.png)
+        ![springboot](/images/springboot/springboot12-14.png)
         - 기본 리소스 위치
     - index.템플릿 찾아 보고 있으면 제공.
     - 둘다없으면에러페이지.
@@ -122,14 +122,14 @@ tags: SpringBoot
 
 - 파비콘
     - 파비콘이란?
-    ![springboot](images/springboot/springboot12-15.png)
+    ![springboot](/images/springboot/springboot12-15.png)
     - favicon.ico 파일을 추가한다.
         - 기본 리소스 위치
     - [파이콘 만들기](https://favicon.io)
     - 파비콘이 안 바뀔 때..
         - https://stackoverflow.com/questions/2208933/how-do-i-force-a-favicon-refresh
         - 브라우저에서 favicon.ico를 읽고 브라우저를 재시작
-        ![springboot](images/springboot/springboot12-16.png)
+        ![springboot](/images/springboot/springboot12-16.png)
 
 #### Thymeleaf
 > **템플릿 엔진**
@@ -160,10 +160,10 @@ tags: SpringBoot
     ```
     - 템플릿 파일 위치: /src/main/resources/​template/
     - Thymeleaf 네임스페이스 추가
-        ![springboot](images/springboot/springboot12-18.png)
+        ![springboot](/images/springboot/springboot12-18.png)
         - th를 사용할 수 있다. (name 값이 있으면 사용한다.)  
     - Thymeleaf test
-    ![springboot](images/springboot/springboot12-17.png)
+    ![springboot](/images/springboot/springboot12-17.png)
     - [예제](https://github.com/thymeleaf/thymeleafexamples-stsm/blob/3.0-master/src/main/webapp/WEB-INF/templates/seedstartermng.html) 
 
 #### HTML Unit
@@ -187,22 +187,22 @@ tags: SpringBoot
 </dependency>
 ```
 - WebClient를 주입받아 사용한다.
-    ![springboot](images/springboot/springboot12-19.png)
+    ![springboot](/images/springboot/springboot12-19.png)
     - WebClient를 만들 때, MockMvc를 사용하기 때문에 MockMvc도 주입받아 사용할 수 있다.
 
 #### ExceptionHandler
 - 스프링 부트 애플리케이션 실행하면 기본적으로 에러핸들러가 등록이 되어있다.
 그리고 그 에러핸들러에 의해 메세지가 보인다.
     - 브라우저 요청 시
-    ![springboot](images/springboot/springboot12-20.png)
+    ![springboot](/images/springboot/springboot12-20.png)
     - 머신핸들러 요청 시 (Json 응답)
-    ![springboot](images/springboot/springboot12-21.png)
+    ![springboot](/images/springboot/springboot12-21.png)
 
 - 스프링 @MVC 예외 처리 방법
     - @ExchangepHandler
-        ![springboot](images/springboot/springboot12-22.png)    
+        ![springboot](/images/springboot/springboot12-22.png)    
     - @ControllerAdvice
-        ![springboot](images/springboot/springboot12-23.png)
+        ![springboot](/images/springboot/springboot12-23.png)
         - 여러 컨트롤러에서 사용하기위해 @ExceptionHandler @ControllerAdvice내에서 정의한다.
         
 - 스프링 부트가 제공하는 기본 예외 처리기
@@ -210,7 +210,7 @@ tags: SpringBoot
         - HTML과 JSON 응답 지원
         - error.path라는 키값에 값이 있으면 값사용, 없으면 /error사용
         server.error.path 키값에 값이 있으면 값사용, 없으면 이전 값 사용(/error 또는 error.path)
-        ![springboot](images/springboot/springboot12-24.png)
+        ![springboot](/images/springboot/springboot12-24.png)
     - 커스터마이징 방법
         - ErrorController 구현
             - 스프링부트에서는 BasicErrorController를 상속받아 만드는것을 추천한다.
@@ -237,12 +237,12 @@ tags: SpringBoot
     - https://spring.io/guides/gs/rest-hateoas/
     - https://docs.spring.io/spring-hateoas/docs/current/reference/html/
     - 사용 Selflink추가 및 테스트
-    ![springboot](images/springboot/springboot12-26.png)
+    ![springboot](/images/springboot/springboot12-26.png)
 
 - ObjectMapper 제공
     - 우리가 제공하는 리소르를 Json으로 변환할 때, 사용하는 인터페이스 
     - 커스터마이징 : spring.jackson.*
-    ![springboot](images/springboot/springboot12-27.png) 
+    ![springboot](/images/springboot/springboot12-27.png) 
     - Jackson2ObjectMapperBuilder
     - web만 의존성에 추가되어도 빈으로 등록된다.
     
@@ -264,9 +264,9 @@ tags: SpringBoot
     - [reference 문서](https://docs.spring.io/spring/docs/5.0.7.RELEASE/spring-framework-reference/web.html#mvc-cors)
     - 미적용
         - 포트가 다른 서버에 요청
-        ![springboot](images/springboot/springboot12-28.png)![springboot](images/springboot/springboot12-30.png)![springboot](images/springboot/springboot12-29.png)
+        ![springboot](/images/springboot/springboot12-28.png)![springboot](/images/springboot/springboot12-30.png)![springboot](/images/springboot/springboot12-29.png)
     - @Controller나 @RequestMapping에 추가
-        ![springboot](images/springboot/springboot12-31.png)![springboot](images/springboot/springboot12-32.png)
+        ![springboot](/images/springboot/springboot12-31.png)![springboot](/images/springboot/springboot12-32.png)
     - WebMvcConfigurer 사용해서 글로벌 설정
     (여러 컨트롤러에서 적용)
-    ![springboot](images/springboot/springboot12-33.png)
+    ![springboot](/images/springboot/springboot12-33.png)

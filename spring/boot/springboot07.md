@@ -3,7 +3,7 @@ title: 스프링 부트 활용07 - 외부설정
 date: 2019-04-05 14:22:16
 tags: SpringBoot
 ---
-![springboot](images/springboot_logo.png)
+![springboot](/images/springboot_logo.png)
 # 스프릥 부트 개념과 활용07(inflearn) - 백기선 
 ## Spring boot
 
@@ -21,11 +21,11 @@ tags: SpringBoot
 #### 프로퍼티 우선 순위
 1. 유저 홈 디렉토리에 있는 spring-boot-dev-tools.properties
 2. 테스트에 있는 @TestPropertySource
-    ![springboot](images/springboot/springboot07-4.png)
+    ![springboot](/images/springboot/springboot07-4.png)
     - 파일로도 정의 가능하다.
-    ![springboot](images/springboot/springboot07-6.png)
+    ![springboot](/images/springboot/springboot07-6.png)
 3. @SpringBootTest 애노테이션의 properties 애트리뷰트
-    ![springboot](images/springboot/springboot07-3.png)
+    ![springboot](/images/springboot/springboot07-3.png)
     
 4. 커맨드 라인 아규먼트
     ```
@@ -42,10 +42,10 @@ tags: SpringBoot
 13. JAR 안에 있는 특정 프로파일용 application properties
 14. JAR 밖에 있는 application properties
 15. JAR 안에 있는 application properties
-    ![springboot](images/springboot/springboot07-1.png)
+    ![springboot](/images/springboot/springboot07-1.png)
     - test resources가 더 늦게 빌드되어 덮어씌어진다.
     - main properties에 있던 속성이 test에 없다면 에러가 발생한다.
-    ![springboot](images/springboot/springboot07-2.png)
+    ![springboot](/images/springboot/springboot07-2.png)
 16. @PropertySource
 17. 기본 프로퍼티 (SpringApplication.setDefaultProperties)
 
@@ -59,7 +59,7 @@ tags: SpringBoot
 **단, application.properties는 프로퍼티 우선순위 14,15이기 때문에 상위 우선순위가 있을 시, 적용되지 않는다.**
 <br>
 ##### 예제
-![springboot](images/springboot/springboot07-7.png)
+![springboot](/images/springboot/springboot07-7.png)
 - 2순위, 4순위에 해당하는 위치에 application.properties를 만들고 각각 다른값을 정의한다.
 - 2순위의 application.properties가 적용된다.
 
@@ -77,7 +77,7 @@ fullName = ${name} baik
 - 여러 프로퍼티를 묶어서 읽어올 수 있음
 - 빈으로등록해서다른빈에주입할수있음
     - @EnableConfigurationProperties
-        ![springboot](images/springboot/springboot07-10.png)
+        ![springboot](/images/springboot/springboot07-10.png)
         - **이렇게 설정을 빈으로 등록해야 하지만 기본적으로 되어있기 때문에 빈으로 등록만 해주면 된다.**
     - **@Component**
     - @Bean
@@ -85,14 +85,14 @@ fullName = ${name} baik
 
 ##### 예제
 다음과 같은 properties값이 있을 때
-![springboot](images/springboot/springboot07-11.png)
+![springboot](/images/springboot/springboot07-11.png)
 
 - properties값에 맞추어 필드값 및 getter, setter를 생성한다.
-![springboot](images/springboot/springboot07-9.png)
+![springboot](/images/springboot/springboot07-9.png)
 
 - @ConfigurationPropertiess("properties_name")
     - 필요한 의존성 설정이 안되어 있어 의존성 추가가 필요하다.
-    ![springboot](images/springboot/springboot07-8.png)
+    ![springboot](/images/springboot/springboot07-8.png)
     ```
     <dependency>
     	<groupId>org.springframework.boot</groupId>
@@ -101,10 +101,10 @@ fullName = ${name} baik
     </dependency>
     ```
 - 앞서 설명했듯이 @EnableConfigurationProperies 자동으로 설정되기 때문에 빈으로 등록하여 사용한다.
-![springboot](images/springboot/springboot07-12.png)
+![springboot](/images/springboot/springboot07-12.png)
 
 - @Autowired로 빈을 주입받아 사용한다.
-![springboot](images/springboot/springboot07-13.png)
+![springboot](/images/springboot/springboot07-13.png)
 ---
     
 - 융통성 있는 바인딩
@@ -119,15 +119,15 @@ fullName = ${name} baik
         - 참고 : [데이터바인딩](https://cyr9210.github.io/2019/03/22/Spring/springframework-core03/)
     - @DurationUnit
         - Duration객체로 타입 Conversion해준다.
-        ![springboot](images/springboot/springboot07-14.png)
+        ![springboot](/images/springboot/springboot07-14.png)
         - 따로 지정하지 않으면 30
         - 지정하면 지정한값
-        ![springboot](images/springboot/springboot07-15.png)
+        ![springboot](/images/springboot/springboot07-15.png)
         - 해당 어노테이션을 쓰지않아도 아래와 같은 suffix를 잘쓰면 자동으로 타입 변한을 해준다.
-        ![springboot](images/springboot/springboot07-16.png)![springboot](images/springboot/springboot07-17.png)
+        ![springboot](/images/springboot/springboot07-16.png)![springboot](/images/springboot/springboot07-17.png)
     
 - 프로퍼티 값 검증
-    ![springboot](images/springboot/springboot07-19.png)
+    ![springboot](/images/springboot/springboot07-19.png)
     - @Validated
     - JSR-303 (@NotNull, ...)
 

@@ -4,7 +4,7 @@ date: 2018-11-05 17:32:43
 tags: Java
 ---
 
-![Java](images/javaimage.png)
+![Java](/images/javaimage.png)
 # KOSTA DAY05
 ## Java
 
@@ -22,7 +22,7 @@ tags: Java
 - 객체를 만드는 과정 = 인스턴스화
 
 #### 클래스
-![Java](images/java/java05-01.png)
+![Java](/images/java/java05-01.png)
 - 클래스의 데이터 구조는 변수로 선언한다.
 - 클래스의 기능은 메소드로 구현한다.
 - new 연산자를 사용하여 객체를 생성한다.

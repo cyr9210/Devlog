@@ -4,7 +4,7 @@ date: 2019-04-25 16:11:55
 tags: SpringWebMvc
 ---
 
-![springf](images/springframwork-logo.png)
+![springf](/images/springframwork-logo.png)
 # 스프링 웹 MVC(inflearn) - 백기선 
 ## Springframework
 
@@ -31,7 +31,7 @@ tags: SpringWebMvc
 - ApplicationContext 생성
     - 기본적으로 xml을 사용하지만 Java설정파일 사용하겠다. (최근 추세)
         - AppConfig 생성
-        ![springmvc](images/springwebmvc/springwebmvc02-1.png)
+        ![springmvc](/images/springwebmvc/springwebmvc02-1.png)
         - context class 설정 변경
         ```
         <context-param>
@@ -46,7 +46,7 @@ tags: SpringWebMvc
         ```
 
     - ContextLoaderListener - initWebApplicationContext을 보면 WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE라는 이름으로 ApplicationContext를 setattribute하는것을 볼 수 있다.
-        ![springmvc](images/springwebmvc/springwebmvc02-2.png)
+        ![springmvc](/images/springwebmvc/springwebmvc02-2.png)
 
 - 등록한 빈 사용하기
     - servletcontext에서 확인한 이름으로 getattrbute해서 확인할 수 있다.
@@ -96,7 +96,7 @@ tags: SpringWebMvc
     - Root : Service, Repository등.. 공통 사용빈
     - Dispatcher : Controller등 web 관련 .. 
     - 그러나 다음과 같은 설정이 필요하다.
-    ![springmvc](images/springwebmvc/springwebmvc02-4.png)
+    ![springmvc](/images/springwebmvc/springwebmvc02-4.png)
 
 - 최근에는 DispatcherServlet 하나만 등록해서 모두 사용하는 방법을 주로 사용한다.
 
@@ -159,6 +159,6 @@ public class SimpleController implements Controller {
     - Suffix
     
 - 예제
-![springmvc](images/springwebmvc/springwebmvc02-5.png)
+![springmvc](/images/springwebmvc/springwebmvc02-5.png)
     - 이제 뷰이름만 주어도 된다. 주소 및 타입 설정을 생략할 수 있다.
 <br>

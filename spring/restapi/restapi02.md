@@ -63,13 +63,13 @@ tags: RestAPI
 
 - @MockBean
     - Mockito를 사용해서 mock 객체를 만들고 빈으로 등록해 줌.
-        ![restapi](images/restapi/restapi02-1.png)
+        ![restapi](/images/restapi/restapi02-1.png)
         - 하지않으면 Repository는 Mock 객체기 때문에 save나 무엇을 하더라도 return 값은 null이 나온다.
     - (주의) 기존 빈을 테스트용 빈이 대체 한다.
 
 #### 테스트 할 것
 - 입력값들을 전달하면 JSON 응답으로 201이 나오는지 확인.
-    ![restapi](images/restapi/restapi02-2.png)
+    ![restapi](/images/restapi/restapi02-2.png)
     - Location 헤더에 생성된 이벤트를 조회할 수 있는 URI 담겨 있는지 확인.
     - id는 DB에 들어갈 때 자동생성된 값으로 나오는지 확인
 <br><br>
@@ -111,25 +111,25 @@ tags: RestAPI
 ### Bad Request 처리하기
 #### @valid 와 BindingResult (또는 Errors)
 - BindingResult는 항상 @Valid 바로 다음 인자로 사용해야 함. (스프링 MVC)
-![restapi](images/restapi/restapi02-3.png)
+![restapi](/images/restapi/restapi02-3.png)
 - @NotNull, @NotEmpty, @Min, @Max, ... 사용해서 입력값 바인딩할 때 에러 확인할 수 있음
-![restapi](images/restapi/restapi02-5.png)
+![restapi](/images/restapi/restapi02-5.png)
 
 #### 도메인 Validator 만들기
 - Validator 인터페이스 없이 만들어도 상관없음
 - 빈으로 등록 후, 사용
-![restapi](images/restapi/restapi02-6.png)
-![restapi](images/restapi/restapi02-4.png)
+![restapi](/images/restapi/restapi02-6.png)
+![restapi](/images/restapi/restapi02-4.png)
 
 #### 테스트 설명 용 애노테이션 만들기
-![restapi](images/restapi/restapi02-7.png)
-![restapi](images/restapi/restapi02-8.png)
+![restapi](/images/restapi/restapi02-7.png)
+![restapi](/images/restapi/restapi02-8.png)
 <br><br>
 
 #### Bad Request 응답 본문 만들기
 
 - errors 객체를 JSON으로 serialization이 안되기 때문에 body에 담아도 에러가 발생한다.
-  ![restapi02-9](images/restapi/restapi02-9.png)
+  ![restapi02-9](/images/restapi/restapi02-9.png)
   - errors는 자바빈 스펙을 준수하고 있는 객체가 아니다… -> beanSerializer를 사용할 수 없다.
   - ErrorsSerilizer를 만들어서 문제를 해결 할 수 있다.
 
@@ -141,7 +141,7 @@ tags: RestAPI
 
 - 생성한 ErrorSerializer를 ObjectMapper에 등록한다.
   - 스프링부트에서는 @JsonComponent를 제공한다. (ObjectMapper에 등록해준다.)
-    ![restapi02-10](images/restapi/restapi02-10.png)
+    ![restapi02-10](/images/restapi/restapi02-10.png)
 
 <br><br>
 

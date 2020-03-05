@@ -4,7 +4,7 @@ date: 2019-04-19 19:04:32
 tags: Git
 ---
 # Git 
-![gitlogo](images/git_logo.png)
+![gitlogo](/images/git_logo.png)
 
 ### Git branch
 - branch는 가지라는 뜻으로 작업을 분기해서 처리하는 경우에 대한 시적인 표현입니다.
@@ -21,7 +21,7 @@ tags: Git
     
 - git branch -D <브랜치이름\>
     - 병합되지 않은 브랜치 강제 삭제
-    ![git](images/git/git02-3.png)
+    ![git](/images/git/git02-3.png)
 
 #### git checkout
 - git checkout <전환하려는 브랜치 이름\>
@@ -30,7 +30,7 @@ tags: Git
 
 - git checkout -b <생성하고 전환할 브랜치 이름\>
     - 브랜치를 생성하고 전환까지 할 때
-    ![git](images/git/git02-2.png)
+    ![git](/images/git/git02-2.png)
     
 
 #### 브랜치 정보확인
@@ -38,7 +38,7 @@ tags: Git
 - git log "브랜치명1".."브랜치명2" : 브랜치 로그 비교
 - git log \--branches : 모든 브렌치의 commit 정보를보여준다. 
 - git log \--branches \--decorate \--graph : 모든 브렌치의 commit 관계를 그래프형태로 보여준다.
-    ![git](images/git/git02-1.png)
+    ![git](/images/git/git02-1.png)
 - git log \--branches \--decorate \--graph \--oneline:  모든 브렌치의 commit 관계를 한줄로 관계를 보여준다.
 
 #### merge(병합)
@@ -62,7 +62,7 @@ tags: Git
 - git stash
     - 현재 작업내용을 스테이징 파일에 올리지않고 stash라는 새로운 공간에 저장한다.
     - git status 확인 시, 변경내용 없음으로 표시된다. (변경사항들이 stash에 저장됨)
-    ![git](images/git/git02-4.png)
+    ![git](/images/git/git02-4.png)
     
 - git stash list
     - 저장된 stash 조회
@@ -76,7 +76,7 @@ tags: Git
 - git stash apply; git stash drop;
     - 동시 수행된다.
     - ** git stash pop**으로 대체할 수 있다. (같은역할)
-    ![git](images/git/git02-5.png)
+    ![git](/images/git/git02-5.png)
     
 - **stash는 버전관리를 하고있는 파일에 한해서 동작한다.**(즉, untracked파일은 적용 되지않는다.)
 

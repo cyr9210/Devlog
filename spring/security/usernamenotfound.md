@@ -232,13 +232,13 @@ Exception 및 DTO/VO설정은 제외하고 진행하겠습니다.
 
 - 테스트 실행
   - 성공
-    ![notfound1](images/springsecurity/usernamenotfoundexception/notfound1.png)
+    ![notfound1](/images/springsecurity/usernamenotfoundexception/notfound1.png)
 
   - 실패 - password 오류
-    ![notfound2](images/springsecurity/usernamenotfoundexception/notfound2.png)
+    ![notfound2](/images/springsecurity/usernamenotfoundexception/notfound2.png)
 
   - 실패 - username 오류
-    ![notfound3](images/springsecurity/usernamenotfoundexception/notfound3.png)
+    ![notfound3](/images/springsecurity/usernamenotfoundexception/notfound3.png)
 
 #### 문제점
 
@@ -247,49 +247,49 @@ Exception 및 DTO/VO설정은 제외하고 진행하겠습니다.
 #### Debug
 
 - Controller
-  ![notfound4](images/springsecurity/usernamenotfoundexception/notfound4.png)
+  ![notfound4](/images/springsecurity/usernamenotfoundexception/notfound4.png)
 
 - WebSecurityConfigurerAdapter.authentiacate(Autentication authentication)
-  ![notfound5](images/springsecurity/usernamenotfoundexception/notfound5.png)
+  ![notfound5](/images/springsecurity/usernamenotfoundexception/notfound5.png)
   - delegate(AuthenticationManager)가 있으면 사용
   - 없으면 빌더로 가져오기
 
 - ProviderManager.authenticate(Authentication authentication)
-  ![notfound6](images/springsecurity/usernamenotfoundexception/notfound6.png)
+  ![notfound6](/images/springsecurity/usernamenotfoundexception/notfound6.png)
   - this.providers : AnonymousProvider (어떤 프로파이더인지는 잘모르겠다.)
   - parents providers : DaoAuthenticationProvider (설정했던 provider)
   - AnonymousProvider는 지원하지 않아서 지나감.
   
-  ![notfound7](images/springsecurity/usernamenotfoundexception/notfound7.png)
+  ![notfound7](/images/springsecurity/usernamenotfoundexception/notfound7.png)
   - result(파라미터로 넘긴 authentication.getClass())와 parent가 있으면 parent.authenticate(authenticate); 재귀함수 호출
   
-  ![notfound8](images/springsecurity/usernamenotfoundexception/notfound8.png)
+  ![notfound8](/images/springsecurity/usernamenotfoundexception/notfound8.png)
   - 다시 왔을때는 provider가 설정한 DaoAuthenticationProvider인것을 알 수있다.
   - provider.authenticate(authentication);을 호출한다.
   
-  ![notfound9](images/springsecurity/usernamenotfoundexception/notfound9.png)
+  ![notfound9](/images/springsecurity/usernamenotfoundexception/notfound9.png)
   - AbstractUserDetailsAuthenticationProvider
   - retrieveUser() 안에서 UserDetailsService.loadUserByUsername(String email); 을 호출한다.
-    ![notfound10](images/springsecurity/usernamenotfoundexception/notfound10.png)
+    ![notfound10](/images/springsecurity/usernamenotfoundexception/notfound10.png)
   - **hideUserNotFoundExceptions 를 확인해서 BadCredentialsException을 던지고 있다.**
 
 hideUserNotFoundExceptions을 확인해보자.
 - 기본적으로 true
-  ![notfound11](images/springsecurity/usernamenotfoundexception/notfound11.png)
+  ![notfound11](/images/springsecurity/usernamenotfoundexception/notfound11.png)
 
 - setHideUserNotFoundException을 통해 false로 변경 될 수 있는데.. 이건 DaoAuthenticationProvider 설정 시에 설정할 수 있다.
-  ![notfound12](images/springsecurity/usernamenotfoundexception/notfound12.png)
+  ![notfound12](/images/springsecurity/usernamenotfoundexception/notfound12.png)
   
-  ![notfound13](images/springsecurity/usernamenotfoundexception/notfound13.png)
+  ![notfound13](/images/springsecurity/usernamenotfoundexception/notfound13.png)
 
 #### 이렇게 설정 되어있는 이유는 ?
 
-![notfound14](images/springsecurity/usernamenotfoundexception/notfound14.png)
+![notfound14](/images/springsecurity/usernamenotfoundexception/notfound14.png)
 - **아이디 체크와 비밀번호 체크를 따로 exception을 날리는거보다 BadCredential Exception하나만 날리는것이 보다 더 보안이 강하기 때문에...**
 
 #### 해결
 
-![notfound15](images/springsecurity/usernamenotfoundexception/notfound15.png)
+![notfound15](/images/springsecurity/usernamenotfoundexception/notfound15.png)
 - AuthenticationProvider 생성 시에 setHideUserNotFoundException(false); 로 설정한다.
 - 그러나 더 강한 보안을 위해서라면 모두 BadCredential을 호출하는것이 맞다.
 <br><br>

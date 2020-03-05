@@ -3,7 +3,7 @@ title: 스프링 핵심기술04 - SpEL
 date: 2019-03-26 14:57:24
 tags: Springframework
 ---
-![springf](images/springframwork-logo.png)
+![springf](/images/springframwork-logo.png)
 # 스프링 프레임워크 핵심기술04(inflearn) - 백기선 
 ## Springframework
 
@@ -42,7 +42,7 @@ tags: Springframework
 - String value = expression.getvalue(context, String.class)
 
 #### 예제
-![springcore](images/springc/springcore04-01.png)
+![springcore](/images/springc/springcore04-01.png)
 
-![springcore](images/springc/springcore04-02.png)
+![springcore](/images/springc/springcore04-02.png)
 <br>

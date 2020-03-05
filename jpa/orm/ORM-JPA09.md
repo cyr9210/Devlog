@@ -57,15 +57,15 @@ tags: JPA
 
 - 회원 엔티티는 이름, 근무 시작일, 근무 종료일, 주소도시, 주소번지, 주소 우편번호를 가진다.
 
-  ![ORM09-1](images/jpa/ORM-JPA/ORM09-1.png)
+  ![ORM09-1](/images/jpa/ORM-JPA/ORM09-1.png)
 
 - 이러한 경우 근무기간(근무 시작일, 근무 종료일), 집주소(도시, 번지, 우편번호)로 그룹지어 관리할 수 있다.
 
-  ![ORM09-2](images/jpa/ORM-JPA/ORM09-2.png)
+  ![ORM09-2](/images/jpa/ORM-JPA/ORM09-2.png)
 
 - 최종적으로 JPA는 아래와 같은 모습으로 관리하게 된다.
 
-  ![ORM09-3](images/jpa/ORM-JPA/ORM09-3.png)
+  ![ORM09-3](/images/jpa/ORM-JPA/ORM09-3.png)
 
 #### 임베디드 타입 장점
 
@@ -77,7 +77,7 @@ tags: JPA
 
 #### 임베디드 타입과 테이블 매핑
 
-![ORM09-4](images/jpa/ORM-JPA/ORM09-4.png)
+![ORM09-4](/images/jpa/ORM-JPA/ORM09-4.png)
 
 - 임베디드 타입은 엔티티의 값일 뿐이다.
 
@@ -87,11 +87,11 @@ tags: JPA
 
     - 임베디드 타입 미사용
 
-      ![ORM09-5](images/jpa/ORM-JPA/ORM09-5.png)
+      ![ORM09-5](/images/jpa/ORM-JPA/ORM09-5.png)
 
     - 임베디드 타입 사용
 
-      ![ORM09-6](images/jpa/ORM-JPA/ORM09-6.png)
+      ![ORM09-6](/images/jpa/ORM-JPA/ORM09-6.png)
 
 - 객체와 테이블을 아주 세밀하게 매핑하는 것이 가능
 
@@ -107,7 +107,7 @@ tags: JPA
 
 - 데이터입력 예시
 
-  ![ORM09-8](images/jpa/ORM-JPA/ORM09-8.png)
+  ![ORM09-8](/images/jpa/ORM-JPA/ORM09-8.png)
 
 #### 임베디드 타입과 연관관계
 
@@ -137,7 +137,7 @@ tags: JPA
     private Address workAddress;
   ```
 
-  ![ORM09-7](images/jpa/ORM-JPA/ORM09-7.png)
+  ![ORM09-7](/images/jpa/ORM-JPA/ORM09-7.png)
 
 #### 임베디드 타입과 null
 
@@ -172,7 +172,7 @@ tags: JPA
     member.getHomeAddress().setCity("anyang");
     ```
 
-    ![ORM09-9](images/jpa/ORM-JPA/ORM09-9.png)
+    ![ORM09-9](/images/jpa/ORM-JPA/ORM09-9.png)
 
     - update문이 2개 나가는것을 확인할 수 있다.
 
@@ -184,7 +184,7 @@ tags: JPA
 
 - 대신 값(인스턴스)을 복사해서 사용
 
-  ![ORM09-10](images/jpa/ORM-JPA/ORM09-10.png)
+  ![ORM09-10](/images/jpa/ORM-JPA/ORM09-10.png)
 
   ```java
   Address address = new Address("city", "street", "zip_code");
@@ -291,13 +291,13 @@ tags: JPA
 
   - 프록시를 사용하는등 복잡해지면 getter로 값을 가져와야 하는 경우도 있다,(인텔리제이 equals 생성 시, 옵션에서 선택가능)
 
-    ![ORM09-11](images/jpa/ORM-JPA/ORM09-11.png)
+    ![ORM09-11](/images/jpa/ORM-JPA/ORM09-11.png)
 
 <br><br>
 
 ### 값 타입 컬렉션
 
-![ORM09-12](images/jpa/ORM-JPA/ORM09-12.png)
+![ORM09-12](/images/jpa/ORM-JPA/ORM09-12.png)
 
 - 값타입을 하나이상 저장할 때 사용
 - DB는 컬렉션을 같은 테이블에 저장할 수 없다.
@@ -359,9 +359,9 @@ tx.commit();
 
 #### 조회
 
-![ORM09-13](images/jpa/ORM-JPA/ORM09-13.png)
+![ORM09-13](/images/jpa/ORM-JPA/ORM09-13.png)
 
-![ORM09-14](images/jpa/ORM-JPA/ORM09-14.png)
+![ORM09-14](/images/jpa/ORM-JPA/ORM09-14.png)
 
 - 값 타입 컬렉션도 지연로딩 전략 사용
 
@@ -393,7 +393,7 @@ tx.commit();
     old1에 대한 데이터만삭제하고 new1을 추가해주는 쿼리가 아니고
     **모든 데이터를 삭제하고 새로 추가를 해준다.**
 
-    ![ORM09-15](images/jpa/ORM-JPA/ORM09-15.png)
+    ![ORM09-15](/images/jpa/ORM-JPA/ORM09-15.png)
 
 #### 값 타입 컬렉션의 제약사항
 

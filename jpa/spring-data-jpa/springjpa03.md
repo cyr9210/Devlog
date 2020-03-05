@@ -3,7 +3,7 @@ title: 스프링 데이터 JPA03 - 엔티티 맵핑, Value 타입 맵핑, 관계
 date: 2019-04-30 16:24:09
 tags: JPA
 ---
-![springf](images/jpa_logo.png)
+![springf](/images/jpa_logo.png)
 # 스프링 데이터 JPA(inflearn) - 백기선 
 ## 핵심 개념 이해
 
@@ -39,7 +39,7 @@ tags: JPA
 #### @Column
 - 멤버변수에는 @Column이 붙어있는거랑 마찬가지이다.
 - 여러설정이 가능하다. 
-    ![springjpa](images/jpa/jpa03-1.png)
+    ![springjpa](/images/jpa/jpa03-1.png)
     - unique
     - nullable
     - length
@@ -47,7 +47,7 @@ tags: JPA
     - ...
 
 #### @Temporal
-![springjpa](images/jpa/jpa03-2.png)
+![springjpa](/images/jpa/jpa03-2.png)
 - 타입으로 날짜, 시간, 날짜+시간(TIMESTAMP) 설정가능
 - 현재 JPA 2.1까지는 Date와 Calendar만 지원.
     - 커스텀한 컨버터를 등록하면 사용이 가능하다.
@@ -78,9 +78,9 @@ tags: JPA
     - 컴포짓 타입의 콜렉션
 - Composite Value 타입 맵핑
     - @Embeddable
-    ![springjpa](images/jpa/jpa03-3.png)
+    ![springjpa](/images/jpa/jpa03-3.png)
     - @Embedded
-        ![springjpa](images/jpa/jpa03-4.png)
+        ![springjpa](/images/jpa/jpa03-4.png)
         - @AttributeOverrides
         - @AttributeOverride
 <br>
@@ -95,21 +95,21 @@ tags: JPA
 - 관계를 정의한 쪽이 그 관계의 주인입니다.
 
 - @ManyToOne
-    ![springjpa](images/jpa/jpa03-8.png)
+    ![springjpa](/images/jpa/jpa03-8.png)
     - 기본값은 FK 생성
 
 - @OneToMany
-    ![springjpa](images/jpa/jpa03-10.png)
+    ![springjpa](/images/jpa/jpa03-10.png)
     - 기본값은 조인 테이블 생성
         - hibernate.ddl-auto=create로 되어있어도 조인테이블은 삭제되지 않는다.
         엔티티로 정의 된 테이블만 삭제
 - ManyToOne 인지 OneToMany인지 헷갈린다면 필드객체를 보아라.
-    ![springjpa](images/jpa/jpa03-9.png)
+    ![springjpa](/images/jpa/jpa03-9.png)
 
 #### 양방향
 - FK 가지고 있는 쪽이 오너 따라서 기본값은 @ManyToOne 가지고 있는 쪽이 주인.
 - 주인이 아닌쪽(@OneToMany쪽)에서 mappedBy 사용해서 관계를 맺고 있는 필드를 설정해야 합니다.
-    ![springjpa](images/jpa/jpa03-11.png)
+    ![springjpa](/images/jpa/jpa03-11.png)
 - 주인한테 관계를 설정해야 DB에 반영이 됩니다.
     - 양쪽모두에 설정해주는것이 제일 좋다.
         - 이렇게 메소드를 만들어 쓰는것을 추천한다.
@@ -120,7 +120,7 @@ tags: JPA
         }
         ```
         - 사용
-        ![springjpa](images/jpa/jpa03-12.png)
+        ![springjpa](/images/jpa/jpa03-12.png)
         
     
     
@@ -128,12 +128,12 @@ tags: JPA
     
 #### issue
 - JSON 변환 시, 무한루프
-    ![springjpa](images/jpa/jpa03-6.png)
+    ![springjpa](/images/jpa/jpa03-6.png)
     
 - @Entity 와 @Data(lombok)
-    ![springjpa](images/jpa/jpa03-5.png)
+    ![springjpa](/images/jpa/jpa03-5.png)
 
 - 양방향 관계를 사용하는 이유
-    ![springjpa](images/jpa/jpa03-7.png)
+    ![springjpa](/images/jpa/jpa03-7.png)
 <br>
 

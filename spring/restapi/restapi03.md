@@ -48,7 +48,7 @@ tags: RestAPI
 - extends ResourceSupport 의 문제
 
 - data resource가 Json으로 감싸져 있다.
-  ![restapi03-1](images/restapi/restapi03-1.png)
+  ![restapi03-1](/images/restapi/restapi03-1.png)
 
   
 
@@ -56,23 +56,23 @@ tags: RestAPI
 
   - @JsonUnwrapped
 
-    ![restapi03-2](images/restapi/restapi03-2.png)
+    ![restapi03-2](/images/restapi/restapi03-2.png)
 
   - extends Resource<T>
 
-    ![restapi03-3](images/restapi/restapi03-3.png)
+    ![restapi03-3](/images/restapi/restapi03-3.png)
 
     - @JsonUnwrapped가 포함되어 있다.
 
-      ![restapi03-18](images/restapi/restapi03-18.png)
+      ![restapi03-18](/images/restapi/restapi03-18.png)
 
     - 링크정보도 추가 할 수 있다.
 
-    ![restapi03-5](images/restapi/restapi03-5.png)
+    ![restapi03-5](/images/restapi/restapi03-5.png)
 
 - test 결과
 
-![restapi03-4](images/restapi/restapi03-4.png)
+![restapi03-4](/images/restapi/restapi03-4.png)
 
 - 링크정보를 포함하고 있기 때문에 response의 content Type은 hal+json
 
@@ -103,19 +103,19 @@ public class EventControllerTest { }
 
 ### RestDocs 사용
 
-![restapi03-6](images/restapi/restapi03-6.png)
+![restapi03-6](/images/restapi/restapi03-6.png)
 
 #### RestDocMockMvc 커스터마이징
 
 - RestDcosMockMvcConfigurationCustomizer 구현한 빈 등록
 
-  ![restapi03-7](images/restapi/restapi03-7.png)
+  ![restapi03-7](/images/restapi/restapi03-7.png)
 
 - 다른 기능을 적용하고 싶다면, [processors 목록](https://docs.spring.io/spring-restdocs/docs/2.0.2.RELEASE/reference/html5/#customizing-requests-and-responses-preprocessors) 을 확인하고 적용시키면 된다.
 
 - 설정을 적용시키기 위해서는 TestClass에서 Import해주어야한다.
 
-  ![restapi03-8](images/restapi/restapi03-8.png)
+  ![restapi03-8](/images/restapi/restapi03-8.png)
 
 <br><br>
 
@@ -132,7 +132,7 @@ public class EventControllerTest { }
 #### Relaxed 접두어
 
 - ResponseFields에 링크 정보가 포함되기 때문에 링크정보를 문서화 했음에도 불구하고, 에러가 발생한다 이러한 문제는 Relaxed라는 prefix를 붙여줌으로서 해결 할 수 있다.
-  ![restapi03-9](images/restapi/restapi03-9.png)
+  ![restapi03-9](/images/restapi/restapi03-9.png)
 - 장점: 문서 일부분만 테스트 할 수 있다.
 - 단점: 정확한 문서를 생성하지 못한다.
 - **Relaxed를 쓰는거 보다는 ResponseFields에 링크정보를 중복으로 포함시키는 것을 추천한다. (변경사항이 있을 시, 반영을 위해서)**
@@ -249,7 +249,7 @@ public class EventControllerTest { }
 
   - Maven 프로젝트
 
-    ![restapi03-10](images/restapi/restapi03-10.png)
+    ![restapi03-10](/images/restapi/restapi03-10.png)
 
     - target/generated-docs
 
@@ -257,11 +257,11 @@ public class EventControllerTest { }
 
     - 상기 두개의 디렉토리에 index.html이 생성되며 해당 파일을 실행하거나 어플리케이션 실행 시, /docs/index.html에서 확인할 수 있다.
 
-      ![restapi03-11](images/restapi/restapi03-11.png)
+      ![restapi03-11](/images/restapi/restapi03-11.png)
 
   - Gradle 프로젝트
 
-    ![restapi03-12](images/restapi/restapi03-12.png)
+    ![restapi03-12](/images/restapi/restapi03-12.png)
 
     - build/asciidoc/html5
     - Maven과 마찬가지이다.
@@ -281,11 +281,11 @@ public class EventControllerTest { }
 
 - RESTdocs문서 추가를 위해 테스트를 추가해준다.
 
-  ![restapi03-13](images/restapi/restapi03-13.png)
+  ![restapi03-13](/images/restapi/restapi03-13.png)
 
 - Controller에서 profile 링크 정보를 추가해준다.
 
-  ![restapi03-14](images/restapi/restapi03-14.png)
+  ![restapi03-14](/images/restapi/restapi03-14.png)
 
 <br><br>
 
@@ -348,7 +348,7 @@ public class EventControllerTest { }
 
 - 테스트 클래스에서 @ActivePorfile("test") 적용
 
-  ![restapi03-15](images/restapi/restapi03-15.png)
+  ![restapi03-15](/images/restapi/restapi03-15.png)
 
   - 실행 시, profile = test로 실행된다.
 
@@ -388,16 +388,16 @@ public void ResourceSupport root() {
 
 - Errors 사용하던 부분 ErrorsResouce로 변경
 
-  ![restapi03-16](images/restapi/restapi03-16.png)
+  ![restapi03-16](/images/restapi/restapi03-16.png)
 
 - 문제점 @JsonUnwrapped JSON arrays는 unwrap이 되지 않는다.
 
-  ![restapi03-17](images/restapi/restapi03-17.png)
+  ![restapi03-17](/images/restapi/restapi03-17.png)
 
   - Serializer를 재정의 하거나 Content로 wrapped 되어있는 상태로 쓴다. 
     (여기서는 wrapped되어있는 상태로 쓰기위해서 TestCase를 수정했다.)
 
-    ![restapi03-19](images/restapi/restapi03-19.png)
+    ![restapi03-19](/images/restapi/restapi03-19.png)
 
 <br>
 <br>
