@@ -1,49 +1,54 @@
 ---
 title: KOSTA 필기시험(Oracle DB)
-date: 2018-12-04 21:09:07
+date: '2018-12-04T21:09:07.000Z'
 tags: Interview
 ---
-![DB](/images/oracledb_logo.png)
-# KOSTA DAY28
-## DataBase
+
+# KOSTA 필기시험\(Oracle DB\)
+
+![DB](../../.gitbook/assets/oracledb_logo.png)
+
+## KOSTA DAY28
+
+### DataBase
 
 DB진도를 마치며 Java때와 마찬가지로 필기시험을 진행하였다.
 
-### 필기시험
-![DB](/images/database/OracleTest01.png)
-- 체크를 한 부분이 틀리거나, 정답은 썼지만 확실하지 않은 부분
+#### 필기시험
 
-#### 정리
-10. 인덱스를 사용하는 목적과 인덱스 생성과정을 서술하시오.
-- 목적 
-    - 일정한 검색 속도 유지
-    - 데이터량이 많은 경우 검색속도 향상 (WHERE절 및 JOIN조건이 많이 들어가는 경우에 사용)
+![DB](../../.gitbook/assets/oracletest01.png)
 
-- 생성과정
-    - 인덱스 생성 → 테이블의 데이터에 대한 Indexing → B-tree구조로 형성
+* 체크를 한 부분이 틀리거나, 정답은 썼지만 확실하지 않은 부분
 
-- 생성방법
-```
-CREATE INDEX index_name
-ON table_name(column_name);
-```
+**정리**
 
-12. 뷰를 사용하는 목적과 용도를 서술하시오.
-- 목적
-    - 반본적으로 사용되는 문을 뷰로 생성하여 테이블처럼 사용가능하게 만듬
+1. 인덱스를 사용하는 목적과 인덱스 생성과정을 서술하시오.
+2. 목적
+   * 일정한 검색 속도 유지
+   * 데이터량이 많은 경우 검색속도 향상 \(WHERE절 및 JOIN조건이 많이 들어가는 경우에 사용\)
+3. 생성과정
+   * 인덱스 생성 → 테이블의 데이터에 대한 Indexing → B-tree구조로 형성
+4. 생성방법
 
-- 용도
-    - 보안적인 내용을 다룰때 사용   
-    ex) 부서에 테이블 제공시 보안사항을 제외한 뷰를 생성하여 제공
+   ```text
+   CREATE INDEX index_name
+   ON table_name(column_name);
+   ```
 
-- 생성방법
-```
-CREATE OR REPLACE VIEW view_name AS
-뷰내용;
+5. 뷰를 사용하는 목적과 용도를 서술하시오.
+6. 목적
+   * 반본적으로 사용되는 문을 뷰로 생성하여 테이블처럼 사용가능하게 만듬
+7. 용도
+   * 보안적인 내용을 다룰때 사용   
 
-DESC view_name; → 뷰의 컬럼 내용보기
-```
+     ex\) 부서에 테이블 제공시 보안사항을 제외한 뷰를 생성하여 제공
+8. 생성방법
 
+   \`\`\` CREATE OR REPLACE VIEW view\_name AS 뷰내용;
+
+DESC view\_name; → 뷰의 컬럼 내용보기
+
+```text
 13. 정규화 3가지 서술하시오.
     - 1차 정규화 : 복수의 속성값을 가진 속성을 분리
     - 2차 정규화 : 주식별자에 종속적이지 않은 속성을 분리 
@@ -55,22 +60,22 @@ DESC view_name; → 뷰의 컬럼 내용보기
 
 - 시퀀스 사용방법
 ```
-CREATE SEQUENCE seq_name
-START WITH 시작번호
-INCREMENT BY 증가량;
-```
 
+CREATE SEQUENCE seq\_name START WITH 시작번호 INCREMENT BY 증가량;
+
+```text
 - 사용
 ```
-/*seq_name.nextval*/
-INSERT INTO board VALUES (seq_seq.NEXTVAL, ‘a1’, ‘a’, ‘a’, sysdate, 0);
-```
 
-15. 엔티티타입 추출 원칙
-- 업무에 필요/관리항목
-- 식별자에의해 식별가능
-- 영속적으로 존재하는 엔티티의 집합(엔티티(행?)가 두개이상)
-- 업무 프로세스에 이용
-- 반드시 속성이 있어야한다.
-- 최소 한개이상의 관계필요 (예외가 있을 수 있음 )
-<br><br>
+/_seq\_name.nextval_/ INSERT INTO board VALUES \(seq\_seq.NEXTVAL, ‘a1’, ‘a’, ‘a’, sysdate, 0\);
+
+\`\`\`
+
+1. 엔티티타입 추출 원칙
+2. 업무에 필요/관리항목
+3. 식별자에의해 식별가능
+4. 영속적으로 존재하는 엔티티의 집합\(엔티티\(행?\)가 두개이상\)
+5. 업무 프로세스에 이용
+6. 반드시 속성이 있어야한다.
+7. 최소 한개이상의 관계필요 \(예외가 있을 수 있음 \)
+

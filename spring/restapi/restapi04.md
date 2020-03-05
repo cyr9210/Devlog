@@ -1,27 +1,29 @@
 ---
 title: 스프링 기반 REST API 개발04 - 이벤트 조회 및 수정 REST API 개발(PagedResouce)
-date: 2019-08-09 11:29:44
+date: '2019-08-09T11:29:44.000Z'
 tags: RestAPI
 ---
-# 스프링 기반 REST API 개발(inflearn)4 - 백기선
+
+# 스프링 기반 REST API 개발04 - 이벤트 조회 및 수정 REST API 개발\(PagedResouce\)
 
 ## 이벤트 조회 및 수정 REST API 개발
 
 ### 이벤트 목록 조회 API 구현
 
 #### 페이징, 정렬
-- 스프링 데이터 JPA가 제공하는 pageable을 사용한다.
-- GET방식 parameter
-  - page : 원하는 페이지 (0부터 시작)
-  - size : 한페이지에 들어갈 리소스 수 (기본값 = 20)
-  - sort : 정렬타입 및 차순 (ex.. sort=name,DESC)
-- Return 
-  - pageable : pageable 정보
-  - content : 리소스 정보
-  - totalElements : 전체 리소스 수
-  - …
-  
-    ```
+
+* 스프링 데이터 JPA가 제공하는 pageable을 사용한다.
+* GET방식 parameter
+  * page : 원하는 페이지 \(0부터 시작\)
+  * size : 한페이지에 들어갈 리소스 수 \(기본값 = 20\)
+  * sort : 정렬타입 및 차순 \(ex.. sort=name,DESC\)
+* Return
+  * pageable : pageable 정보
+  * content : 리소스 정보
+  * totalElements : 전체 리소스 수
+  * …
+
+    ```text
     @GetMapping("/api/events")
     public ResponseEntity queryEvents(Pageable pageable) {
         Page<Event> page = eventsRepository.findall(pagealbe);
@@ -31,14 +33,15 @@ tags: RestAPI
 
 #### PagedResouce
 
-- PagedResourceAssembler<T>를 사용하여 Page객체를 PagedResouce를 생성할 수 있다.
-  - 첫페이지, 이전페이지, 현재페이지, 다음페이지, 마지막페이지 Link가 포함되어있다.
-  - Resource<Event>로 사용할 경우, 각 리소스들의 링크정보는 포함되지 않는다.
-    - 이전에 생성했던 EventResource로 적용시킨다. ( e -> new EventResouce(e); )
-    ![restapi04-1](/images/restapi/restapi04-1.png)
+* PagedResourceAssembler를 사용하여 Page객체를 PagedResouce를 생성할 수 있다.
+  * 첫페이지, 이전페이지, 현재페이지, 다음페이지, 마지막페이지 Link가 포함되어있다.
+  * Resource로 사용할 경우, 각 리소스들의 링크정보는 포함되지 않는다.
+    * 이전에 생성했던 EventResource로 적용시킨다. \( e -&gt; new EventResouce\(e\); \)
 
-- Profile 링크 추가
-    ```
+      ![restapi04-1](../../.gitbook/assets/restapi04-1.png)
+* Profile 링크 추가
+
+  ```text
     @GetMapping("/api/events")
     public ResponseEntity queryEvents(Pageable pageable, PagedResourcesAssembler<Event> assembler) {
         Page<Event> page = eventRepository.findAll(pageable);
@@ -46,10 +49,11 @@ tags: RestAPI
         pagedResources.add(new Link("/docs/index.html#resources-events-list").withRel("profile"));
         return ResponseEntity.ok(pagedResources);
     }
-    ```
-
-- 테스트 (문서화는 생략)
   ```
+
+* 테스트 \(문서화는 생략\)
+
+  ```text
   @Test
   @TestDescription("30개 이벤트를 10개씩 두번째 페이지 조회하기")
   public void queryEvents() throws Exception {
@@ -82,13 +86,12 @@ tags: RestAPI
       this.eventRepository.save(event);
   }
   ```
-<br><br>
 
 ### 이벤트 조회 API 구현
 
 #### 단일 조회 API
 
-```
+```text
 @GetMapping("/{id}")
 public ResponseEntity getEvent(@PathVariable Integer id) {
   Optional<Event> byId = eventRepository.findById(id);
@@ -103,22 +106,23 @@ public ResponseEntity getEvent(@PathVariable Integer id) {
 }
 ```
 
-- 해당아이디에 해당하는 이벤트를 찾아서 조회한다.
-  - EventResource를 ResponseEntity body에 담아서 리턴(self 링크를 포함하고 있다.)
-  - profile 링크를 추가
-- isPrsent() : 해당 이벤트가 있으면 true 아니면 false를 반환
-- ResponseEntity.notFound().build(); -> 404에러를 반환
+* 해당아이디에 해당하는 이벤트를 찾아서 조회한다.
+  * EventResource를 ResponseEntity body에 담아서 리턴\(self 링크를 포함하고 있다.\)
+  * profile 링크를 추가
+* isPrsent\(\) : 해당 이벤트가 있으면 true 아니면 false를 반환
+* ResponseEntity.notFound\(\).build\(\); -&gt; 404에러를 반환
 
 #### 테스트
 
-- 정상조회
-  ```
+* 정상조회
+
+  ```text
   @Test
   @TestDescription("기존의 이벤트 하나 조회하기")
   public void getEvent() throws Exception {
     //given
     Event event = this.generateEvent(100);
-  
+
     //when
     ResultActions perform = this.mockMvc.perform(get("/api/events/{id}", event.getId()))
       .andExpect(status().isOk())
@@ -126,14 +130,15 @@ public ResponseEntity getEvent(@PathVariable Integer id) {
       .andExpect(jsonPath("id").exists())
       .andExpect(jsonPath("_links.self").exists())
       .andExpect(jsonPath("_links.profile").exists());  
-  
+
     //then
     perform.andDo(document("get-an-events"));
   }
   ```
 
-- 없는 이벤트 조회시 404 응답
-  ```
+* 없는 이벤트 조회시 404 응답
+
+  ```text
   @Test
   @TestDescription("없는 이벤트를 조회하면 404 응답받기")
   public void getEvent404() throws Exception {
@@ -141,16 +146,16 @@ public ResponseEntity getEvent(@PathVariable Integer id) {
       .andExpect(status().isNotFound());
   }
   ```
-<br><br>
-### 이벤트 수정 API 구현
+
+  **이벤트 수정 API 구현**
 
 #### 이벤트 수정 API
 
-```
+```text
 @PutMapping("/{id}")
 public ResponseEntity updateEvent(@PathVariable Integer id, 
                                   @RequestBody @Valid EventDto eventDto, Errors errors) {
-  
+
   Optional<Event> byId = this.eventRepository.findById(id);
 
   if (!byId.isPresent()){
@@ -179,101 +184,111 @@ public ResponseEntity updateEvent(@PathVariable Integer id,
 }
 ```
 
-
-
 #### 테스트코드
-- 이벤트 정상 수정
-  ```
-  @Test
-  @TestDescription("이벤트를 정상적으로 수정하기")
-  public void updateEvent() throws Exception {
-    // given
-    Event event = this.generateEvent(200);
-    EventDto eventDto = this.modelMapper.map(event, EventDto.class);
-    eventDto.setName("수정한 이벤트");
-  
-  
-    // when
-    this.mockMvc.perform(put("/api/events/{id}", event.getId())
-                         .contentType(MediaType.APPLICATION_JSON_UTF8)
-                         .content(this.objectMapper.writeValueAsString(eventDto))
-                         .accept(MediaTypes.HAL_JSON_UTF8))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("name").value(eventDto.getName()))
-                .andExpect(jsonPath("_links.self").exists())
-                .andDo(document("update-event"));
-  
-    Event updateEvent = eventRepository.findById(event.getId()).get();
-    assertThat(updateEvent.getName()).isEqualTo(eventDto.getName());
-  }
-  ```
 
+* 이벤트 정상 수정
+
+  \`\`\`
+
+  @Test
+
+  @TestDescription\("이벤트를 정상적으로 수정하기"\)
+
+  public void updateEvent\(\) throws Exception {
+
+    // given
+
+    Event event = this.generateEvent\(200\);
+
+    EventDto eventDto = this.modelMapper.map\(event, EventDto.class\);
+
+    eventDto.setName\("수정한 이벤트"\);
+
+```text
+// when
+this.mockMvc.perform(put("/api/events/{id}", event.getId())
+                     .contentType(MediaType.APPLICATION_JSON_UTF8)
+                     .content(this.objectMapper.writeValueAsString(eventDto))
+                     .accept(MediaTypes.HAL_JSON_UTF8))
+            .andDo(print())
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("name").value(eventDto.getName()))
+            .andExpect(jsonPath("_links.self").exists())
+            .andDo(document("update-event"));
+
+Event updateEvent = eventRepository.findById(event.getId()).get();
+assertThat(updateEvent.getName()).isEqualTo(eventDto.getName());
+```
+
+}
+
+```text
 - 수정하려는 이벤트가 없는경우 404 Not Found
-  ```
-  @Test
-  @TestDescription("존재하지 않는 이벤트 수정 404 응답")
-  public void updateEvent404_NotFound() throws Exception {
-    // given
-    Event event = this.generateEvent(200);
-    EventDto eventDto = this.modelMapper.map(event, EventDto.class);
-  
-    // when
-    this.mockMvc.perform(put("/api/events/123331")
-                         .contentType(MediaType.APPLICATION_JSON_UTF8)
-                         .content(this.objectMapper.writeValueAsString(eventDto))
-                         .accept(MediaTypes.HAL_JSON_UTF8))
-      .andDo(print())
-      .andExpect(status().isNotFound());
-  }
-  ```
+```
 
+@Test @TestDescription\("존재하지 않는 이벤트 수정 404 응답"\) public void updateEvent404\_NotFound\(\) throws Exception { // given Event event = this.generateEvent\(200\); EventDto eventDto = this.modelMapper.map\(event, EventDto.class\);
+
+```text
+// when
+this.mockMvc.perform(put("/api/events/123331")
+                     .contentType(MediaType.APPLICATION_JSON_UTF8)
+                     .content(this.objectMapper.writeValueAsString(eventDto))
+                     .accept(MediaTypes.HAL_JSON_UTF8))
+  .andDo(print())
+  .andExpect(status().isNotFound());
+```
+
+}
+
+```text
 - 입력 데이터가 이상한 경우 400 Bad Request
-  ```
-  @Test
-  @TestDescription("이벤트 입력값이 잘못된 경우 BadRequest 응답 받기")
-  public void updateEvent400_Empty() throws Exception {
-    // given
-    Event event = this.generateEvent(200);
-  
-    // when
-    this.mockMvc.perform(put("/api/events/{id}", event.getId())
-                         .contentType(MediaType.APPLICATION_JSON_UTF8)
-                         .accept(MediaTypes.HAL_JSON_UTF8))
-      .andDo(print())
-      .andExpect(status().isBadRequest());
-  }
-  ```
+```
 
+@Test @TestDescription\("이벤트 입력값이 잘못된 경우 BadRequest 응답 받기"\) public void updateEvent400\_Empty\(\) throws Exception { // given Event event = this.generateEvent\(200\);
+
+```text
+// when
+this.mockMvc.perform(put("/api/events/{id}", event.getId())
+                     .contentType(MediaType.APPLICATION_JSON_UTF8)
+                     .accept(MediaTypes.HAL_JSON_UTF8))
+  .andDo(print())
+  .andExpect(status().isBadRequest());
+```
+
+}
+
+```text
 - 도메인로직으로 데이터 검증 실패 400 Bad Request
-    ```
-    @Test
-    @TestDescription("이벤트 입력값이 잘못된 경우 BadRequest 응답 받기")
-    public void updateEvent400_Wrong() throws Exception {
-    //  given
-    Event event = this.generateEvent(200);
-    EventDto eventDto = this.modelMapper.map(event, EventDto.class);
-    eventDto.setBasePrice(20000);
-    eventDto.setMaxPrice(1000);  
-    
-    //  when
-    this.mockMvc.perform(put("/api/events/{id}", event.getId())
-                         .contentType(MediaType.APPLICATION_JSON_UTF8)
-                         .content(this.objectMapper.writeValueAsString(eventDto))
-                         .accept(MediaTypes.HAL_JSON_UTF8))
-      .andDo(print())
-      .andExpect(status().isBadRequest());
-    }
-    ```
+```
 
+```text
+@Test
+@TestDescription("이벤트 입력값이 잘못된 경우 BadRequest 응답 받기")
+public void updateEvent400_Wrong() throws Exception {
+//  given
+Event event = this.generateEvent(200);
+EventDto eventDto = this.modelMapper.map(event, EventDto.class);
+eventDto.setBasePrice(20000);
+eventDto.setMaxPrice(1000);  
 
+//  when
+this.mockMvc.perform(put("/api/events/{id}", event.getId())
+                     .contentType(MediaType.APPLICATION_JSON_UTF8)
+                     .content(this.objectMapper.writeValueAsString(eventDto))
+                     .accept(MediaTypes.HAL_JSON_UTF8))
+  .andDo(print())
+  .andExpect(status().isBadRequest());
+}
+```
+```
 
 ### 테스트 코드 리팩토링
 
-- 중복 코드 제거 하기
-- 중복되는 코드들을 뽑아 테스트 클래스를 작성 후 상속한다.
-  - 상속 클래스에는 @Ignore 어노테이션으로 테스트로 간주되지 않도록 설정한다.
-    ```
+* 중복 코드 제거 하기
+* 중복되는 코드들을 뽑아 테스트 클래스를 작성 후 상속한다.
+  * 상속 클래스에는 @Ignore 어노테이션으로 테스트로 간주되지 않도록 설정한다.
+
+    ```text
     @RunWith(SpringRunner.class)
     @SpringBootTest
     @AutoConfigureMockMvc
@@ -282,20 +297,20 @@ public ResponseEntity updateEvent(@PathVariable Integer id,
     @ActiveProfiles("test")
     @Ignore
     public class BaseControllerTest {
-    
+
         @Autowired
         protected MockMvc mockMvc;
-    
+
         @Autowired
         protected ModelMapper modelMapper;
-    
+
         @Autowired
         protected ObjectMapper objectMapper;
     }
     ```
+* 상속받는 테스트들에서 상속. \(중복된 내용 제거\)
 
-- 상속받는 테스트들에서 상속. (중복된 내용 제거)
-  ```
+  ```text
   public class EventControllerTest extends BaseControllerTest {
     ...
   }

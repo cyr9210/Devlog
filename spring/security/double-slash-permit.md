@@ -1,9 +1,12 @@
 ---
 title: 스프링 시큐리티 - 더블 슬래쉬 허용
-date: 2020-01-12 22:15:04
-tags: [SpringSecurity, debug]
+date: '2020-01-12T22:15:04.000Z'
+tags:
+  - SpringSecurity
+  - debug
 ---
-# Spring
+
+# 스프링 시큐리티 - 더블 슬래쉬 허용
 
 ## Security
 
@@ -11,21 +14,20 @@ tags: [SpringSecurity, debug]
 
 #### 문제점
 
-- 기본 정책은 URL에 더블 슬래쉬를 허용하지 않는다.
+* 기본 정책은 URL에 더블 슬래쉬를 허용하지 않는다.
+  * 에러가 발생
 
-  - 에러가 발생
-
-    ```
+    ```text
     org.springframework.security.web.firewall.RequestRejectedException: The request was rejected because the URL was not normalized.
-    	at org.springframework.security.web.firewall.StrictHttpFirewall.getFirewalledRequest(StrictHttpFirewall.java:296)
-    	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:194)
-    	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-    	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+        at org.springframework.security.web.firewall.StrictHttpFirewall.getFirewalledRequest(StrictHttpFirewall.java:296)
+        at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:194)
+        at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+        at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
     ```
 
 #### 허용
 
-- SpringSecurityConfig 설정 클래스에 다음 빈을 추가해준다.
+* SpringSecurityConfig 설정 클래스에 다음 빈을 추가해준다.
 
   ```java
   @Bean
@@ -34,13 +36,12 @@ tags: [SpringSecurity, debug]
   }
   ```
 
-- WebSecurity 설정에 추가해준다.
+* WebSecurity 설정에 추가해준다.
 
   ```java
   @Override
   public void configure(WebSecurity web) throws Exception {
-  	web.httpFirewall(defaultHttpFirewall());
+      web.httpFirewall(defaultHttpFirewall());
   }
   ```
 
-<br><br>
