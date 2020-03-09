@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Bong's Dev](README.md)
+* [Bong's Devlog](README.md)
 
 ## Spring
 
